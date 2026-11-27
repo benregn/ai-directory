@@ -1,0 +1,19 @@
+lefthook.yml
+  s_1a675ef38966e2::t_be9b4bd2a25e34 8-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ac88f0167e81155e856aa402e687a34facb58d6a",
+  "prompts": {},
+  "sessions": {
+    "s_1a675ef38966e2": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a21d95-9c10-7664-951b-521c5f288e18",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
