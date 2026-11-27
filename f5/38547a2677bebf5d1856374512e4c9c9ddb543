@@ -1,0 +1,20 @@
+docs/mockups/BRIEF.md
+  h_9889e896d9694b 1-71
+docs/mockups/agy/NOTES.md
+  h_9889e896d9694b 1-17
+docs/mockups/codex/NOTES.md
+  h_9889e896d9694b 1-13
+docs/mockups/sample-rows.json
+  h_9889e896d9694b 1-201
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f538547a2677bebf5d1856374512e4c9c9ddb543",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
