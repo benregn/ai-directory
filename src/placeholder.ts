@@ -284,6 +284,22 @@ export const matrixRows: Array<MatrixRowData> = [
   },
 ];
 
+export const drawerShell = {
+  categoryPill: 'Agent orchestration',
+  name: 'Aeon',
+  sub: '★ 777 · MIT · open source',
+  actions: [
+    { label: 'Open listing', primary: true },
+    { label: 'Compare' },
+    { label: 'Shortlist' },
+  ],
+  overview:
+    'Open-source framework that runs unattended on GitHub Actions, dispatching markdown-defined skills and repairing failing ones.',
+  compareHead: 'Same class · starred',
+  footerLeft: 'ENTRY 004 / 239',
+  footerRight: 'MIT · OSS',
+};
+
 export const drawerFacts: Array<[string, string]> = [
   ['CATEGORY', 'Agent orchestration'],
   ['LICENSE', 'MIT'],

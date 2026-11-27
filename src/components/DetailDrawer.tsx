@@ -1,4 +1,4 @@
-import { drawerCompare, drawerFacts } from '../placeholder.ts';
+import { drawerCompare, drawerFacts, drawerShell } from '../placeholder.ts';
 import './DetailDrawer.css';
 
 /**
@@ -12,20 +12,20 @@ export function DetailDrawer() {
     <section className="drawer" aria-label="Selected product">
       <div className="dtop">
         <div className="dmeta-row">
-          <span className="dpill">Agent orchestration</span>
+          <span className="dpill">{drawerShell.categoryPill}</span>
           <button type="button" className="xbtn">
             ✕
           </button>
         </div>
-        <h2>Aeon</h2>
-        <div className="dsub">★ 777 · MIT · open source</div>
+        <h2>{drawerShell.name}</h2>
+        <div className="dsub">{drawerShell.sub}</div>
       </div>
       <div className="dactions">
-        <button type="button" className="pri">
-          Open listing
-        </button>
-        <button type="button">Compare</button>
-        <button type="button">Shortlist</button>
+        {drawerShell.actions.map((action) => (
+          <button type="button" className={action.primary ? 'pri' : undefined} key={action.label}>
+            {action.label}
+          </button>
+        ))}
       </div>
       <div className="facts">
         {drawerFacts.map(([label, value]) => (
@@ -37,13 +37,10 @@ export function DetailDrawer() {
       </div>
       <div className="dsec">
         <h4>Overview</h4>
-        <p>
-          Open-source framework that runs unattended on GitHub Actions,
-          dispatching markdown-defined skills and repairing failing ones.
-        </p>
+        <p>{drawerShell.overview}</p>
       </div>
       <div className="dsec cmp">
-        <h4>Same class · starred</h4>
+        <h4>{drawerShell.compareHead}</h4>
         {drawerCompare.map((item) => (
           <a href="#" key={item.name}>
             {item.name}
@@ -52,8 +49,8 @@ export function DetailDrawer() {
         ))}
       </div>
       <div className="dfoot">
-        <span>ENTRY 004 / 239</span>
-        <span>MIT · OSS</span>
+        <span>{drawerShell.footerLeft}</span>
+        <span>{drawerShell.footerRight}</span>
       </div>
     </section>
   );
