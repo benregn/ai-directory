@@ -1,0 +1,32 @@
+.gitignore
+  h_9889e896d9694b 1-5
+README.md
+  h_9889e896d9694b 1-117
+githits_directory/__init__.py
+  h_9889e896d9694b 1
+githits_directory/__main__.py
+  h_9889e896d9694b 1-5
+githits_directory/cache.py
+  h_9889e896d9694b 1-142
+githits_directory/cli.py
+  h_9889e896d9694b 1-172
+githits_directory/fetcher.py
+  h_9889e896d9694b 1-195
+githits_directory/parse.py
+  h_9889e896d9694b 1-430
+githits_directory/pipeline.py
+  h_9889e896d9694b 1-410
+pyproject.toml
+  h_9889e896d9694b 1-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a8ce2259cb6b0f3b7bf910ae7bc5114b8d00aa94",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
