@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      run: pnpm lint
+    test:
+      run: uv run --extra dev pytest tests/
