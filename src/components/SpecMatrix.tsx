@@ -6,7 +6,7 @@ import {
   useState,
   useSyncExternalStore,
 } from 'react';
-import type { KeyboardEvent as ReactKeyboardEvent } from 'react';
+import type { KeyboardEvent as ReactKeyboardEvent, MouseEvent as ReactMouseEvent } from 'react';
 import { createVirtualizer } from '@ui-sdk/core';
 import { listings } from '../data/listings.ts';
 import type { MatrixRowView, SortColumn, SortDirection } from '../matrix-model.ts';
@@ -137,15 +137,16 @@ export function SpecMatrix() {
   );
 
   // The virtualizer is created once and reads the live ordering through
-  // refs; refresh() re-reads it after every sort or focus change. The refs
-  // sync in the first effect so every later effect and handler reads the
-  // committed ordering, never a stale one.
+  // refs; refresh() re-reads it after every sort or focus change. rowsRef
+  // syncs in an effect since it derives from render state; focusIndexRef is
+  // written synchronously in the handlers that change it — the effect path
+  // is a full React cycle too slow, and a scroll landing in that gap
+  // unrenders the focused row out from under the user.
   const rowsRef = useRef(sorted);
   const focusIndexRef = useRef(focusIndex);
   useEffect(() => {
     rowsRef.current = sorted;
-    focusIndexRef.current = focusIndex;
-  }, [sorted, focusIndex]);
+  }, [sorted]);
 
   // Passing the ref objects, not their values: the factory's closures read
   // .current only post-commit. This is the latest-ref pattern the rule means
@@ -201,20 +202,36 @@ export function SpecMatrix() {
   // Focus moves only on explicit intent (arrow keys, row press) — never on
   // scroll-driven re-renders, or scrolling the matrix would steal focus back
   // from anywhere else on the page. preventScroll: the virtualizer already
-  // scrolled the row into view.
+  // scrolled the row into view. The intent expires the moment focus sits
+  // outside the grid: pressing End and clicking elsewhere within the gap
+  // before the row renders must not steal focus back a frame later.
   const pendingFocus = useRef(false);
   useEffect(() => {
     if (focusIndex !== null && pendingFocus.current) {
       const el = rowEls.current.get(focusIndex);
       if (el) {
+        const active = document.activeElement;
+        const scroller = scrollerRef.current;
+        if (active !== null && active !== document.body && scroller !== null && !scroller.contains(active)) {
+          pendingFocus.current = false;
+          return;
+        }
         el.focus({ preventScroll: true });
         pendingFocus.current = false;
       }
     }
   }, [focusIndex, items]);
 
-  function pressHeader(column: SortColumn) {
-    setFocusIndex(null);
+  function pressHeader(event: ReactMouseEvent<HTMLButtonElement>, column: SortColumn) {
+    // Rows must never carry focus across a re-sort: React reuses row
+    // elements by index, so a focused row silently becomes a different
+    // product and no focus event fires to re-sync state — keep() then
+    // protects nothing and scrolling drops focus to the page. Move focus
+    // onto the control deliberately: Safari and Firefox on macOS never
+    // focus clicked buttons, programmatic activation never does, and the
+    // component's correctness can't hinge on which browser happened to.
+    event.currentTarget.focus();
+    commitFocusIndex(null);
     if (column === sortColumn) {
       setSortDirection((dir) => (dir === 'asc' ? 'desc' : 'asc'));
     } else {
@@ -223,16 +240,26 @@ export function SpecMatrix() {
     }
   }
 
+  // Focus intent commits synchronously: the ref keep() reads and the
+  // refresh that re-reads it both land in the handler's own task, before
+  // any scroll event can arrive in a later one. setState is for rendering;
+  // correctness here can't wait for it.
+  function commitFocusIndex(next: number | null) {
+    focusIndexRef.current = next;
+    virtual.refresh();
+    setFocusIndex(next);
+  }
+
   // Plain DOM focus — exactly what Tab produces — must sync into state, or
   // keep() protects nothing and the focused row unrenders out from under
   // the user on scroll. No scrolling, no selecting: focus alone.
   function focusRow(index: number) {
-    setFocusIndex(index);
+    commitFocusIndex(index);
   }
 
   function pressRow(index: number) {
     pendingFocus.current = true;
-    setFocusIndex(index);
+    commitFocusIndex(index);
     const row = rowsRef.current[index];
     if (row) {
       setSelectedId((current) => (current === row.id ? null : row.id));
@@ -243,7 +270,7 @@ export function SpecMatrix() {
     const last = rowsRef.current.length - 1;
     const next = Math.max(0, Math.min(last, index));
     pendingFocus.current = true;
-    setFocusIndex(next);
+    commitFocusIndex(next);
     virtual.scrollToIndex(next);
   }
 
@@ -308,7 +335,7 @@ export function SpecMatrix() {
               <button
                 className={active ? 'msort act' : 'msort'}
                 type="button"
-                onClick={() => pressHeader(header.column)}
+                onClick={(event) => pressHeader(event, header.column)}
               >
                 {header.label}
                 <span className="srt">
