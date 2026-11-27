@@ -1,0 +1,14 @@
+PRODUCT.md
+  h_9889e896d9694b 1-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "184a7b9e499386e59c896bd173370db379717783",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
