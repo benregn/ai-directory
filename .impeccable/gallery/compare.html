@@ -1,0 +1,123 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compare — final four</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #161513; color: #e8e4dc; font: 14px/1.5 -apple-system, system-ui, sans-serif; }
+  .bar { position: sticky; top: 0; z-index: 10; background: #161513f2; backdrop-filter: blur(8px); border-bottom: 1px solid #33302a; padding: 10px 10px 8px; }
+  .btns { display: flex; gap: 6px; }
+  .btns button { flex: 1; padding: 9px 2px; font: 600 11px/1.1 inherit; letter-spacing: .06em; text-transform: uppercase; background: #242119; color: #c9c1b2; border: 1px solid #3a362e; border-radius: 6px; cursor: pointer; }
+  .btns button.on { background: #e8e4dc; color: #161513; border-color: #e8e4dc; }
+  .hint { font-size: 11px; color: #8f887a; margin-top: 6px; text-align: center; }
+  .stage { padding: 10px; }
+  .framebox { position: relative; width: 100%; overflow: hidden; border-radius: 8px; border: 1px solid #33302a; background: #fff; }
+  .framebox iframe { position: absolute; left: 0; top: 0; width: 1440px; height: 900px; border: 0; transform-origin: 0 0; }
+  .meta { padding: 12px 4px 30px; }
+  .meta h2 { margin: 0 0 4px; font-size: 19px; }
+  .meta .tag { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #8f887a; }
+  .meta .thesis { color: #b6aea0; font-size: 13.5px; margin: 6px 0; }
+  .meta .risk { color: #c99; font-size: 12.5px; margin: 4px 0; }
+  .meta .risk b { color: #daa; font-weight: 600; }
+  .sw { display: inline-block; width: 13px; height: 13px; border-radius: 3px; border: 1px solid #0006; margin-right: 4px; vertical-align: -2px; }
+  .grid { display: grid; gap: 10px; grid-template-columns: 1fr; padding: 10px; }
+  @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .cell { cursor: pointer; }
+  .cell .lbl { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #c9c1b2; margin: 6px 2px 0; }
+  .hidden { display: none; }
+</style>
+
+<div class="bar">
+  <div class="btns" id="btns">
+    <button data-v="all" class="on">All four</button>
+    <button data-v="partsv3">Parts v3</button>
+    <button data-v="plate">Plate</button>
+    <button data-v="parts">Parts</button>
+    <button data-v="print">Print</button>
+    <button data-v="canon">Canon</button>
+  </div>
+  <div class="hint" id="hint">grid — tap one to inspect it full-width, or pick above</div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="stage hidden" id="stage">
+  <div class="framebox" id="framebox"><iframe id="frame" title="sketch"></iframe></div>
+  <div class="meta" id="meta"></div>
+</div>
+
+<script>
+var CANDS = {
+  partsv3: { file: "mocks/decision/model-pick-v3.html", name: "Parts v3 — canon drawer, print density", tag: "your fusion · parts base",
+    thesis: "The Parametric Parts Catalog exactly as before — checkbox rail untouched — plus a right detail drawer in Canon\u2019s clean structure (pill, actions, sections) carrying Print\u2019s full information at Print\u2019s density: 25px mono fact rows for category, license, stars, topics, deployment, commercial, listed and verified, then overview, same-class compare and entry footer. Facts shown are Aeon\u2019s real dataset values.",
+    risk: "The table surrenders ~350px of width to the drawer — summaries truncate sooner; the rail, matrix and drawer compete for horizontal budget at small widths.",
+    palette: ["#ffffff","#14181d","#6b7280","#0057b8"] },
+  plate: { file: "mocks/decision/challenger-plate.html", name: "Design Annual Plate", tag: "round 2 · challenger",
+    thesis: "The directory as a print-production plate sheet: near-white stock, registration crosshairs aligning real grid corners, mono uppercase micro-labels, verification as a letterpress seal.",
+    risk: "Registration furniture reads as decoration the moment it stops aligning real things.",
+    palette: ["#f5f4f6","#16181a","#dcddf3","#c9c7c4"] },
+  parts: { file: "mocks/decision/model-pick.html", name: "The Parametric Parts Catalog", tag: "round 1 · impeccable\u2019s pick",
+    thesis: "The directory as a parts catalog: every product a part with parameters, every filter a spec, spec-sheet precision throughout.",
+    risk: "The closest to where most runs in this category land — familiar and effective, the trade is distinctiveness.",
+    palette: ["#ffffff","#14181d","#6b7280","#0057b8"] },
+  print: { file: "mocks/decision/assigned.html", name: "The Printed Trade Directory", tag: "round 1 · the roll",
+    thesis: "The directory owning what it is: 239 boldface entries in a dense ruled register, set with printer\u2019s ink discipline. Paper white, spot blue, red reserved for shortlist marks, thumb-index category rail.",
+    risk: "Reads as paper nostalgia cosplay when the ink discipline goes soft — it must stay a working screen first.",
+    palette: ["#fbfaf6","#1a1815","#8a8578","#2c4a9e"] },
+  canon: { file: "mocks/decision/canon.html", name: "The canon — category standard", tag: "the standing exit",
+    thesis: "The modern SaaS data table — neutral chrome, one blue accent, standard filter bar, clean sortable rows — executed impeccably, no irony. Measured against Linear, Airtable and GitHub.",
+    risk: "Indistinguishable from the competition by design.",
+    palette: ["#ffffff","#111827","#6b7280","#2563eb"] }
+};
+var W = 1440, H = 900;
+
+function fit(box) {
+  var s = box.clientWidth / W;
+  box.style.height = (H * s) + "px";
+  var f = box.querySelector("iframe");
+  if (f) f.style.transform = "scale(" + s + ")";
+}
+
+// build grid cells once — live sketches, lazily loaded
+var grid = document.getElementById("grid");
+Object.keys(CANDS).forEach(function (k) {
+  var c = CANDS[k];
+  var cell = document.createElement("div");
+  cell.className = "cell";
+  cell.innerHTML = '<div class="framebox"><iframe loading="lazy" src="' + c.file + '" title="' + c.name + '"></iframe></div><div class="lbl">' + c.name + '</div>';
+  cell.addEventListener("click", function () { show(k); window.scrollTo(0, 0); });
+  grid.appendChild(cell);
+});
+
+function fitAll() { document.querySelectorAll(".framebox").forEach(fit); }
+window.addEventListener("resize", fitAll);
+
+function show(v) {
+  document.querySelectorAll("#btns button").forEach(function (b) { b.classList.toggle("on", b.dataset.v === v); });
+  var isGrid = v === "all";
+  grid.classList.toggle("hidden", !isGrid);
+  document.getElementById("stage").classList.toggle("hidden", isGrid);
+  document.getElementById("hint").textContent = isGrid
+    ? "grid — tap one to inspect it full-width, or pick above"
+    : "live sketch, not a screenshot — switch above and watch what changes";
+  if (!isGrid) {
+    var c = CANDS[v];
+    var f = document.getElementById("frame");
+    if (!f.src.endsWith(c.file)) f.src = c.file;
+    document.getElementById("meta").innerHTML =
+      '<div class="tag">' + c.tag + '</div><h2>' + c.name + '</h2>' +
+      '<div>' + c.palette.map(function (p) { return '<span class="sw" style="background:' + p + '"></span>'; }).join("") + '</div>' +
+      '<p class="thesis">' + c.thesis + '</p>' +
+      '<p class="risk"><b>Risk —</b> ' + c.risk + '</p>';
+  }
+  requestAnimationFrame(fitAll);
+}
+
+document.getElementById("btns").addEventListener("click", function (e) {
+  if (e.target.dataset.v) show(e.target.dataset.v);
+});
+
+// deep-link: ?v=plate etc.
+var m = location.search.match(/v=(partsv3|plate|parts|print|canon|all)/);
+show(m ? m[1] : "all");
+window.addEventListener("load", fitAll);
+</script>
