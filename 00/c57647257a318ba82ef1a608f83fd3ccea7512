@@ -1,0 +1,42 @@
+tests/fixtures/categories-mini.json
+  h_9889e896d9694b 1-47
+tests/fixtures/category/agent-infrastructure.html
+  h_9889e896d9694b 1-8
+tests/fixtures/category/agent-orchestration.html
+  h_9889e896d9694b 1-8
+tests/fixtures/category/agent-workspaces.html
+  h_9889e896d9694b 1-8
+tests/fixtures/category/ai-labs.html
+  h_9889e896d9694b 1-8
+tests/fixtures/category/app-builders.html
+  h_9889e896d9694b 1-8
+tests/fixtures/category/code-review.html
+  h_9889e896d9694b 1-8
+tests/fixtures/category/development-platforms.html
+  h_9889e896d9694b 1-8
+tests/fixtures/category/engineering-factories.html
+  h_9889e896d9694b 1-8
+tests/fixtures/detail/8090.html
+  h_9889e896d9694b 1-10
+tests/fixtures/detail/aeon.html
+  h_9889e896d9694b 1-10
+tests/fixtures/index.html
+  h_9889e896d9694b 1-8
+tests/test_parse_detail.py
+  h_9889e896d9694b 1-239
+tests/test_replay.py
+  h_9889e896d9694b 1-178
+tests/test_retry.py
+  h_9889e896d9694b 1-161
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "00c57647257a318ba82ef1a608f83fd3ccea7512",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
