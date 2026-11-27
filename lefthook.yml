@@ -5,3 +5,9 @@ pre-commit:
       run: pnpm lint
     test:
       run: uv run --extra dev pytest tests/
+    regen-listings:
+      glob:
+        - data/listings.jsonl
+        - data/categories.json
+        - scripts/build-data.mjs
+      run: node scripts/build-data.mjs && git add src/data/listings.json
