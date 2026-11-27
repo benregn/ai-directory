@@ -5,6 +5,7 @@
  */
 
 :root {
+  --white: #ffffff;
   --ink: #14181d;
   --gray: #6b7280;
   --blue: #0057b8;
@@ -35,7 +36,7 @@ body {
 
 body {
   font-family: 'Barlow', system-ui, sans-serif;
-  background: #fff;
+  background: var(--white);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
 }
@@ -49,7 +50,10 @@ a {
   text-decoration: none;
 }
 
-/* ── frame: fixed-density desktop register, clipped like the mock ── */
+/* ── frame: fixed-density desktop register, clipped like the mock ──
+   shortcut: viewport units stand in for the mock's fixed 1440×900 page — the
+   frame is exact at the target size but has no small-viewport policy yet,
+   upgrade when a responsive pass is scheduled, not before */
 .app {
   height: 100vh;
   overflow: hidden;

@@ -18,7 +18,7 @@
 .mark .tile {
   width: 22px;
   height: 22px;
-  background: #fff;
+  background: var(--white);
   color: var(--ink);
   font-weight: 700;
   font-size: 13px;
@@ -28,14 +28,17 @@
 }
 
 .mark b {
-  color: #fff;
+  color: var(--white);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-.mark .catno {
+/* mock cascade verbatim: these properties hit every span in .mark — the tile
+   included (its own rule wins on the properties it sets, but margin-left and
+   letter-spacing are uncontested, and the mock relies on exactly that) */
+.mark span {
   color: var(--masthead-muted);
   font-size: 10px;
   letter-spacing: 0.1em;
@@ -56,8 +59,8 @@
 }
 
 .mastnav a.on {
-  color: #fff;
-  border-bottom: 2px solid #fff;
+  color: var(--white);
+  border-bottom: 2px solid var(--white);
   padding-bottom: 3px;
 }
 
