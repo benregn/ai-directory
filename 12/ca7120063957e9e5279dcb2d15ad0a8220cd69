@@ -1,0 +1,21 @@
+src/placeholder.ts
+  s_d3bab6208dda7c::t_63e91f207fa133 287-302
+src/components/DetailDrawer.tsx
+  s_d3bab6208dda7c::t_cecc40850fba2e 1,15,20-21,24-28,40,43,52-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "12ca7120063957e9e5279dcb2d15ad0a8220cd69",
+  "prompts": {},
+  "sessions": {
+    "s_d3bab6208dda7c": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-2-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
