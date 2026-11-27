@@ -1,0 +1,19 @@
+src/data/listings.json
+  s_58aada15d971b8::t_20d78609a651dd 1-44716
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cd6a2757b9572a8cd2de217c2a00a92a95c7d801",
+  "prompts": {},
+  "sessions": {
+    "s_58aada15d971b8": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-1-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
