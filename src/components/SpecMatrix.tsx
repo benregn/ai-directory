@@ -80,6 +80,7 @@ function Row({
   tabStop,
   onPress,
   onKey,
+  onFocus,
   rowRef,
 }: {
   row: MatrixRowView;
@@ -88,6 +89,7 @@ function Row({
   tabStop: boolean;
   onPress: (index: number) => void;
   onKey: (event: ReactKeyboardEvent, index: number) => void;
+  onFocus: (index: number) => void;
   rowRef: (index: number, el: HTMLElement | null) => void;
 }) {
   return (
@@ -101,6 +103,7 @@ function Row({
       ref={(el) => rowRef(item.index, el)}
       onClick={() => onPress(item.index)}
       onKeyDown={(event) => onKey(event, item.index)}
+      onFocus={() => onFocus(item.index)}
     >
       <div className="idx" role="gridcell">
         {row.entryLabel}
@@ -156,6 +159,10 @@ export function SpecMatrix() {
   );
   const getItems = useCallback(() => virtual.items(), [virtual]);
   const items = useSyncExternalStore(subscribe, getItems);
+  // size() goes through the same subscription: a plain number snapshot, so
+  // the spacer can never go stale once filtering makes count dynamic (#4).
+  const getSize = useCallback(() => virtual.size(), [virtual]);
+  const size = useSyncExternalStore(subscribe, getSize);
 
   const scrollerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -166,6 +173,10 @@ export function SpecMatrix() {
     return virtual.connect(el);
   }, [virtual]);
 
+  // refresh() re-reads the list when its inputs change: the ordering (a
+  // re-sort also restarts the scan at the top) and the focused row the
+  // keep() clause protects. Never keyed on items — that would refresh on
+  // every scroll frame.
   useEffect(() => {
     virtual.refresh();
     const el = scrollerRef.current;
@@ -173,6 +184,10 @@ export function SpecMatrix() {
       el.scrollTop = 0;
     }
   }, [virtual, sorted]);
+
+  useEffect(() => {
+    virtual.refresh();
+  }, [virtual, focusIndex]);
 
   const rowEls = useRef(new Map<number, HTMLElement>());
   const rowRef = useCallback((index: number, el: HTMLElement | null) => {
@@ -189,7 +204,6 @@ export function SpecMatrix() {
   // scrolled the row into view.
   const pendingFocus = useRef(false);
   useEffect(() => {
-    virtual.refresh();
     if (focusIndex !== null && pendingFocus.current) {
       const el = rowEls.current.get(focusIndex);
       if (el) {
@@ -197,7 +211,7 @@ export function SpecMatrix() {
         pendingFocus.current = false;
       }
     }
-  }, [virtual, focusIndex, items]);
+  }, [focusIndex, items]);
 
   function pressHeader(column: SortColumn) {
     setFocusIndex(null);
@@ -207,6 +221,13 @@ export function SpecMatrix() {
       setSortColumn(column);
       setSortDirection(initialDirection(column));
     }
+  }
+
+  // Plain DOM focus — exactly what Tab produces — must sync into state, or
+  // keep() protects nothing and the focused row unrenders out from under
+  // the user on scroll. No scrolling, no selecting: focus alone.
+  function focusRow(index: number) {
+    setFocusIndex(index);
   }
 
   function pressRow(index: number) {
@@ -298,7 +319,7 @@ export function SpecMatrix() {
           );
         })}
       </div>
-      <div className="mbody" role="presentation" style={{ height: virtual.size() }}>
+      <div className="mbody" role="presentation" style={{ height: size }}>
         {items.map((item) => {
           const row = sorted[item.index];
           if (!row) {
@@ -310,9 +331,17 @@ export function SpecMatrix() {
               row={row}
               item={item}
               selected={row.id === selectedId}
-              tabStop={focusIndex === null ? item.index === 0 : focusIndex === item.index}
+              tabStop={
+                // With no focused row the stop belongs to the first rendered
+                // item, never a hard-tied index: row 0 unrenders when scrolled
+                // away, and a grid with zero tab stops is keyboard-unreachable.
+                focusIndex === null
+                  ? item.index === items[0]?.index
+                  : focusIndex === item.index
+              }
               onPress={pressRow}
               onKey={keyRow}
+              onFocus={focusRow}
               rowRef={rowRef}
             />
           );
