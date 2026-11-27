@@ -1,0 +1,21 @@
+package.json
+  s_d3bab6208dda7c::t_16202c4e4a45f7 16-17
+pnpm-lock.yaml
+  s_d3bab6208dda7c::t_30862f9c22e085 11-16,194-199,1263-1266
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "10f742ef72629c872e262684c081e7d90101bbfc",
+  "prompts": {},
+  "sessions": {
+    "s_d3bab6208dda7c": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-2-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
