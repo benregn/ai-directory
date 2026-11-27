@@ -1,0 +1,150 @@
+/* ── spec matrix ── */
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.matrix col.c-idx {
+  width: 34px;
+}
+.matrix col.c-name {
+  width: 278px;
+}
+.matrix col.c-cat {
+  width: 118px;
+}
+.matrix col.c-lic {
+  width: 86px;
+}
+.matrix col.c-dep {
+  width: 118px;
+}
+.matrix col.c-oss {
+  width: 52px;
+}
+.matrix col.c-star {
+  width: 76px;
+}
+
+.matrix th {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gray);
+  text-align: left;
+  padding: 9px 10px 8px;
+  border-bottom: 1px solid var(--ink);
+  white-space: nowrap;
+}
+
+.matrix th .srt {
+  color: var(--blue);
+  font-size: 9px;
+  margin-left: 3px;
+}
+
+.matrix th.act {
+  color: var(--ink);
+}
+
+.matrix th.r,
+.matrix td.r {
+  text-align: right;
+}
+
+.matrix td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+  font-size: 12.5px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.matrix td.idx {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 10px;
+  color: var(--gray);
+}
+
+.matrix td.cat,
+.matrix td.dep {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+}
+
+.matrix td.lic {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 10.5px;
+}
+
+.matrix td.oss {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 10.5px;
+  color: var(--gray);
+}
+
+.matrix td.star {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.matrix td.dim {
+  color: var(--dim);
+}
+
+.ncell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mtile {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  background: var(--ink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.ntxt {
+  min-width: 0;
+}
+
+.nname {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nsum {
+  font-size: 11px;
+  color: var(--gray);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.matrix tbody tr:hover {
+  background: var(--row-hover);
+}
+
+.matrix tbody tr.sel {
+  background: var(--row-selected);
+  box-shadow: inset 2px 0 0 var(--blue);
+}

@@ -1,0 +1,41 @@
+/* ── parameter strip ── */
+.strip {
+  height: 38px;
+  background: var(--wash);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 8px;
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 11px;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+.strip b {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.strip .x {
+  color: var(--blue);
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.strip .sep {
+  margin: 0 4px;
+  color: var(--dim);
+}
+
+.strip .res {
+  margin-left: auto;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.strip .clear {
+  margin-left: 14px;
+  font-size: 10.5px;
+}
