@@ -13,12 +13,15 @@
 
 /* Column widths carry the mock's proportions, widened where the real data
    demands it: 3-digit entry numbers (38px), the Proprietary license (90px),
-   and tilde-prefixed star counts like ~217,100 (78px) must never truncate —
-   truncation is for text columns, not machine facts. */
+   tilde-prefixed star counts like ~217,100 (78px), and the category
+   vocabulary — controlled values, machine facts like licenses: "AI labs &
+   coding models" measures 112px at the row font: 112 + 20px padding + 2px
+   subpixel slack.
+   Truncation is for free text (summary, deployment), not machine facts. */
 .mhead,
 .mrow {
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) 118px 94px 118px 52px 86px;
+  grid-template-columns: 42px minmax(0, 1fr) 134px 94px 118px 52px 86px;
   align-items: center;
 }
 
