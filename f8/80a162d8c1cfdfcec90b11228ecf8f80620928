@@ -1,0 +1,27 @@
+src/components/SpecMatrix.test.tsx
+  s_74e5d8612fd950::t_42dafa8de0315b 122-187
+src/components/SpecMatrix.css
+  s_74e5d8612fd950::t_ce0d46f692b4fd 37-38,49-53,64-65
+  s_74e5d8612fd950::t_fc28908f7e9219 66-67
+src/components/SpecMatrix.tsx
+  s_74e5d8612fd950::t_ca21e42fa045d2 140-144,149,234,243-252,257,262,273
+  s_74e5d8612fd950::t_362929924e9fc8 9,338
+  s_74e5d8612fd950::t_7f620b43a1e535 233
+  s_74e5d8612fd950::t_490ed5d68ec5db 205-207,213-218,225-232
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f880a162d8c1cfdfcec90b11228ecf8f80620928",
+  "prompts": {},
+  "sessions": {
+    "s_74e5d8612fd950": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-3-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
