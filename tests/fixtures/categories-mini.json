@@ -1,0 +1,47 @@
+{
+  "source": "https://githits.com/software-factories/",
+  "discovered_at": "2026-01-01T00:00:00+00:00",
+  "categories": [
+    {
+      "name": "Agent orchestration",
+      "slug": "agent-orchestration",
+      "url": "https://githits.com/software-factories/category/agent-orchestration/",
+      "advertised_count": 2,
+      "item_urls": [
+        "https://githits.com/software-factories/8090/",
+        "https://githits.com/software-factories/aeon/"
+      ],
+      "collected_count": 2
+    }
+  ],
+  "topics": [],
+  "directory_inventory": {
+    "url_count": 2,
+    "item_urls": [
+      "https://githits.com/software-factories/8090/",
+      "https://githits.com/software-factories/aeon/"
+    ]
+  },
+  "unique_item_count": 2,
+  "unique_item_urls": [
+    "https://githits.com/software-factories/8090/",
+    "https://githits.com/software-factories/aeon/"
+  ],
+  "items": {
+    "https://githits.com/software-factories/8090/": {
+      "categories": ["agent-orchestration"],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/aeon/": {
+      "categories": ["agent-orchestration"],
+      "in_directory_inventory": true
+    }
+  },
+  "observations": {
+    "advertised_total": 2,
+    "collected_total_with_duplicates": 2,
+    "in_inventory_not_in_categories": [],
+    "in_categories_not_in_inventory": []
+  },
+  "errors": []
+}
