@@ -1,0 +1,297 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>directory mock</title>
+<style>
+* { box-sizing:border-box; margin:0; padding:0 }
+body { font:12px/1.35 -apple-system,"SF Pro Text",Helvetica,Arial,sans-serif; color:#1a1a1a; background:#fafafa }
+code,.mono { font-family:ui-monospace,Menlo,monospace }
+/* toolbar */
+.bar { position:sticky; top:0; background:#fff; border-bottom:1px solid #ddd; padding:5px 8px; display:flex; gap:6px; align-items:center; z-index:5; flex-wrap:wrap }
+.bar input[type=search] { width:170px; padding:2px 7px; border:1px solid #ccc; border-radius:4px; font-size:12px }
+.chip { display:inline-block; padding:0 5px; border-radius:8px; border:1px solid; font-size:10px; white-space:nowrap; max-width:92px; overflow:hidden; text-overflow:ellipsis; vertical-align:0 }
+.fchip { padding:1px 7px; border-radius:9px; border:1px solid #bbb; background:#f3f3f3; cursor:pointer; font-size:11px; white-space:nowrap }
+.fchip.on { background:#1a1a1a; color:#fff; border-color:#1a1a1a }
+.count { margin-left:auto; color:#777; font-size:11px }
+select { font-size:11px; padding:1px 2px }
+/* layout */
+.wrap { display:flex }
+table { border-collapse:collapse; flex:1; min-width:0; table-layout:fixed; width:100% }
+thead th { position:sticky; top:30px; background:#f0f0f0; text-align:left; padding:3px 6px; border-bottom:1px solid #ccc; font-size:10.5px; text-transform:uppercase; letter-spacing:.4px; color:#555; white-space:nowrap; cursor:pointer; z-index:4 }
+thead th .arr { color:#999 }
+td { padding:2px 6px; border-bottom:1px solid #eee; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+tr.row:hover { background:#eef4ff }
+tr.row.sel { background:#dbeafe }
+.c-name { max-width:170px; overflow:hidden; text-overflow:ellipsis }
+.c-sum { max-width:340px; overflow:hidden; text-overflow:ellipsis; color:#444 }
+.c-top { max-width:150px; overflow:hidden; text-overflow:ellipsis; color:#666; font-size:11px }
+.num { text-align:right; font-variant-numeric:tabular-nums }
+.ctr { text-align:center; color:#059669 }
+.nowrap { color:#666; font-size:11px } td:nth-child(5) { font-size:10.5px; color:#555 }
+.links a { text-decoration:none; margin-right:4px; color:#2563eb }
+.oss { font-size:9px; background:#05966918; color:#059669; border:1px solid #05966940; border-radius:6px; padding:0 4px; margin-left:4px; vertical-align:1px }
+.nologo { display:inline-block; width:14px; height:14px; border-radius:3px; background:#ddd; color:#666; font-size:9px; text-align:center; line-height:14px }
+/* detail panel */
+.panel { width:400px; flex:none; border-left:1px solid #ddd; background:#fff; height:calc(100vh - 30px); position:sticky; top:29px; overflow-y:auto; padding:10px 12px }
+.panel h2 { font-size:15px; margin-bottom:2px }
+.panel .sub { color:#666; margin-bottom:8px }
+.panel h3 { font-size:10.5px; text-transform:uppercase; letter-spacing:.5px; color:#888; margin:10px 0 3px }
+.panel p { margin-bottom:5px; color:#333 }
+.panel ul { padding-left:16px }
+.panel li { margin-bottom:2px }
+.kv { display:grid; grid-template-columns:105px 1fr; gap:2px 8px; font-size:11.5px }
+.kv dt { color:#888 }
+.kv dd { overflow:hidden; text-overflow:ellipsis }
+.simcard { border:1px solid #e5e5e5; border-radius:4px; padding:4px 7px; margin-bottom:4px }
+.simcard b { display:block; font-size:11.5px }
+.simcard span { color:#666; font-size:11px; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.acts a { display:inline-block; margin-right:6px; padding:2px 10px; border:1px solid #ccc; border-radius:4px; text-decoration:none; color:#1a1a1a; background:#f8f8f8 }
+.acts a.primary { background:#1a1a1a; color:#fff; border-color:#1a1a1a }
+</style></head><body>
+<div class="bar">
+<input type="search" placeholder="filter…  ( / )">
+<span class="fchip on">all 239</span>
+<span class="fchip">orchestration 74</span>
+<span class="fchip">app-builders 65</span>
+<span class="fchip">eng-factories 56</span>
+<span class="fchip">infra 19</span>
+<span class="fchip">+4</span>
+<select><option>license</option></select>
+<select><option>deploy</option></select>
+<select><option>topic</option></select>
+<label style="font-size:11px;color:#555"><input type="checkbox"> OSS only</label>
+<label style="font-size:11px;color:#555"><input type="checkbox"> has ★</label>
+<span class="count">16 / 239 · sort: stars ↓</span>
+</div>
+<div class="wrap">
+<div style="flex:1;min-width:0;overflow-x:auto">
+<table>
+<colgroup><col style="width:150px"><col><col style="width:100px"><col style="width:150px"><col style="width:72px"><col style="width:34px"><col style="width:44px"><col style="width:22px"><col style="width:56px"><col style="width:46px"></colgroup>
+<thead><tr>
+<th>name</th><th>summary</th><th>category</th><th>topics</th><th>license</th><th>dep</th><th style="text-align:right">★ <span class="arr">▼</span></th><th>$</th><th>verified</th><th>links</th>
+</tr></thead>
+<tbody>
+<tr class="row sel">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/8090-a77d1f33af.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>8090</b></td>
+<td class="c-sum" title="AI-native software company that builds enterprise software with AI agents under governance and audit controls.">AI-native software company that builds enterprise software with AI agents under governance and audit controls.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Enterprise, Governance &amp; audit</td>
+<td>Prop</td>
+<td class="mono"></td>
+<td class="num"></td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://www.8090.ai/">↗</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/aeon-5bd1fdbda3.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Aeon</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Open-source framework that runs unattended on GitHub Actions, dispatching markdown-defined skills and repairing failing ones.">Open-source framework that runs unattended on GitHub Actions, dispatching markdown-defined skills and repairing failing ones.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Background agents, MCP</td>
+<td>MIT</td>
+<td class="mono"></td>
+<td class="num">777</td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://www.aeon.fun/">↗</a><a href="https://github.com/aeonfun/aeon" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/agentic-engineering-os-b264d9d68d.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Agentic Engineering OS</b></td>
+<td class="c-sum" title="Platform for running and governing coding agents across software delivery, with Knowledge Core, Ledger and Mission Control.">Platform for running and governing coding agents across software delivery, with Knowledge Core, Ledger and Mission Control.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Governance &amp; audit, Enterprise</td>
+<td>Prop</td>
+<td class="mono">C</td>
+<td class="num"></td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://modernpath.ai/">↗</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/ai-ready-nx-workspace-7b5e30e748.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>AI-Ready Nx Workspace</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Agent-agnostic governance layer that makes coding agents follow a repository&#x27;s architecture, SDLC phases and quality gates.">Agent-agnostic governance layer that makes coding agents follow a repository&#x27;s architecture, SDLC phases and quality gates.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Works with your agents, Governance &amp; audit +1</td>
+<td>—</td>
+<td class="mono"></td>
+<td class="num"></td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://www.codeaiforge.com/">↗</a><a href="https://github.com/codeaiforge/ai-ready-nx-workspace" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/aifactory-4569b24f2b.ico" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>AIFactory</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Self-hosted, browser-based software factory where planner, coder and QA agents take a spec to working code.">Self-hosted, browser-based software factory where planner, coder and QA agents take a spec to working code.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Spec-driven development, Multi-agent systems +3</td>
+<td>—</td>
+<td class="mono">S</td>
+<td class="num"></td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://aifactory.freundcloud.com/">↗</a><a href="https://github.com/olafkfreund/AIFactory" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/atomic-6bd21028ed.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Atomic</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Verifiable coding agent runtime that models the engineering process as a graph of stages, checks and approval gates.">Verifiable coding agent runtime that models the engineering process as a graph of stages, checks and approval gates.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Governance &amp; audit, Testing &amp; QA</td>
+<td>—</td>
+<td class="mono"></td>
+<td class="num">861</td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://bastani.ai/">↗</a><a href="https://github.com/bastani-inc/atomic" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/cyrus-3f353b614d.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Cyrus</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Claude Code background agent for Linear, Slack, GitHub and GitLab that can be self-hosted or used as a cloud service.">Claude Code background agent for Linear, Slack, GitHub and GitLab that can be self-hosted or used as a cloud service.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Background agents, Works with your agents +1</td>
+<td>Apache-2.0</td>
+<td class="mono">CS</td>
+<td class="num">857</td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://atcyrus.com/">↗</a><a href="https://github.com/cyrusagents/cyrus" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/foreman-9ef0988c4f.jpg" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Foreman</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Terminal UI orchestrator that supervises headless Claude Code agents through a gated pipeline.">Terminal UI orchestrator that supervises headless Claude Code agents through a gated pipeline.</td>
+<td><span class="chip" style="background:#7c3aed18;color:#7c3aed;border-color:#7c3aed40">orchestration</span></td>
+<td class="c-top">Works with your agents, CLI</td>
+<td>MIT</td>
+<td class="mono"></td>
+<td class="num">443</td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://github.com/VisionForge-OU/foreman">↗</a><a href="https://github.com/VisionForge-OU/foreman" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/agentic-software-factory-9f16a03599.jpg" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Agentic Software Factory</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Open-source reference design for OpenShift AI where a chain of agents turns requirements into issues, code and reviewed pull requests.">Open-source reference design for OpenShift AI where a chain of agents turns requirements into issues, code and reviewed pull requests.</td>
+<td><span class="chip" style="background:#05966918;color:#059669;border-color:#05966940">eng-factories</span></td>
+<td class="c-top">Multi-agent systems, Issue to pull request +2</td>
+<td>—</td>
+<td class="mono"></td>
+<td class="num"></td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://github.com/rh-ai-quickstart/agentic-software-factory">↗</a><a href="https://github.com/rh-ai-quickstart/agentic-software-factory" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/appfactor-f4a0c316da.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>AppFactor</b></td>
+<td class="c-sum" title="Persistent AI agents that maintain and modernize a company&#x27;s whole software estate, built for regulated enterprises.">Persistent AI agents that maintain and modernize a company&#x27;s whole software estate, built for regulated enterprises.</td>
+<td><span class="chip" style="background:#05966918;color:#059669;border-color:#05966940">eng-factories</span></td>
+<td class="c-top">Legacy modernization, Enterprise +1</td>
+<td>Prop</td>
+<td class="mono">S</td>
+<td class="num"></td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://www.appfactor.io/">↗</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><span class="nologo">A</span> <b>Anything</b></td>
+<td class="c-sum" title="AI agent that builds mobile and web apps from a chat, with database, login, backend and payments built in.">AI agent that builds mobile and web apps from a chat, with database, login, backend and payments built in.</td>
+<td><span class="chip" style="background:#2563eb18;color:#2563eb;border-color:#2563eb40">app-builders</span></td>
+<td class="c-top">Prompt to app, Mobile apps +1</td>
+<td>Prop</td>
+<td class="mono">C</td>
+<td class="num"></td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://www.create.xyz/">↗</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/appwizzy-505a30156d.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>AppWizzy</b></td>
+<td class="c-sum" title="Builds web apps and websites from a plain English description, each running on its own hosted virtual machine.">Builds web apps and websites from a plain English description, each running on its own hosted virtual machine.</td>
+<td><span class="chip" style="background:#2563eb18;color:#2563eb;border-color:#2563eb40">app-builders</span></td>
+<td class="c-top">Prompt to app, Web apps +1</td>
+<td>Prop</td>
+<td class="mono">C</td>
+<td class="num"></td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://appwizzy.com/">↗</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/cline-be425bfbb8.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Cline</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Open-source agentic coding assistant with Plan and Act modes and MCP tooling.">Open-source agentic coding assistant with Plan and Act modes and MCP tooling.</td>
+<td><span class="chip" style="background:#0891b218;color:#0891b2;border-color:#0891b240">workspaces</span></td>
+<td class="c-top">IDE, CLI +3</td>
+<td>Apache-2.0</td>
+<td class="mono"></td>
+<td class="num"></td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://cline.bot/">↗</a><a href="https://github.com/cline/cline" title="repository">gh</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/conductor-d71042d261.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Conductor</b></td>
+<td class="c-sum" title="Mac app that runs Claude Code, Codex, Cursor and OpenCode agents in parallel isolated workspaces with multiplayer review.">Mac app that runs Claude Code, Codex, Cursor and OpenCode agents in parallel isolated workspaces with multiplayer review.</td>
+<td><span class="chip" style="background:#0891b218;color:#0891b2;border-color:#0891b240">workspaces</span></td>
+<td class="c-top">Parallel agents, Works with your agents +3</td>
+<td>Prop</td>
+<td class="mono"></td>
+<td class="num"></td>
+<td class="ctr"></td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://conductor.build/">↗</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/actual-ai-f6a114f2fa.png" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Actual</b></td>
+<td class="c-sum" title="Turns a team&#x27;s code, docs and tickets into architecture decisions and reviews every pull request against them.">Turns a team&#x27;s code, docs and tickets into architecture decisions and reviews every pull request against them.</td>
+<td><span class="chip" style="background:#dc262618;color:#dc2626;border-color:#dc262640">Code review &amp; quality</span></td>
+<td class="c-top">Code review, MCP +1</td>
+<td>Prop</td>
+<td class="mono"></td>
+<td class="num"></td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://actual.ai/">↗</a></td>
+</tr>
+<tr class="row">
+<td class="c-name"><img src="https://githits.com/assets/directory/logos/baz-812d55cad8.svg" width="14" height="14" style="border-radius:3px;vertical-align:-2px"> <b>Baz</b><span class="oss">OSS</span></td>
+<td class="c-sum" title="Agentic code review platform that extends AI review upstream into planning, reviewing coding plans before code is written.">Agentic code review platform that extends AI review upstream into planning, reviewing coding plans before code is written.</td>
+<td><span class="chip" style="background:#dc262618;color:#dc2626;border-color:#dc262640">Code review &amp; quality</span></td>
+<td class="c-top">Code review, Spec-driven development +3</td>
+<td>AGPL-3.0</td>
+<td class="mono"></td>
+<td class="num">46</td>
+<td class="ctr">✓</td>
+<td class="nowrap">October</td>
+<td class="links"><a href="https://baz.co/">↗</a><a href="https://github.com/baz-scm/baz-cli" title="repository">gh</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="panel">
+<h2>Aeon <span style="font-weight:normal;color:#666;font-size:12px">777 ★</span></h2>
+<div class="sub">Open-source framework that runs unattended on GitHub Actions, dispatching markdown-defined skills and repairing failing ones.</div>
+<div class="acts"><a class="primary" href="https://www.aeon.fun/">visit site ↗</a><a href="https://github.com/aeonfun/aeon">github</a></div>
+<h3>overview</h3>
+<p>Aeon is an open-source framework that runs unattended on GitHub Actions. It dispatches skills written in markdown and repairs the ones that fail, using your own agent keys.</p>
+<p>The framework, including its workflows, 86 skills and a dashboard, is MIT licensed. A hosted Aeon Connect dashboard and MCP endpoint are available for free, and all runs happen on the user’s own GitHub Actions.</p>
+<h3>features</h3>
+<ul><li>Runs unattended on your own GitHub Actions.</li>
+<li>Dispatches skills defined in markdown.</li>
+<li>Repairs skills that fail.</li>
+<li>Ships with workflows, 86 skills and a dashboard.</li>
+<li>Offers a free hosted Aeon Connect dashboard and MCP endpoint.</li></ul>
+<h3>details</h3>
+<dl class="kv">
+<dt>category</dt><dd>Agent orchestration</dd>
+<dt>license</dt><dd>MIT</dd>
+<dt>deployment</dt><dd>—</dd>
+<dt>commercial</dt><dd>None found</dd>
+<dt>hq</dt><dd>—</dd>
+<dt>topics</dt><dd>Background agents, MCP</dd>
+<dt>listed</dt><dd>October 2026</dd>
+<dt>verified</dt><dd>October 2026</dd>
+</dl>
+<h3>similar</h3>
+<div class="simcard"><b>AI-Ready Nx Workspace</b><span>Agent-agnostic governance layer that makes coding agents follow a repository&#x27;s architecture, SDLC phases and quality gates.</span></div>
+<div class="simcard"><b>Alfred</b><span>Local, scheduled agent fleet driven by GitHub issue labels and built on Claude Code, Codex and OpenCode.</span></div>
+<div class="simcard"><b>Beadhive</b><span>Open-source CLI that runs an agentic software factory on your machine, driving your own Claude Code and OpenCode.</span></div>
+<div class="simcard"><b>Cyrus</b><span>Claude Code background agent for Linear, Slack, GitHub and GitLab that can be self-hosted or used as a cloud service.</span></div>
+</div>
+</div>
+</body></html>
