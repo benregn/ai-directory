@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predev": "node scripts/build-data.mjs",
+    "prebuild": "node scripts/build-data.mjs",
     "build": "tsc -b && vite build",
     "lint": "oxlint src",
     "preview": "vite preview",
