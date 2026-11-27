@@ -1,0 +1,178 @@
+.agents/skills/vercel-react-best-practices/AGENTS.md
+  h_9889e896d9694b 1-3810
+.agents/skills/vercel-react-best-practices/README.md
+  h_9889e896d9694b 1-123
+.agents/skills/vercel-react-best-practices/SKILL.md
+  h_9889e896d9694b 1-149
+.agents/skills/vercel-react-best-practices/rules/_sections.md
+  h_9889e896d9694b 1-46
+.agents/skills/vercel-react-best-practices/rules/_template.md
+  h_9889e896d9694b 1-28
+.agents/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md
+  h_9889e896d9694b 1-56
+.agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md
+  h_9889e896d9694b 1-55
+.agents/skills/vercel-react-best-practices/rules/advanced-init-once.md
+  h_9889e896d9694b 1-42
+.agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md
+  h_9889e896d9694b 1-39
+.agents/skills/vercel-react-best-practices/rules/async-api-routes.md
+  h_9889e896d9694b 1-38
+.agents/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md
+  h_9889e896d9694b 1-37
+.agents/skills/vercel-react-best-practices/rules/async-defer-await.md
+  h_9889e896d9694b 1-82
+.agents/skills/vercel-react-best-practices/rules/async-dependencies.md
+  h_9889e896d9694b 1-51
+.agents/skills/vercel-react-best-practices/rules/async-parallel.md
+  h_9889e896d9694b 1-28
+.agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md
+  h_9889e896d9694b 1-99
+.agents/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md
+  h_9889e896d9694b 1-63
+.agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md
+  h_9889e896d9694b 1-60
+.agents/skills/vercel-react-best-practices/rules/bundle-conditional.md
+  h_9889e896d9694b 1-31
+.agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md
+  h_9889e896d9694b 1-49
+.agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md
+  h_9889e896d9694b 1-35
+.agents/skills/vercel-react-best-practices/rules/bundle-preload.md
+  h_9889e896d9694b 1-50
+.agents/skills/vercel-react-best-practices/rules/client-event-listeners.md
+  h_9889e896d9694b 1-74
+.agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md
+  h_9889e896d9694b 1-71
+.agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md
+  h_9889e896d9694b 1-48
+.agents/skills/vercel-react-best-practices/rules/client-swr-dedup.md
+  h_9889e896d9694b 1-56
+.agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md
+  h_9889e896d9694b 1-107
+.agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md
+  h_9889e896d9694b 1-80
+.agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md
+  h_9889e896d9694b 1-28
+.agents/skills/vercel-react-best-practices/rules/js-cache-storage.md
+  h_9889e896d9694b 1-70
+.agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md
+  h_9889e896d9694b 1-32
+.agents/skills/vercel-react-best-practices/rules/js-early-exit.md
+  h_9889e896d9694b 1-50
+.agents/skills/vercel-react-best-practices/rules/js-flatmap-filter.md
+  h_9889e896d9694b 1-60
+.agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md
+  h_9889e896d9694b 1-45
+.agents/skills/vercel-react-best-practices/rules/js-index-maps.md
+  h_9889e896d9694b 1-37
+.agents/skills/vercel-react-best-practices/rules/js-length-check-first.md
+  h_9889e896d9694b 1-49
+.agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md
+  h_9889e896d9694b 1-82
+.agents/skills/vercel-react-best-practices/rules/js-request-idle-callback.md
+  h_9889e896d9694b 1-105
+.agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md
+  h_9889e896d9694b 1-24
+.agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md
+  h_9889e896d9694b 1-57
+.agents/skills/vercel-react-best-practices/rules/rendering-activity.md
+  h_9889e896d9694b 1-26
+.agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md
+  h_9889e896d9694b 1-47
+.agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md
+  h_9889e896d9694b 1-40
+.agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md
+  h_9889e896d9694b 1-38
+.agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md
+  h_9889e896d9694b 1-46
+.agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md
+  h_9889e896d9694b 1-82
+.agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md
+  h_9889e896d9694b 1-30
+.agents/skills/vercel-react-best-practices/rules/rendering-resource-hints.md
+  h_9889e896d9694b 1-85
+.agents/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md
+  h_9889e896d9694b 1-68
+.agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md
+  h_9889e896d9694b 1-28
+.agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md
+  h_9889e896d9694b 1-75
+.agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md
+  h_9889e896d9694b 1-39
+.agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md
+  h_9889e896d9694b 1-45
+.agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md
+  h_9889e896d9694b 1-40
+.agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md
+  h_9889e896d9694b 1-29
+.agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md
+  h_9889e896d9694b 1-74
+.agents/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md
+  h_9889e896d9694b 1-58
+.agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md
+  h_9889e896d9694b 1-38
+.agents/skills/vercel-react-best-practices/rules/rerender-memo.md
+  h_9889e896d9694b 1-44
+.agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md
+  h_9889e896d9694b 1-45
+.agents/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md
+  h_9889e896d9694b 1-82
+.agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md
+  h_9889e896d9694b 1-35
+.agents/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md
+  h_9889e896d9694b 1-64
+.agents/skills/vercel-react-best-practices/rules/rerender-transitions.md
+  h_9889e896d9694b 1-40
+.agents/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md
+  h_9889e896d9694b 1-59
+.agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md
+  h_9889e896d9694b 1-73
+.agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md
+  h_9889e896d9694b 1-73
+.agents/skills/vercel-react-best-practices/rules/server-auth-actions.md
+  h_9889e896d9694b 1-96
+.agents/skills/vercel-react-best-practices/rules/server-cache-lru.md
+  h_9889e896d9694b 1-41
+.agents/skills/vercel-react-best-practices/rules/server-cache-react.md
+  h_9889e896d9694b 1-76
+.agents/skills/vercel-react-best-practices/rules/server-dedup-props.md
+  h_9889e896d9694b 1-65
+.agents/skills/vercel-react-best-practices/rules/server-hoist-static-io.md
+  h_9889e896d9694b 1-149
+.agents/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md
+  h_9889e896d9694b 1-50
+.agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md
+  h_9889e896d9694b 1-83
+.agents/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md
+  h_9889e896d9694b 1-34
+.agents/skills/vercel-react-best-practices/rules/server-serialization.md
+  h_9889e896d9694b 1-38
+.agents/skills/vercel-react-view-transitions/AGENTS.md
+  h_9889e896d9694b 1-1380
+.agents/skills/vercel-react-view-transitions/README.md
+  h_9889e896d9694b 1-44
+.agents/skills/vercel-react-view-transitions/SKILL.md
+  h_9889e896d9694b 1-332
+.agents/skills/vercel-react-view-transitions/references/css-recipes.md
+  h_9889e896d9694b 1-312
+.agents/skills/vercel-react-view-transitions/references/implementation.md
+  h_9889e896d9694b 1-170
+.agents/skills/vercel-react-view-transitions/references/nextjs.md
+  h_9889e896d9694b 1-233
+.agents/skills/vercel-react-view-transitions/references/patterns.md
+  h_9889e896d9694b 1-274
+.agents/skills/vercel-react-view-transitions/references/troubleshooting.md
+  h_9889e896d9694b 1-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "89ef382e2e31ca7d5d2726509059f57b8b50bd01",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
