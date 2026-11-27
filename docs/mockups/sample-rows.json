@@ -1,0 +1,201 @@
+[
+ {
+  "name": "8090",
+  "summary": "AI-native software company that builds enterprise software with AI agents under governance and audit controls.",
+  "category": "Agent orchestration",
+  "oss": false,
+  "topics": [
+   "Enterprise",
+   "Governance & audit"
+  ],
+  "license": "Proprietary",
+  "deployment": "",
+  "stars": null,
+  "commercial": false,
+  "verified": "October 2026",
+  "hq": "Menlo Park, CA, United States"
+ },
+ {
+  "name": "Aeon",
+  "summary": "Open-source framework that runs unattended on GitHub Actions, dispatching markdown-defined skills and repairing failing ones.",
+  "category": "Agent orchestration",
+  "oss": true,
+  "topics": [
+   "Background agents",
+   "MCP"
+  ],
+  "license": "MIT",
+  "deployment": "",
+  "stars": 777,
+  "commercial": false,
+  "verified": "October 2026",
+  "hq": ""
+ },
+ {
+  "name": "Agentic Engineering OS",
+  "summary": "Platform for running and governing coding agents across software delivery, with Knowledge Core, Ledger and Mission Control.",
+  "category": "Agent orchestration",
+  "oss": false,
+  "topics": [
+   "Governance & audit",
+   "Enterprise"
+  ],
+  "license": "Proprietary",
+  "deployment": "Cloud",
+  "stars": null,
+  "commercial": true,
+  "verified": "October 2026",
+  "hq": ""
+ },
+ {
+  "name": "AI-Ready Nx Workspace",
+  "summary": "Agent-agnostic governance layer that makes coding agents follow a repository's architecture, SDLC phases and quality gates.",
+  "category": "Agent orchestration",
+  "oss": true,
+  "topics": [
+   "Works with your agents",
+   "Governance & audit",
+   "MCP"
+  ],
+  "license": "",
+  "deployment": "",
+  "stars": null,
+  "commercial": true,
+  "verified": "October 2026",
+  "hq": "Athens, Greece"
+ },
+ {
+  "name": "AIFactory",
+  "summary": "Self-hosted, browser-based software factory where planner, coder and QA agents take a spec to working code.",
+  "category": "Agent orchestration",
+  "oss": true,
+  "topics": [
+   "Spec-driven development",
+   "Multi-agent systems",
+   "Git worktrees"
+  ],
+  "license": "",
+  "deployment": "Self-hosted",
+  "stars": null,
+  "commercial": false,
+  "verified": "October 2026",
+  "hq": "London, United Kingdom"
+ },
+ {
+  "name": "Atomic",
+  "summary": "Verifiable coding agent runtime that models the engineering process as a graph of stages, checks and approval gates.",
+  "category": "Agent orchestration",
+  "oss": true,
+  "topics": [
+   "Governance & audit",
+   "Testing & QA"
+  ],
+  "license": "",
+  "deployment": "",
+  "stars": 861,
+  "commercial": true,
+  "verified": "October 2026",
+  "hq": ""
+ },
+ {
+  "name": "Cyrus",
+  "summary": "Claude Code background agent for Linear, Slack, GitHub and GitLab that can be self-hosted or used as a cloud service.",
+  "category": "Agent orchestration",
+  "oss": true,
+  "topics": [
+   "Background agents",
+   "Works with your agents",
+   "Issue to pull request"
+  ],
+  "license": "Apache-2.0",
+  "deployment": "Cloud, Self-hosted",
+  "stars": 857,
+  "commercial": true,
+  "verified": "October 2026",
+  "hq": ""
+ },
+ {
+  "name": "Foreman",
+  "summary": "Terminal UI orchestrator that supervises headless Claude Code agents through a gated pipeline.",
+  "category": "Agent orchestration",
+  "oss": true,
+  "topics": [
+   "Works with your agents",
+   "CLI"
+  ],
+  "license": "MIT",
+  "deployment": "",
+  "stars": 443,
+  "commercial": false,
+  "verified": "October 2026",
+  "hq": ""
+ },
+ {
+  "name": "Agentic Software Factory",
+  "summary": "Open-source reference design for OpenShift AI where a chain of agents turns requirements into issues, code and reviewed pull requests.",
+  "category": "Engineering factories",
+  "oss": true,
+  "topics": [
+   "Multi-agent systems",
+   "Issue to pull request",
+   "Code review"
+  ],
+  "license": "",
+  "deployment": "",
+  "stars": null,
+  "commercial": true,
+  "verified": "October 2026",
+  "hq": "Raleigh, NC"
+ },
+ {
+  "name": "AppFactor",
+  "summary": "Persistent AI agents that maintain and modernize a company's whole software estate, built for regulated enterprises.",
+  "category": "Engineering factories",
+  "oss": false,
+  "topics": [
+   "Legacy modernization",
+   "Enterprise",
+   "MCP"
+  ],
+  "license": "Proprietary",
+  "deployment": "Self-hosted",
+  "stars": null,
+  "commercial": false,
+  "verified": "October 2026",
+  "hq": "London, United Kingdom"
+ },
+ {
+  "name": "Anything",
+  "summary": "AI agent that builds mobile and web apps from a chat, with database, login, backend and payments built in.",
+  "category": "App builders",
+  "oss": false,
+  "topics": [
+   "Prompt to app",
+   "Mobile apps",
+   "Web apps"
+  ],
+  "license": "Proprietary",
+  "deployment": "Cloud",
+  "stars": null,
+  "commercial": false,
+  "verified": "October 2026",
+  "hq": "San Francisco, CA"
+ },
+ {
+  "name": "AppWizzy",
+  "summary": "Builds web apps and websites from a plain English description, each running on its own hosted virtual machine.",
+  "category": "App builders",
+  "oss": false,
+  "topics": [
+   "Prompt to app",
+   "Web apps",
+   "Works with your agents"
+  ],
+  "license": "Proprietary",
+  "deployment": "Cloud",
+  "stars": null,
+  "commercial": false,
+  "verified": "October 2026",
+  "hq": "Warsaw, Mazowieckie, Poland"
+ }
+]
