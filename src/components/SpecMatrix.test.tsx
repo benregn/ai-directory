@@ -119,3 +119,69 @@ describe('roving tab stop under virtualization', () => {
     expect(first.classList.contains('sel')).toBe(true);
   });
 });
+
+function sortButtonOf(container: HTMLElement, label: string): HTMLElement {
+  const button = [...container.querySelectorAll<HTMLElement>('.msort')].find((el) =>
+    el.textContent?.includes(label),
+  );
+  if (!button) {
+    throw new Error(`no sort button: ${label}`);
+  }
+  return button;
+}
+
+describe('re-sort while a row holds focus', () => {
+  // Round-2 blocking finding: with focus on a row, activating a sort header
+  // does not move focus in Safari/Firefox-macOS or on programmatic clicks.
+  // React reuses the row element for a different product, no focus event
+  // fires, and scrolling dropped focus to BODY. The deliberate fix puts
+  // focus on the operated control — the sort button — in every browser.
+  for (const path of ['keyboard', 'mouse-click'] as const) {
+    test(`${path}-focused row + programmatic re-sort: focus lands on the button and never drops`, async () => {
+      const { container } = render(<SpecMatrix />);
+      await settle();
+      const first = rowsOf(container)[0];
+      if (!first) {
+        throw new Error('no rows rendered');
+      }
+      first.focus();
+      await settle();
+      if (path === 'keyboard') {
+        fireEvent.keyDown(first, { key: 'ArrowDown' });
+      } else {
+        fireEvent.click(first);
+      }
+      await settle();
+      expect(document.activeElement?.classList.contains('mrow')).toBe(true);
+
+      // Programmatic activation: the no-focus-on-click case, standing in
+      // for Safari and Firefox on macOS.
+      const license = sortButtonOf(container, 'License');
+      fireEvent.click(license);
+      await settle();
+
+      expect(document.activeElement).toBe(license);
+
+      await scrollDeep(container);
+      expect(document.activeElement).not.toBe(document.body);
+      expect(document.activeElement).toBe(license);
+    });
+  }
+
+  test('after re-sort the rows are keyboard-reachable again', async () => {
+    const { container } = render(<SpecMatrix />);
+    await settle();
+    const first = rowsOf(container)[0];
+    if (!first) {
+      throw new Error('no rows rendered');
+    }
+    first.focus();
+    await settle();
+    fireEvent.click(sortButtonOf(container, 'License'));
+    await settle();
+    // focusIndex reset with the sort: exactly one stop, on a rendered row
+    const stops = stopsOf(container);
+    expect(stops).toHaveLength(1);
+    expect(rowsOf(container)).toContain(stops[0]);
+  });
+});
