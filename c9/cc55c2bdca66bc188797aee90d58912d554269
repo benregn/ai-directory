@@ -1,0 +1,53 @@
+src/components/ParameterStrip.tsx
+  s_d3bab6208dda7c::t_187d3f9367b04f 1,13-17,19
+  s_d3bab6208dda7c::t_e1580c2e8c54d9 2-11,20-27
+  s_d3bab6208dda7c::t_e8aa175e5a46f0 12,18
+src/components/FacetRail.tsx
+  s_d3bab6208dda7c::t_8168454be1697a 1-34
+src/components/ParameterStrip.css
+  s_d3bab6208dda7c::t_21af3917d77b92 1-41
+src/components/SpecMatrix.tsx
+  s_d3bab6208dda7c::t_79364a523a54f6 7
+  s_d3bab6208dda7c::t_5b06384790c137 4-6,8-10,65-68
+  s_d3bab6208dda7c::t_b7c5f4f362d3fd 1-3,11-64,69-74
+src/index.css
+  s_d3bab6208dda7c::t_2d71e859716757 1-5,7-12,14-22,25-27,31,33,36-40,43-44,46-49,51-57,60-63,66-68
+src/placeholder.ts
+  s_d3bab6208dda7c::t_f9223421a7d598 1-304
+index.html
+  s_d3bab6208dda7c::t_11b1320aa878ba 7
+src/components/DetailDrawer.css
+  s_d3bab6208dda7c::t_27707e4ef31d45 1-158
+src/components/FacetRail.css
+  s_d3bab6208dda7c::t_d150d606cd55e3 1-79
+src/App.tsx
+  s_d3bab6208dda7c::t_fe07abd2f34c4b 1-5,7-11,13-24
+src/components/Masthead.tsx
+  s_d3bab6208dda7c::t_67f4a5e49335f0 1-33
+src/main.tsx
+  s_d3bab6208dda7c::t_25cb16b0083506 1-10,12,14,21
+src/components/SpecMatrix.css
+  s_d3bab6208dda7c::t_30083ee4bfaf98 1-150
+src/components/Masthead.css
+  s_d3bab6208dda7c::t_c830f8c0f2410a 1-91
+public/favicon.svg
+  s_d3bab6208dda7c::t_f90b3371bd0db4 1
+src/components/DetailDrawer.tsx
+  s_d3bab6208dda7c::t_d8730ac01334b2 1-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c9cc55c2bdca66bc188797aee90d58912d554269",
+  "prompts": {},
+  "sessions": {
+    "s_d3bab6208dda7c": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-2-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
