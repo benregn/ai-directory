@@ -1,0 +1,27 @@
+package.json
+  s_58aada15d971b8::t_d2ba97b755e0f7 8-9
+oxlint.config.ts
+  s_58aada15d971b8::t_0f3be7fede7e56 7-11
+src/data/types.ts
+  s_58aada15d971b8::t_f4b07d7d68658d 30,36,72-73,75,86,104,106,108,110
+  s_58aada15d971b8::t_d05a87feea57f1 1-29,31-35,37-71,74,76-85,87-103,105,107,109,111-131
+scripts/build-data.mjs
+  s_58aada15d971b8::t_78adccb1903894 336
+  s_58aada15d971b8::t_ce1c2af8ce9850 1-335,337-349
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "39f46f9f07340018b169fac275990ccf1fb15c24",
+  "prompts": {},
+  "sessions": {
+    "s_58aada15d971b8": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-1-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
