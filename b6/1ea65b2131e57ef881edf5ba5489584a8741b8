@@ -1,0 +1,26 @@
+oxlint.config.ts
+  s_8bdc183adb10b3::t_eaa4c563ea0ede 1-8
+src/App.tsx
+  s_8bdc183adb10b3::t_1d19faed16dc47 44,50,65,77,89,101
+src/main.tsx
+  s_8bdc183adb10b3::t_b0dde86db464fb 6,10-11
+  s_8bdc183adb10b3::t_2a4d6c69b29116 7-9
+uv.lock
+  s_8bdc183adb10b3::t_0b2d4f4295d076 1-460
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b61ea65b2131e57ef881edf5ba5489584a8741b8",
+  "prompts": {},
+  "sessions": {
+    "s_8bdc183adb10b3": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a21ce9-05bb-730b-8ede-539678b5015e",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
