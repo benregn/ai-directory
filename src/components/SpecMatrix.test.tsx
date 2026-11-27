@@ -3,16 +3,11 @@ import { describe, expect, test } from 'vitest';
 import { SpecMatrix } from './SpecMatrix.tsx';
 
 /**
- * Regression tests for review round 1, blocking finding 1: the roving tab
- * stop evaporated under virtualization. jsdom has no layout — clientHeight
- * is zero — but the virtualizer's window still tracks scrollTop, which is
- * exactly what these scenarios need.
- *
- * The invariants under test:
- *  A. Scrolled deep with no keyboard interaction, the grid still holds a
- *     tab stop — otherwise it is keyboard-unreachable.
- *  B. DOM focus alone (what Tab produces) is enough to protect the focused
- *     row: scroll it away and focus must not drop to the page.
+ * Interaction tests for the plain-rendered spec matrix. Since the owner
+ * stripped virtualization, every row is always in the DOM — the round-1/2
+ * evaporation scenarios are structurally impossible and their tests are
+ * replaced, not preserved. What these pin is the roving-focus logic itself
+ * and the deliberate focus placements, which are still real logic.
  */
 
 function settle() {
@@ -23,14 +18,6 @@ function settle() {
   });
 }
 
-function scrollerOf(container: HTMLElement): HTMLElement {
-  const el = container.querySelector<HTMLElement>('.matrix-scroll');
-  if (!el) {
-    throw new Error('no matrix scroller');
-  }
-  return el;
-}
-
 function rowsOf(container: HTMLElement): Array<HTMLElement> {
   return [...container.querySelectorAll<HTMLElement>('.mrow')];
 }
@@ -38,87 +25,6 @@ function rowsOf(container: HTMLElement): Array<HTMLElement> {
 function stopsOf(container: HTMLElement): Array<HTMLElement> {
   return [...container.querySelectorAll<HTMLElement>('.mrow[tabindex="0"]')];
 }
-
-async function scrollDeep(container: HTMLElement) {
-  const scroller = scrollerOf(container);
-  fireEvent.scroll(scroller, { target: { scrollTop: 3000 } });
-  await settle();
-}
-
-describe('roving tab stop under virtualization', () => {
-  test('exactly one tab stop exists in the grid on first render', async () => {
-    const { container } = render(<SpecMatrix />);
-    await settle();
-    expect(stopsOf(container)).toHaveLength(1);
-  });
-
-  test('path A: scrolled deep with no interaction, a tab stop still exists', async () => {
-    const { container } = render(<SpecMatrix />);
-    await settle();
-    await scrollDeep(container);
-    // The pre-fix failure: zero stops once row 0 unrendered. The stop must
-    // sit on a row that is actually rendered.
-    const stops = stopsOf(container);
-    expect(stops).toHaveLength(1);
-    expect(rowsOf(container)).toContain(stops[0]);
-  });
-
-  test('path B: plain DOM focus protects the row — scroll does not drop focus', async () => {
-    const { container } = render(<SpecMatrix />);
-    await settle();
-    const first = rowsOf(container)[0];
-    if (!first) {
-      throw new Error('no rows rendered');
-    }
-    // What Tab produces: DOM focus, no key pressed, no click.
-    first.focus();
-    await settle();
-    expect(document.activeElement).toBe(first);
-
-    await scrollDeep(container);
-
-    // The pre-fix failure: the row unrendered and activeElement fell to BODY.
-    // With DOM focus synced, keep() covers the row wherever the scroller is.
-    expect(document.activeElement).toBe(first);
-    expect(document.activeElement).not.toBe(document.body);
-    expect(rowsOf(container)).toContain(document.activeElement);
-  });
-
-  test('arrow keys still move focus after the scroll window moves', async () => {
-    const { container } = render(<SpecMatrix />);
-    await settle();
-    const first = rowsOf(container)[0];
-    if (!first) {
-      throw new Error('no rows rendered');
-    }
-    first.focus();
-    await settle();
-    fireEvent.keyDown(first, { key: 'ArrowDown' });
-    await settle();
-    const focused = document.activeElement;
-    expect(focused).not.toBe(first);
-    expect(focused?.classList.contains('mrow')).toBe(true);
-    // focus followed the move: exactly one stop, on the focused row
-    const stops = stopsOf(container);
-    expect(stops).toHaveLength(1);
-    expect(stops[0]).toBe(focused);
-  });
-
-  test('enter on the focused row selects it', async () => {
-    const { container } = render(<SpecMatrix />);
-    await settle();
-    const first = rowsOf(container)[0];
-    if (!first) {
-      throw new Error('no rows rendered');
-    }
-    first.focus();
-    await settle();
-    fireEvent.keyDown(first, { key: 'Enter' });
-    await settle();
-    expect(first.getAttribute('aria-selected')).toBe('true');
-    expect(first.classList.contains('sel')).toBe(true);
-  });
-});
 
 function sortButtonOf(container: HTMLElement, label: string): HTMLElement {
   const button = [...container.querySelectorAll<HTMLElement>('.msort')].find((el) =>
@@ -130,14 +36,99 @@ function sortButtonOf(container: HTMLElement, label: string): HTMLElement {
   return button;
 }
 
+describe('plain-rendered matrix', () => {
+  test('all 239 rows are in the DOM', async () => {
+    const { container } = render(<SpecMatrix />);
+    await settle();
+    expect(rowsOf(container)).toHaveLength(239);
+  });
+
+  test('exactly one tab stop exists at all times', async () => {
+    const { container } = render(<SpecMatrix />);
+    await settle();
+    expect(stopsOf(container)).toHaveLength(1);
+
+    // after focusing a row deep in the list
+    const rows = rowsOf(container);
+    rows[100]?.focus();
+    await settle();
+    const stops = stopsOf(container);
+    expect(stops).toHaveLength(1);
+    expect(stops[0]).toBe(rows[100]);
+
+    // after a re-sort
+    fireEvent.click(sortButtonOf(container, 'License'));
+    await settle();
+    expect(stopsOf(container)).toHaveLength(1);
+  });
+
+  test('arrow keys move focus row to row', async () => {
+    const { container } = render(<SpecMatrix />);
+    await settle();
+    const rows = rowsOf(container);
+    rows[0]?.focus();
+    await settle();
+    fireEvent.keyDown(rowsOf(container)[0], { key: 'ArrowDown' });
+    await settle();
+    expect(document.activeElement).toBe(rowsOf(container)[1]);
+    fireEvent.keyDown(rowsOf(container)[1], { key: 'ArrowUp' });
+    await settle();
+    expect(document.activeElement).toBe(rowsOf(container)[0]);
+  });
+
+  test('End focuses the last row, Home the first', async () => {
+    const { container } = render(<SpecMatrix />);
+    await settle();
+    const rows = rowsOf(container);
+    rows[0]?.focus();
+    await settle();
+    fireEvent.keyDown(rowsOf(container)[0], { key: 'End' });
+    await settle();
+    const last = rowsOf(container)[238];
+    expect(document.activeElement).toBe(last);
+    expect(last?.getAttribute('aria-rowindex')).toBe('240');
+    fireEvent.keyDown(rowsOf(container)[238], { key: 'Home' });
+    await settle();
+    expect(document.activeElement).toBe(rowsOf(container)[0]);
+  });
+
+  test('Enter selects the focused row, and again deselects', async () => {
+    const { container } = render(<SpecMatrix />);
+    await settle();
+    const first = rowsOf(container)[0];
+    if (!first) {
+      throw new Error('no rows rendered');
+    }
+    first.focus();
+    await settle();
+    fireEvent.keyDown(first, { key: 'Enter' });
+    await settle();
+    expect(first.getAttribute('aria-selected')).toBe('true');
+    fireEvent.keyDown(first, { key: 'Enter' });
+    await settle();
+    expect(first.getAttribute('aria-selected')).toBe('false');
+  });
+
+  test('click focuses and selects the row', async () => {
+    const { container } = render(<SpecMatrix />);
+    await settle();
+    const third = rowsOf(container)[2];
+    if (!third) {
+      throw new Error('no rows rendered');
+    }
+    fireEvent.click(third);
+    await settle();
+    expect(document.activeElement).toBe(third);
+    expect(third.getAttribute('aria-selected')).toBe('true');
+  });
+});
+
 describe('re-sort while a row holds focus', () => {
-  // Round-2 blocking finding: with focus on a row, activating a sort header
-  // does not move focus in Safari/Firefox-macOS or on programmatic clicks.
-  // React reuses the row element for a different product, no focus event
-  // fires, and scrolling dropped focus to BODY. The deliberate fix puts
-  // focus on the operated control — the sort button — in every browser.
+  // Rows never carry focus across a re-sort: focus moves onto the operated
+  // control deliberately, since Safari/Firefox-macOS and programmatic
+  // activation never focus clicked buttons.
   for (const path of ['keyboard', 'mouse-click'] as const) {
-    test(`${path}-focused row + programmatic re-sort: focus lands on the button and never drops`, async () => {
+    test(`${path}-focused row + programmatic re-sort: focus lands on the button`, async () => {
       const { container } = render(<SpecMatrix />);
       await settle();
       const first = rowsOf(container)[0];
@@ -154,34 +145,40 @@ describe('re-sort while a row holds focus', () => {
       await settle();
       expect(document.activeElement?.classList.contains('mrow')).toBe(true);
 
-      // Programmatic activation: the no-focus-on-click case, standing in
-      // for Safari and Firefox on macOS.
       const license = sortButtonOf(container, 'License');
       fireEvent.click(license);
       await settle();
-
       expect(document.activeElement).toBe(license);
 
-      await scrollDeep(container);
+      // deep scrolling changes nothing: the header never unrenders
+      const scroller = container.querySelector<HTMLElement>('.matrix-scroll');
+      if (!scroller) {
+        throw new Error('no scroller');
+      }
+      fireEvent.scroll(scroller, { target: { scrollTop: 4000 } });
+      await settle();
+      expect(document.activeElement).toBe(license);
       expect(document.activeElement).not.toBe(document.body);
-      expect(document.activeElement).toBe(license);
     });
   }
 
-  test('after re-sort the rows are keyboard-reachable again', async () => {
+  test('selection survives re-sort by row id', async () => {
     const { container } = render(<SpecMatrix />);
     await settle();
     const first = rowsOf(container)[0];
     if (!first) {
       throw new Error('no rows rendered');
     }
-    first.focus();
+    const name = first.querySelector('.nname')?.textContent;
+    fireEvent.click(first);
     await settle();
-    fireEvent.click(sortButtonOf(container, 'License'));
+    expect(first.getAttribute('aria-selected')).toBe('true');
+
+    fireEvent.click(sortButtonOf(container, 'Product'));
     await settle();
-    // focusIndex reset with the sort: exactly one stop, on a rendered row
-    const stops = stopsOf(container);
-    expect(stops).toHaveLength(1);
-    expect(rowsOf(container)).toContain(stops[0]);
+    const moved = rowsOf(container).find(
+      (row) => row.querySelector('.nname')?.textContent === name,
+    );
+    expect(moved?.getAttribute('aria-selected')).toBe('true');
   });
 });

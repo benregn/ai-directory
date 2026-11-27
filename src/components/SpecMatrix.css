@@ -1,8 +1,9 @@
-/* ── spec matrix: virtualized dense register ──
-   Rows are fixed-height and absolutely positioned by the ui-sdk virtualizer
-   inside .mbody; the sticky header shares their grid template exactly, so
-   columns align at every scroll position. Density target: 27px rows (issue
-   #3: 26–28px), a deliberate deviation from the mock's 48px. */
+/* ── spec matrix: dense register, all rows plain-rendered ──
+   Owner decision: no virtualization — 239 rows is trivial for the browser.
+   Rows are fixed-height in normal flow; the sticky header shares their grid
+   template exactly, so columns align at every scroll position. Density
+   target: 27px rows (issue #3: 26–28px), a deliberate deviation from the
+   mock's 48px. */
 .matrix-scroll {
   flex: 1;
   min-height: 0;
@@ -79,19 +80,14 @@
   margin-left: 3px;
 }
 
-.mbody {
-  position: relative;
-}
-
 .mrow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 27px;
   border-bottom: 1px solid var(--line);
   cursor: pointer;
   font-size: 12.5px;
+  /* focus() scrolls rows into view clear of the 30px sticky header — the
+     plain-CSS successor of the virtualizer's scrollMargin */
+  scroll-margin-top: 30px;
 }
 
 .mrow > div {
