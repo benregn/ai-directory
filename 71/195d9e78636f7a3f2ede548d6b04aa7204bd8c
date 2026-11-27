@@ -1,0 +1,22 @@
+docs/directory-page-mock.html
+  h_9889e896d9694b 1-297
+docs/provenance/annotate.py
+  h_9889e896d9694b 1-121
+docs/provenance/build_page.py
+  h_9889e896d9694b 1-299
+docs/provenance/geo.json
+  h_9889e896d9694b 1
+docs/provenance/index.html
+  h_9889e896d9694b 1-701
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "71195d9e78636f7a3f2ede548d6b04aa7204bd8c",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
