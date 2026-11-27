@@ -1,31 +1,28 @@
-import {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  useSyncExternalStore,
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type {
+  KeyboardEvent as ReactKeyboardEvent,
+  MouseEvent as ReactMouseEvent,
 } from 'react';
-import type { KeyboardEvent as ReactKeyboardEvent, MouseEvent as ReactMouseEvent } from 'react';
-import { createVirtualizer } from '@ui-sdk/core';
 import { listings } from '../data/listings.ts';
 import type { MatrixRowView, SortColumn, SortDirection } from '../matrix-model.ts';
 import { deriveRows, initialDirection, sortRows } from '../matrix-model.ts';
 import './SpecMatrix.css';
 
 /**
- * Spec matrix: all 239 rows in one scroll, virtualized with ui-sdk's
- * createVirtualizer, sorted by every column, absence as the dimmed dash.
+ * Spec matrix: all 239 rows plain-rendered in one scroll — owner decision,
+ * no virtualization: 239 rows is a few thousand DOM nodes, which browsers
+ * render trivially, and every defect the review rounds caught was
+ * virtualization-induced complexity. The behavioral contract is unchanged:
+ * 27px rows, seven sortable columns, click/keyboard selection, roving tab
+ * stop — all of it trivially implementable because every row is always in
+ * the DOM: focus() scrolls a row into view on its own, and scroll-margin-top
+ * on the rows keeps them clear of the sticky header, no machinery needed.
  *
  * Density deviates from the mock deliberately (issue #3: 26–28px rows, not
  * the mock's 48px): the row furniture is the mock's — index, tile, name,
  * summary, category, license, deployment, oss, stars — compressed to a
  * single truncated line per row. The tile shrinks 24px → 16px and the
  * two-line name/summary stack becomes one line; nothing else is dropped.
- *
- * Rows are fixed-height by construction, so the virtualizer's estimate is
- * exact and no measurement pass is needed. The sticky header is exactly
- * HEAD_H tall: the virtualizer's scrollMargin depends on it.
  */
 const ROW_H = 27;
 const HEAD_H = 30;
@@ -46,25 +43,6 @@ const HEADERS: Array<HeaderSpec> = [
   { column: 'star', label: 'Stars', right: true },
 ];
 
-/**
- * The virtualizer outlives any single render, so its closures read the live
- * ordering and focus through refs — they only run post-commit (scroll,
- * refresh, scrollToIndex), never during render. Fixed-height rows are never
- * measured, so no per-row key option is needed: sizes can't drift.
- */
-function createMatrixVirtualizer(
-  rowsRef: { current: Array<MatrixRowView> },
-  focusIndexRef: { current: number | null },
-) {
-  return createVirtualizer({
-    count: () => rowsRef.current.length,
-    estimate: () => ROW_H,
-    overscan: 6,
-    scrollMargin: HEAD_H,
-    keep: () => (focusIndexRef.current === null ? [] : [focusIndexRef.current]),
-  });
-}
-
 function Fact({ value, className }: { value: string | null; className: string }) {
   return (
     <div className={value === null ? `${className} dim` : className} role="gridcell">
@@ -75,7 +53,7 @@ function Fact({ value, className }: { value: string | null; className: string })
 
 function Row({
   row,
-  item,
+  index,
   selected,
   tabStop,
   onPress,
@@ -84,26 +62,25 @@ function Row({
   rowRef,
 }: {
   row: MatrixRowView;
-  item: { index: number; start: number };
+  index: number;
   selected: boolean;
   tabStop: boolean;
   onPress: (index: number) => void;
   onKey: (event: ReactKeyboardEvent, index: number) => void;
   onFocus: (index: number) => void;
-  rowRef: (index: number, el: HTMLElement | null) => void;
+  rowRef: (id: string, el: HTMLElement | null) => void;
 }) {
   return (
     <div
       className={selected ? 'mrow sel' : 'mrow'}
       role="row"
-      aria-rowindex={item.index + 2}
+      aria-rowindex={index + 2}
       aria-selected={selected}
       tabIndex={tabStop ? 0 : -1}
-      style={{ transform: `translateY(${item.start}px)` }}
-      ref={(el) => rowRef(item.index, el)}
-      onClick={() => onPress(item.index)}
-      onKeyDown={(event) => onKey(event, item.index)}
-      onFocus={() => onFocus(item.index)}
+      ref={(el) => rowRef(row.id, el)}
+      onClick={() => onPress(index)}
+      onKeyDown={(event) => onKey(event, index)}
+      onFocus={() => onFocus(index)}
     >
       <div className="idx" role="gridcell">
         {row.entryLabel}
@@ -136,102 +113,31 @@ export function SpecMatrix() {
     [rows, sortColumn, sortDirection],
   );
 
-  // The virtualizer is created once and reads the live ordering through
-  // refs; refresh() re-reads it after every sort or focus change. rowsRef
-  // syncs in an effect since it derives from render state; focusIndexRef is
-  // written synchronously in the handlers that change it — the effect path
-  // is a full React cycle too slow, and a scroll landing in that gap
-  // unrenders the focused row out from under the user.
-  const rowsRef = useRef(sorted);
-  const focusIndexRef = useRef(focusIndex);
-  useEffect(() => {
-    rowsRef.current = sorted;
-  }, [sorted]);
-
-  // Passing the ref objects, not their values: the factory's closures read
-  // .current only post-commit. This is the latest-ref pattern the rule means
-  // to protect, not a render-time read.
-  // oxlint-disable-next-line react/refs
-  const [virtual] = useState(() => createMatrixVirtualizer(rowsRef, focusIndexRef));
-
-  const subscribe = useCallback(
-    (listener: () => void) => virtual.subscribe(listener),
-    [virtual],
-  );
-  const getItems = useCallback(() => virtual.items(), [virtual]);
-  const items = useSyncExternalStore(subscribe, getItems);
-  // size() goes through the same subscription: a plain number snapshot, so
-  // the spacer can never go stale once filtering makes count dynamic (#4).
-  const getSize = useCallback(() => virtual.size(), [virtual]);
-  const size = useSyncExternalStore(subscribe, getSize);
-
   const scrollerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) {
-      return;
+  const rowEls = useRef(new Map<string, HTMLElement>());
+  const rowRef = useCallback((id: string, el: HTMLElement | null) => {
+    if (el) {
+      rowEls.current.set(id, el);
+    } else {
+      rowEls.current.delete(id);
     }
-    return virtual.connect(el);
-  }, [virtual]);
+  }, []);
 
-  // refresh() re-reads the list when its inputs change: the ordering (a
-  // re-sort also restarts the scan at the top) and the focused row the
-  // keep() clause protects. Never keyed on items — that would refresh on
-  // every scroll frame.
+  // A re-sort is a new scan: start at the top of the new ordering.
   useEffect(() => {
-    virtual.refresh();
     const el = scrollerRef.current;
     if (el) {
       el.scrollTop = 0;
     }
-  }, [virtual, sorted]);
-
-  useEffect(() => {
-    virtual.refresh();
-  }, [virtual, focusIndex]);
-
-  const rowEls = useRef(new Map<number, HTMLElement>());
-  const rowRef = useCallback((index: number, el: HTMLElement | null) => {
-    if (el) {
-      rowEls.current.set(index, el);
-    } else {
-      rowEls.current.delete(index);
-    }
-  }, []);
-
-  // Focus moves only on explicit intent (arrow keys, row press) — never on
-  // scroll-driven re-renders, or scrolling the matrix would steal focus back
-  // from anywhere else on the page. preventScroll: the virtualizer already
-  // scrolled the row into view. The intent expires the moment focus sits
-  // outside the grid: pressing End and clicking elsewhere within the gap
-  // before the row renders must not steal focus back a frame later.
-  const pendingFocus = useRef(false);
-  useEffect(() => {
-    if (focusIndex !== null && pendingFocus.current) {
-      const el = rowEls.current.get(focusIndex);
-      if (el) {
-        const active = document.activeElement;
-        const scroller = scrollerRef.current;
-        if (active !== null && active !== document.body && scroller !== null && !scroller.contains(active)) {
-          pendingFocus.current = false;
-          return;
-        }
-        el.focus({ preventScroll: true });
-        pendingFocus.current = false;
-      }
-    }
-  }, [focusIndex, items]);
+  }, [sorted]);
 
   function pressHeader(event: ReactMouseEvent<HTMLButtonElement>, column: SortColumn) {
-    // Rows must never carry focus across a re-sort: React reuses row
-    // elements by index, so a focused row silently becomes a different
-    // product and no focus event fires to re-sync state — keep() then
-    // protects nothing and scrolling drops focus to the page. Move focus
-    // onto the control deliberately: Safari and Firefox on macOS never
-    // focus clicked buttons, programmatic activation never does, and the
-    // component's correctness can't hinge on which browser happened to.
+    // Rows never carry focus across a re-sort: focus moves onto the control
+    // deliberately, because Safari and Firefox on macOS never focus clicked
+    // buttons and programmatic activation never does. Standard, correct
+    // focus placement in every browser.
     event.currentTarget.focus();
-    commitFocusIndex(null);
+    setFocusIndex(null);
     if (column === sortColumn) {
       setSortDirection((dir) => (dir === 'asc' ? 'desc' : 'asc'));
     } else {
@@ -240,38 +146,34 @@ export function SpecMatrix() {
     }
   }
 
-  // Focus intent commits synchronously: the ref keep() reads and the
-  // refresh that re-reads it both land in the handler's own task, before
-  // any scroll event can arrive in a later one. setState is for rendering;
-  // correctness here can't wait for it.
-  function commitFocusIndex(next: number | null) {
-    focusIndexRef.current = next;
-    virtual.refresh();
-    setFocusIndex(next);
-  }
-
-  // Plain DOM focus — exactly what Tab produces — must sync into state, or
-  // keep() protects nothing and the focused row unrenders out from under
-  // the user on scroll. No scrolling, no selecting: focus alone.
+  // DOM focus — exactly what Tab produces — syncs the roving stop. No
+  // scrolling, no selecting: focus alone.
   function focusRow(index: number) {
-    commitFocusIndex(index);
+    setFocusIndex(index);
   }
 
   function pressRow(index: number) {
-    pendingFocus.current = true;
-    commitFocusIndex(index);
-    const row = rowsRef.current[index];
-    if (row) {
-      setSelectedId((current) => (current === row.id ? null : row.id));
+    const row = sorted[index];
+    if (!row) {
+      return;
     }
+    // Deliberate focus, as with the sort buttons: clicking a row must put
+    // keyboard focus on it in every browser, not almost every browser.
+    rowEls.current.get(row.id)?.focus({ preventScroll: true });
+    setFocusIndex(index);
+    setSelectedId((current) => (current === row.id ? null : row.id));
   }
 
   function moveFocus(index: number) {
-    const last = rowsRef.current.length - 1;
-    const next = Math.max(0, Math.min(last, index));
-    pendingFocus.current = true;
-    commitFocusIndex(next);
-    virtual.scrollToIndex(next);
+    const next = Math.max(0, Math.min(sorted.length - 1, index));
+    const row = sorted[next];
+    if (!row) {
+      return;
+    }
+    // Every row is always in the DOM, so focus lands synchronously and the
+    // browser scrolls it into view — scroll-margin-top keeps it clear of
+    // the sticky header. No effects, no retries, nothing to lose.
+    rowEls.current.get(row.id)?.focus();
   }
 
   function keyRow(event: ReactKeyboardEvent, index: number) {
@@ -294,7 +196,7 @@ export function SpecMatrix() {
         break;
       case 'End':
         event.preventDefault();
-        moveFocus(rowsRef.current.length - 1);
+        moveFocus(sorted.length - 1);
         break;
       case 'PageDown':
         event.preventDefault();
@@ -346,34 +248,19 @@ export function SpecMatrix() {
           );
         })}
       </div>
-      <div className="mbody" role="presentation" style={{ height: size }}>
-        {items.map((item) => {
-          const row = sorted[item.index];
-          if (!row) {
-            return null;
-          }
-          return (
-            <Row
-              key={item.key}
-              row={row}
-              item={item}
-              selected={row.id === selectedId}
-              tabStop={
-                // With no focused row the stop belongs to the first rendered
-                // item, never a hard-tied index: row 0 unrenders when scrolled
-                // away, and a grid with zero tab stops is keyboard-unreachable.
-                focusIndex === null
-                  ? item.index === items[0]?.index
-                  : focusIndex === item.index
-              }
-              onPress={pressRow}
-              onKey={keyRow}
-              onFocus={focusRow}
-              rowRef={rowRef}
-            />
-          );
-        })}
-      </div>
+      {sorted.map((row, index) => (
+        <Row
+          key={row.id}
+          row={row}
+          index={index}
+          selected={row.id === selectedId}
+          tabStop={focusIndex === null ? index === 0 : focusIndex === index}
+          onPress={pressRow}
+          onKey={keyRow}
+          onFocus={focusRow}
+          rowRef={rowRef}
+        />
+      ))}
     </div>
   );
 }
