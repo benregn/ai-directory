@@ -1,0 +1,28 @@
+.agents/skills/ui-sdk/SKILL.md
+  h_9889e896d9694b 1-56
+.agents/skills/ui-sdk/references/agent-ready.md
+  h_9889e896d9694b 1-136
+.agents/skills/ui-sdk/references/build-interface.md
+  h_9889e896d9694b 1-187
+.agents/skills/ui-sdk/references/create-component.md
+  h_9889e896d9694b 1-88
+.agents/skills/ui-sdk/references/patterns.md
+  h_9889e896d9694b 1-246
+.agents/skills/ui-sdk/references/styles.md
+  h_9889e896d9694b 1-66
+.agents/skills/ui-sdk/references/testing.md
+  h_9889e896d9694b 1-172
+.agents/skills/ui-sdk/references/web-components.md
+  h_9889e896d9694b 1-78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4eb945b1be09cd8405c3ba7b0e6ab84c109787a9",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
