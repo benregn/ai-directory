@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 85751,
+  "body_sha256": "99bf90cffcbfd720c430abb82d8d8314f064ed72e5d47c62d3ccfd8e56e740ba",
+  "elapsed_ms": 484.1,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:26.642008+00:00",
+  "final_url": "https://githits.com/software-factories/cyrus/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:27 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115727Z-17cdd8df565dh8pdhC1CPHbfuc000000163000000000r7z3"
+  },
+  "requested_url": "https://githits.com/software-factories/cyrus/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.333
+    }
+  ],
+  "status": 200
+}

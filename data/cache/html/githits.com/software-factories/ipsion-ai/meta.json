@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83369,
+  "body_sha256": "568d6fa835673331c24445cdfe2f24c1b0cc11db5bf21bbaa01a16281b5a7df9",
+  "elapsed_ms": 449.3,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:35.477203+00:00",
+  "final_url": "https://githits.com/software-factories/ipsion-ai/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:35 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115835Z-17cdd8df565ldxwjhC1CPHcp9s0000001650000000004s4k"
+  },
+  "requested_url": "https://githits.com/software-factories/ipsion-ai/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.277
+    }
+  ],
+  "status": 200
+}

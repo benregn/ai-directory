@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 82126,
+  "body_sha256": "3a0bbc9d1e5110c9de2871cd818b9acfbf08fcc931ebd6adefb1c8b3ce3bd49a",
+  "elapsed_ms": 484.7,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:25.472746+00:00",
+  "final_url": "https://githits.com/software-factories/bitmagic/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:26 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115825Z-17cdd8df565qdvplhC1CPHxem0000000169000000000kmhy"
+  },
+  "requested_url": "https://githits.com/software-factories/bitmagic/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.396
+    }
+  ],
+  "status": 200
+}

@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83532,
+  "body_sha256": "984f0b31fffb0293e2f101311bd6485d6d83c1872f54207beefed13b70e3c03c",
+  "elapsed_ms": 547.3,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:37.892197+00:00",
+  "final_url": "https://githits.com/software-factories/magic-patterns/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:38 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115838Z-17cdd8df565mbkxshC1CPHaze800000015qg00000000k8ea"
+  },
+  "requested_url": "https://githits.com/software-factories/magic-patterns/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.409
+    }
+  ],
+  "status": 200
+}

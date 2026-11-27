@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 80808,
+  "body_sha256": "a94cee34e9f050841ccb996408fe7fd791df32ec7206a434ad1b378ba51d164c",
+  "elapsed_ms": 444.7,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:33.386613+00:00",
+  "final_url": "https://githits.com/software-factories/growapps/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:33 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115833Z-17cdd8df565bq92khC1CPH3d0800000016c000000000us6t"
+  },
+  "requested_url": "https://githits.com/software-factories/growapps/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.349
+    }
+  ],
+  "status": 200
+}

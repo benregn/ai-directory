@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83912,
+  "body_sha256": "471a8deb845c63ffbb384a444d7163eae728d83c81caf041e02f0e3b399b735a",
+  "elapsed_ms": 508.3,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:32.294123+00:00",
+  "final_url": "https://githits.com/software-factories/emergent/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:32 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115832Z-17cdd8df565jq652hC1CPHcs6400000016cg000000007rf6"
+  },
+  "requested_url": "https://githits.com/software-factories/emergent/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.427
+    }
+  ],
+  "status": 200
+}

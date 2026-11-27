@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83035,
+  "body_sha256": "6524e6a928bd56d10aea8bcfa1a0bcf643022fa27a68ed1c33dcec4c35a11d1b",
+  "elapsed_ms": 490.6,
+  "error": null,
+  "fetched_at": "2026-11-26T11:59:03.798258+00:00",
+  "final_url": "https://githits.com/software-factories/cubic/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:59:04 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115904Z-17cdd8df565rxnnkhC1CPHwf2s00000016500000000092fh"
+  },
+  "requested_url": "https://githits.com/software-factories/cubic/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.396
+    }
+  ],
+  "status": 200
+}

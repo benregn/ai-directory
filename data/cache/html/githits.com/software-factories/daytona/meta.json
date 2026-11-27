@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 81871,
+  "body_sha256": "5a448342e64f03cd8e1c1a32e0c9bbf8755e0a6588791654d74432f0609a4014",
+  "elapsed_ms": 432.9,
+  "error": null,
+  "fetched_at": "2026-11-26T11:59:07.934481+00:00",
+  "final_url": "https://githits.com/software-factories/daytona/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:59:08 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115908Z-17cdd8df5655m4m6hC1CPHmkp800000016k0000000001ktu"
+  },
+  "requested_url": "https://githits.com/software-factories/daytona/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.335
+    }
+  ],
+  "status": 200
+}

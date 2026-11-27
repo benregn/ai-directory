@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83630,
+  "body_sha256": "6adec99f2eb0dac3207bf5137e0aa4223694aa17b0c4d76e2f8d33e822bc8349",
+  "elapsed_ms": 570.8,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:36.871290+00:00",
+  "final_url": "https://githits.com/software-factories/lovable/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:37 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115837Z-17cdd8df5655m4m6hC1CPHmkp800000016dg000000004hsq"
+  },
+  "requested_url": "https://githits.com/software-factories/lovable/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.411
+    }
+  ],
+  "status": 200
+}

@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83576,
+  "body_sha256": "cc3c01fb5e6908ca7996e86c4c0da757375a5408d4f67fe63ea1462cb0761211",
+  "elapsed_ms": 575.7,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:09.726901+00:00",
+  "final_url": "https://githits.com/software-factories/jules/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:10 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115810Z-17cdd8df565fcgw4hC1CPHas6s00000016t0000000001b3k"
+  },
+  "requested_url": "https://githits.com/software-factories/jules/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.412
+    }
+  ],
+  "status": 200
+}

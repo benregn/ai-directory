@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 84052,
+  "body_sha256": "6b868af7f6c2d4f72b590b9c9af765c4275c9e383515d18cb8b857c03ae69047",
+  "elapsed_ms": 562.5,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:29.175565+00:00",
+  "final_url": "https://githits.com/software-factories/fabrika-berkaycubuk/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:29 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115729Z-17cdd8df565qdvplhC1CPHxem000000016d0000000002z15"
+  },
+  "requested_url": "https://githits.com/software-factories/fabrika-berkaycubuk/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.342
+    }
+  ],
+  "status": 200
+}

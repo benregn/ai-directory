@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 82146,
+  "body_sha256": "8d88898017b5bf8ec2076cae56e6dde117bad8c0e7efacd198144609b5b825c2",
+  "elapsed_ms": 468.6,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:52.660823+00:00",
+  "final_url": "https://githits.com/software-factories/velra/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:53 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115853Z-17cdd8df565c7m8thC1CPHuaag00000016hg000000000mc8"
+  },
+  "requested_url": "https://githits.com/software-factories/velra/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.361
+    }
+  ],
+  "status": 200
+}

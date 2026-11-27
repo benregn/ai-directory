@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 81127,
+  "body_sha256": "cb64d20610e36ed582d0bb7f173e88780ec44145b9082824ec413c63eb0dd4ea",
+  "elapsed_ms": 511.2,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:28.517345+00:00",
+  "final_url": "https://githits.com/software-factories/choicely/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:29 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115829Z-17cdd8df565rxnnkhC1CPHwf2s00000016ag0000000057vx"
+  },
+  "requested_url": "https://githits.com/software-factories/choicely/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.405
+    }
+  ],
+  "status": 200
+}

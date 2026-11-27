@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 82543,
+  "body_sha256": "6f3c003429cb9df7ed0e0b930b56dc3e459a0968e9cf8464192aca8467b0c7e6",
+  "elapsed_ms": 509.2,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:24.590089+00:00",
+  "final_url": "https://githits.com/software-factories/codelayer/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:25 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115725Z-17cdd8df5655m4m6hC1CPHmkp800000016dg000000004e1n"
+  },
+  "requested_url": "https://githits.com/software-factories/codelayer/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.348
+    }
+  ],
+  "status": 200
+}

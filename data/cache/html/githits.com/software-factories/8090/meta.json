@@ -1,0 +1,33 @@
+{
+  "attempts": 1,
+  "body_bytes": 81970,
+  "body_sha256": "ca187a539ad981d8c802d2cc1eb655abf95457ccbafa3b674a3e0fb41a28eddc",
+  "elapsed_ms": 206.9,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:17.822342+00:00",
+  "final_url": "https://githits.com/software-factories/8090/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:18 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115717Z-17cdd8df565bq92khC1CPH3d0800000016x0000000000qq3"
+  },
+  "requested_url": "https://githits.com/software-factories/8090/",
+  "retry_events": [],
+  "status": 200
+}

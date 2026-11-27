@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 82949,
+  "body_sha256": "f11be9c4217974ae1652e42f1822a8bb11da2a7bd4792b46725dd7be2b9fcb22",
+  "elapsed_ms": 561.8,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:00.077367+00:00",
+  "final_url": "https://githits.com/software-factories/buildful/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:00 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115800Z-17cdd8df565jcx29hC1CPHsuxc00000016p000000000101p"
+  },
+  "requested_url": "https://githits.com/software-factories/buildful/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.405
+    }
+  ],
+  "status": 200
+}

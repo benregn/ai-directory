@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 85855,
+  "body_sha256": "3d1cb39e637055ab121ca6dbfdcab55b3e76915c0e93e922cc01d65a381ec222",
+  "elapsed_ms": 501.3,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:44.402761+00:00",
+  "final_url": "https://githits.com/software-factories/oh-my-symphony/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:44 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115744Z-17cdd8df565ldxwjhC1CPHcp9s00000016800000000030zp"
+  },
+  "requested_url": "https://githits.com/software-factories/oh-my-symphony/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.343
+    }
+  ],
+  "status": 200
+}

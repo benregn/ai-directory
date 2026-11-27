@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83340,
+  "body_sha256": "7e27a3c40783fe5883b8614295e528d343b621855e603395de7c35b0d1a8dac9",
+  "elapsed_ms": 403.6,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:24.550025+00:00",
+  "final_url": "https://githits.com/software-factories/base44/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:25 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115824Z-17cdd8df5656sjszhC1CPH2tps00000016yg000000000950"
+  },
+  "requested_url": "https://githits.com/software-factories/base44/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.301
+    }
+  ],
+  "status": 200
+}

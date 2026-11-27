@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 85491,
+  "body_sha256": "80909c8ae636b555539888a73a8bee36769c5c4e6b7895575086e091b040c54b",
+  "elapsed_ms": 511.0,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:39.391977+00:00",
+  "final_url": "https://githits.com/software-factories/metagpt/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:39 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115839Z-17cdd8df565rxnnkhC1CPHwf2s00000016ag00000000589r"
+  },
+  "requested_url": "https://githits.com/software-factories/metagpt/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.427
+    }
+  ],
+  "status": 200
+}

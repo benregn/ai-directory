@@ -1,0 +1,132 @@
+{
+  "checked_at": "2026-11-26T12:06:38.698747+00:00",
+  "checks": [
+    {
+      "detail": "data/categories.json",
+      "name": "categories.json exists",
+      "ok": true
+    },
+    {
+      "detail": [
+        {
+          "advertised": 74,
+          "collected_unique": 74,
+          "fetch_error": null,
+          "match": true,
+          "slug": "agent-orchestration"
+        },
+        {
+          "advertised": 56,
+          "collected_unique": 56,
+          "fetch_error": null,
+          "match": true,
+          "slug": "engineering-factories"
+        },
+        {
+          "advertised": 65,
+          "collected_unique": 65,
+          "fetch_error": null,
+          "match": true,
+          "slug": "app-builders"
+        },
+        {
+          "advertised": 9,
+          "collected_unique": 9,
+          "fetch_error": null,
+          "match": true,
+          "slug": "agent-workspaces"
+        },
+        {
+          "advertised": 10,
+          "collected_unique": 10,
+          "fetch_error": null,
+          "match": true,
+          "slug": "code-review"
+        },
+        {
+          "advertised": 19,
+          "collected_unique": 19,
+          "fetch_error": null,
+          "match": true,
+          "slug": "agent-infrastructure"
+        },
+        {
+          "advertised": 2,
+          "collected_unique": 2,
+          "fetch_error": null,
+          "match": true,
+          "slug": "development-platforms"
+        },
+        {
+          "advertised": 4,
+          "collected_unique": 4,
+          "fetch_error": null,
+          "match": true,
+          "slug": "ai-labs"
+        }
+      ],
+      "name": "per-category advertised counts match collected unique URLs",
+      "ok": true
+    },
+    {
+      "detail": {
+        "inventory_count": 239,
+        "only_in_categories": [],
+        "only_in_inventory": [],
+        "union_count": 239
+      },
+      "name": "category union equals directory-wide inventory",
+      "ok": true
+    },
+    {
+      "detail": {
+        "advertised_total": 239,
+        "extra_references": 0,
+        "multi_category_items": 0,
+        "union_count": 239
+      },
+      "name": "advertised total explained by category membership",
+      "ok": true
+    },
+    {
+      "detail": {
+        "checked": 239,
+        "mismatches": []
+      },
+      "name": "inventory card categories agree with category-page membership",
+      "ok": true
+    },
+    {
+      "detail": [],
+      "name": "listings.jsonl is valid JSONL",
+      "ok": true
+    },
+    {
+      "detail": {
+        "duplicates": []
+      },
+      "name": "record ids are unique",
+      "ok": true
+    },
+    {
+      "detail": {
+        "expected": 239,
+        "missing_records": [],
+        "records": 239,
+        "unexpected_records": []
+      },
+      "name": "exactly one detail record per discovered unique item",
+      "ok": true
+    },
+    {
+      "detail": {
+        "missing": []
+      },
+      "name": "successful snapshot exists for every unique item",
+      "ok": true
+    }
+  ],
+  "fallback_usage": {},
+  "ok": true,
+  "record_count": 239
+}

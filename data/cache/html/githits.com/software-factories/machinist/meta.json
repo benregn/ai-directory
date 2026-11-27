@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 86369,
+  "body_sha256": "4a143e16d8d50b08f21599de02b82561f9f3b31d05a595ad8f096c140d9d9b2e",
+  "elapsed_ms": 579.6,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:39.819980+00:00",
+  "final_url": "https://githits.com/software-factories/machinist/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:40 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115740Z-17cdd8df565cdnm9hC1CPHrqhg0000001650000000004ykx"
+  },
+  "requested_url": "https://githits.com/software-factories/machinist/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.353
+    }
+  ],
+  "status": 200
+}

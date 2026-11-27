@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 191942,
+  "body_sha256": "c4d184535440a9d90d2506a1b0d7fffb673d8ff8148577c9599d36885b8a8882",
+  "elapsed_ms": 461.6,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:06.297096+00:00",
+  "final_url": "https://githits.com/software-factories/category/engineering-factories/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:06 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115706Z-17cdd8df565jq652hC1CPHcs6400000016q0000000001m5f"
+  },
+  "requested_url": "https://githits.com/software-factories/category/engineering-factories/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.322
+    }
+  ],
+  "status": 200
+}

@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 85010,
+  "body_sha256": "30dd8e69941d803a792d02d05068c35d78dabf476acc070cce51c78d6c3f5d4d",
+  "elapsed_ms": 782.9,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:50.006350+00:00",
+  "final_url": "https://githits.com/software-factories/sortie/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:50 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115750Z-17cdd8df565dh8pdhC1CPHbfuc000000169g00000000468u"
+  },
+  "requested_url": "https://githits.com/software-factories/sortie/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.324
+    }
+  ],
+  "status": 200
+}

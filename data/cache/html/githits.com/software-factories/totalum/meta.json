@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 85174,
+  "body_sha256": "f2c86717a4f9b168c3cd2db8f68997030921de3fa7b05edfc5f0630c15c74e02",
+  "elapsed_ms": 491.2,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:51.145867+00:00",
+  "final_url": "https://githits.com/software-factories/totalum/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:51 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115851Z-17cdd8df5655m4m6hC1CPHmkp800000016kg000000001bcc"
+  },
+  "requested_url": "https://githits.com/software-factories/totalum/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.349
+    }
+  ],
+  "status": 200
+}

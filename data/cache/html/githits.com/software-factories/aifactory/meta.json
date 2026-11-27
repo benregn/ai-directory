@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 87066,
+  "body_sha256": "9f3cd931657c5bce6d542fccf3043c9b74bee43c7a31a0aaa747c137671a0e44",
+  "elapsed_ms": 480.7,
+  "error": null,
+  "fetched_at": "2026-11-26T11:57:20.011889+00:00",
+  "final_url": "https://githits.com/software-factories/aifactory/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:57:20 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115720Z-17cdd8df5656sjszhC1CPH2tps00000016bg000000006a76"
+  },
+  "requested_url": "https://githits.com/software-factories/aifactory/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.348
+    }
+  ],
+  "status": 200
+}

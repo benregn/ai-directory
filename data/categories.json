@@ -1,0 +1,4790 @@
+{
+  "categories": [
+    {
+      "advertised_count": 74,
+      "collected_count": 74,
+      "item_urls": [
+        "https://githits.com/software-factories/8090/",
+        "https://githits.com/software-factories/aeon/",
+        "https://githits.com/software-factories/agentic-engineering-os/",
+        "https://githits.com/software-factories/ai-ready-nx-workspace/",
+        "https://githits.com/software-factories/ai-software-factory/",
+        "https://githits.com/software-factories/aifactory/",
+        "https://githits.com/software-factories/alfred/",
+        "https://githits.com/software-factories/anneal/",
+        "https://githits.com/software-factories/another-orchestrator/",
+        "https://githits.com/software-factories/atelier/",
+        "https://githits.com/software-factories/atomic/",
+        "https://githits.com/software-factories/beadhive/",
+        "https://githits.com/software-factories/brain/",
+        "https://githits.com/software-factories/claude-lane-stack/",
+        "https://githits.com/software-factories/codelayer/",
+        "https://githits.com/software-factories/commons-systems/",
+        "https://githits.com/software-factories/contrabass/",
+        "https://githits.com/software-factories/corbits/",
+        "https://githits.com/software-factories/cyrus/",
+        "https://githits.com/software-factories/dark-factory/",
+        "https://githits.com/software-factories/donmai/",
+        "https://githits.com/software-factories/engrams/",
+        "https://githits.com/software-factories/esf/",
+        "https://githits.com/software-factories/fabrika-berkaycubuk/",
+        "https://githits.com/software-factories/factory-watt-mind/",
+        "https://githits.com/software-factories/factory-on-herdr/",
+        "https://githits.com/software-factories/factory-agent-ajsai47/",
+        "https://githits.com/software-factories/factory-agent-annakov/",
+        "https://githits.com/software-factories/finn-loop/",
+        "https://githits.com/software-factories/fluent/",
+        "https://githits.com/software-factories/foreman/",
+        "https://githits.com/software-factories/forge/",
+        "https://githits.com/software-factories/forgeo/",
+        "https://githits.com/software-factories/fusion/",
+        "https://githits.com/software-factories/gas-city/",
+        "https://githits.com/software-factories/genie/",
+        "https://githits.com/software-factories/great-cto/",
+        "https://githits.com/software-factories/har/",
+        "https://githits.com/software-factories/harness-kanban/",
+        "https://githits.com/software-factories/human/",
+        "https://githits.com/software-factories/issue-to-pr-agent/",
+        "https://githits.com/software-factories/lightspeed/",
+        "https://githits.com/software-factories/lit-factory/",
+        "https://githits.com/software-factories/loki-mode/",
+        "https://githits.com/software-factories/machinist/",
+        "https://githits.com/software-factories/mindflock/",
+        "https://githits.com/software-factories/miniforge/",
+        "https://githits.com/software-factories/minimum-viable-factory/",
+        "https://githits.com/software-factories/mission-control/",
+        "https://githits.com/software-factories/mspilot/",
+        "https://githits.com/software-factories/multica/",
+        "https://githits.com/software-factories/needle/",
+        "https://githits.com/software-factories/no-human/",
+        "https://githits.com/software-factories/oh-my-symphony/",
+        "https://githits.com/software-factories/opencastle/",
+        "https://githits.com/software-factories/openfactory-core/",
+        "https://githits.com/software-factories/optio/",
+        "https://githits.com/software-factories/pi-rukas/",
+        "https://githits.com/software-factories/planwright/",
+        "https://githits.com/software-factories/polygraph/",
+        "https://githits.com/software-factories/port/",
+        "https://githits.com/software-factories/sgai/",
+        "https://githits.com/software-factories/smile-software-factory/",
+        "https://githits.com/software-factories/software-factory-nicolas-melo/",
+        "https://githits.com/software-factories/sortie/",
+        "https://githits.com/software-factories/software-factory-stratonext/",
+        "https://githits.com/software-factories/taskplane/",
+        "https://githits.com/software-factories/tasktrooper/",
+        "https://githits.com/software-factories/taskuary/",
+        "https://githits.com/software-factories/ivy-tendril/",
+        "https://githits.com/software-factories/tessl/",
+        "https://githits.com/software-factories/tiden/",
+        "https://githits.com/software-factories/treegates/",
+        "https://githits.com/software-factories/zeroshot-and-opcore/"
+      ],
+      "name": "Agent orchestration",
+      "slug": "agent-orchestration",
+      "url": "https://githits.com/software-factories/category/agent-orchestration/"
+    },
+    {
+      "advertised_count": 56,
+      "collected_count": 56,
+      "item_urls": [
+        "https://githits.com/software-factories/agentic-software-factory/",
+        "https://githits.com/software-factories/appfactor/",
+        "https://githits.com/software-factories/atlantic/",
+        "https://githits.com/software-factories/atomically/",
+        "https://githits.com/software-factories/authentica-software-factory/",
+        "https://githits.com/software-factories/background-agents/",
+        "https://githits.com/software-factories/blackbox-ai/",
+        "https://githits.com/software-factories/blitzy/",
+        "https://githits.com/software-factories/bosun/",
+        "https://githits.com/software-factories/builder-io-fusion/",
+        "https://githits.com/software-factories/buildful/",
+        "https://githits.com/software-factories/codeaf-and-swe-af/",
+        "https://githits.com/software-factories/codemate-ai/",
+        "https://githits.com/software-factories/codeplain/",
+        "https://githits.com/software-factories/command-code/",
+        "https://githits.com/software-factories/condux/",
+        "https://githits.com/software-factories/cosmos/",
+        "https://githits.com/software-factories/cursor/",
+        "https://githits.com/software-factories/danic/",
+        "https://githits.com/software-factories/windsurf-ide/",
+        "https://githits.com/software-factories/diffusion/",
+        "https://githits.com/software-factories/fabrik/",
+        "https://githits.com/software-factories/fabrika-tatiyants/",
+        "https://githits.com/software-factories/fabro/",
+        "https://githits.com/software-factories/factory-com/",
+        "https://githits.com/software-factories/forgecode/",
+        "https://githits.com/software-factories/guild-software-factory/",
+        "https://githits.com/software-factories/hoplite/",
+        "https://githits.com/software-factories/intercode/",
+        "https://githits.com/software-factories/jules/",
+        "https://githits.com/software-factories/junie/",
+        "https://githits.com/software-factories/kavia-ai/",
+        "https://githits.com/software-factories/kilo-code/",
+        "https://githits.com/software-factories/kiro/",
+        "https://githits.com/software-factories/latentforce-ai/",
+        "https://githits.com/software-factories/lightsprint/",
+        "https://githits.com/software-factories/mastra-factory/",
+        "https://githits.com/software-factories/mechanical-orchard/",
+        "https://githits.com/software-factories/open-swe/",
+        "https://githits.com/software-factories/opencode/",
+        "https://githits.com/software-factories/openhands/",
+        "https://githits.com/software-factories/orbi/",
+        "https://githits.com/software-factories/overcut/",
+        "https://githits.com/software-factories/playerzero/",
+        "https://githits.com/software-factories/plover-labs/",
+        "https://githits.com/software-factories/qoder/",
+        "https://githits.com/software-factories/reason-agent/",
+        "https://githits.com/software-factories/stagewise/",
+        "https://githits.com/software-factories/taiga/",
+        "https://githits.com/software-factories/trae/",
+        "https://githits.com/software-factories/vorflux/",
+        "https://githits.com/software-factories/warp-oz/",
+        "https://githits.com/software-factories/xsquad/",
+        "https://githits.com/software-factories/yagni/",
+        "https://githits.com/software-factories/zed/",
+        "https://githits.com/software-factories/zencoder-zenflow/"
+      ],
+      "name": "Engineering factories",
+      "slug": "engineering-factories",
+      "url": "https://githits.com/software-factories/category/engineering-factories/"
+    },
+    {
+      "advertised_count": 65,
+      "collected_count": 65,
+      "item_urls": [
+        "https://githits.com/software-factories/create-xyz-anything/",
+        "https://githits.com/software-factories/appwizzy/",
+        "https://githits.com/software-factories/base44/",
+        "https://githits.com/software-factories/bilt/",
+        "https://githits.com/software-factories/bitmagic/",
+        "https://githits.com/software-factories/bitrig/",
+        "https://githits.com/software-factories/blink/",
+        "https://githits.com/software-factories/bloom/",
+        "https://githits.com/software-factories/bolt-new/",
+        "https://githits.com/software-factories/buildra/",
+        "https://githits.com/software-factories/choicely/",
+        "https://githits.com/software-factories/codalio/",
+        "https://githits.com/software-factories/codedesign-ai/",
+        "https://githits.com/software-factories/codewisp/",
+        "https://githits.com/software-factories/deep-interactions/",
+        "https://githits.com/software-factories/draftbit-ai/",
+        "https://githits.com/software-factories/dyad/",
+        "https://githits.com/software-factories/emergent/",
+        "https://githits.com/software-factories/fastshot/",
+        "https://githits.com/software-factories/growapps/",
+        "https://githits.com/software-factories/happycapy/",
+        "https://githits.com/software-factories/henosia/",
+        "https://githits.com/software-factories/imagine-bo/",
+        "https://githits.com/software-factories/ipsion-ai/",
+        "https://githits.com/software-factories/iqx-studio/",
+        "https://githits.com/software-factories/jenz/",
+        "https://githits.com/software-factories/lovable/",
+        "https://githits.com/software-factories/luo/",
+        "https://githits.com/software-factories/magic-patterns/",
+        "https://githits.com/software-factories/manus/",
+        "https://githits.com/software-factories/meku/",
+        "https://githits.com/software-factories/metagpt/",
+        "https://githits.com/software-factories/modelence-app-builder/",
+        "https://githits.com/software-factories/newly/",
+        "https://githits.com/software-factories/onlook/",
+        "https://githits.com/software-factories/open-polsia/",
+        "https://githits.com/software-factories/polymet/",
+        "https://githits.com/software-factories/primio/",
+        "https://githits.com/software-factories/reflex/",
+        "https://githits.com/software-factories/replit-agent/",
+        "https://githits.com/software-factories/retool-appgen-agents/",
+        "https://githits.com/software-factories/riff/",
+        "https://githits.com/software-factories/rocket-new/",
+        "https://githits.com/software-factories/rork/",
+        "https://githits.com/software-factories/rosebud/",
+        "https://githits.com/software-factories/sfactory/",
+        "https://githits.com/software-factories/softgen/",
+        "https://githits.com/software-factories/softr/",
+        "https://githits.com/software-factories/solid/",
+        "https://githits.com/software-factories/summer-engine/",
+        "https://githits.com/software-factories/superapp/",
+        "https://githits.com/software-factories/superblocks/",
+        "https://githits.com/software-factories/temper/",
+        "https://githits.com/software-factories/thunkable/",
+        "https://githits.com/software-factories/totalum/",
+        "https://githits.com/software-factories/ui-bakery/",
+        "https://githits.com/software-factories/v0/",
+        "https://githits.com/software-factories/velra/",
+        "https://githits.com/software-factories/vibecode/",
+        "https://githits.com/software-factories/vibely/",
+        "https://githits.com/software-factories/vybe/",
+        "https://githits.com/software-factories/workshop/",
+        "https://githits.com/software-factories/x1/",
+        "https://githits.com/software-factories/xfactory/",
+        "https://githits.com/software-factories/youware/"
+      ],
+      "name": "App builders",
+      "slug": "app-builders",
+      "url": "https://githits.com/software-factories/category/app-builders/"
+    },
+    {
+      "advertised_count": 9,
+      "collected_count": 9,
+      "item_urls": [
+        "https://githits.com/software-factories/cline/",
+        "https://githits.com/software-factories/conductor/",
+        "https://githits.com/software-factories/factory-factory/",
+        "https://githits.com/software-factories/fredrin/",
+        "https://githits.com/software-factories/helmor/",
+        "https://githits.com/software-factories/moi/",
+        "https://githits.com/software-factories/superset/",
+        "https://githits.com/software-factories/tempo/",
+        "https://githits.com/software-factories/xirp/"
+      ],
+      "name": "Agent workspaces",
+      "slug": "agent-workspaces",
+      "url": "https://githits.com/software-factories/category/agent-workspaces/"
+    },
+    {
+      "advertised_count": 10,
+      "collected_count": 10,
+      "item_urls": [
+        "https://githits.com/software-factories/actual-ai/",
+        "https://githits.com/software-factories/baz/",
+        "https://githits.com/software-factories/bytebell/",
+        "https://githits.com/software-factories/codeboarding/",
+        "https://githits.com/software-factories/coderabbit/",
+        "https://githits.com/software-factories/cubic/",
+        "https://githits.com/software-factories/graphite-agent/",
+        "https://githits.com/software-factories/greptile/",
+        "https://githits.com/software-factories/linearb/",
+        "https://githits.com/software-factories/qodo-gen/"
+      ],
+      "name": "Code review & quality",
+      "slug": "code-review",
+      "url": "https://githits.com/software-factories/category/code-review/"
+    },
+    {
+      "advertised_count": 19,
+      "collected_count": 19,
+      "item_urls": [
+        "https://githits.com/software-factories/aiven/",
+        "https://githits.com/software-factories/caveman/",
+        "https://githits.com/software-factories/crafting/",
+        "https://githits.com/software-factories/daytona/",
+        "https://githits.com/software-factories/e2b-fragments/",
+        "https://githits.com/software-factories/e2e/",
+        "https://githits.com/software-factories/ellipsis/",
+        "https://githits.com/software-factories/encore/",
+        "https://githits.com/software-factories/floot/",
+        "https://githits.com/software-factories/insforge/",
+        "https://githits.com/software-factories/membrane/",
+        "https://githits.com/software-factories/mo-ai-qa-engineer/",
+        "https://githits.com/software-factories/morph/",
+        "https://githits.com/software-factories/agent-runners/",
+        "https://githits.com/software-factories/niteshift/",
+        "https://githits.com/software-factories/opensession/",
+        "https://githits.com/software-factories/prized/",
+        "https://githits.com/software-factories/shipfox/",
+        "https://githits.com/software-factories/truefoundry-ai-gateway/"
+      ],
+      "name": "Agent infrastructure",
+      "slug": "agent-infrastructure",
+      "url": "https://githits.com/software-factories/category/agent-infrastructure/"
+    },
+    {
+      "advertised_count": 2,
+      "collected_count": 2,
+      "item_urls": [
+        "https://githits.com/software-factories/entire-checkpoints/",
+        "https://githits.com/software-factories/gitlab/"
+      ],
+      "name": "Development platforms",
+      "slug": "development-platforms",
+      "url": "https://githits.com/software-factories/category/development-platforms/"
+    },
+    {
+      "advertised_count": 4,
+      "collected_count": 4,
+      "item_urls": [
+        "https://githits.com/software-factories/mistral-code/",
+        "https://githits.com/software-factories/ona/",
+        "https://githits.com/software-factories/poolside/",
+        "https://githits.com/software-factories/spacexai/"
+      ],
+      "name": "AI labs & coding models",
+      "slug": "ai-labs",
+      "url": "https://githits.com/software-factories/category/ai-labs/"
+    }
+  ],
+  "directory_inventory": {
+    "cards": {
+      "https://githits.com/software-factories/8090/": {
+        "added": "1787021428000",
+        "added_ms": 1787021428000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "8090",
+        "oss": "false",
+        "tags": "enterprise governance"
+      },
+      "https://githits.com/software-factories/actual-ai/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "actual",
+        "oss": "false",
+        "tags": "code-review mcp governance"
+      },
+      "https://githits.com/software-factories/aeon/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "aeon",
+        "oss": "true",
+        "tags": "background-agents mcp"
+      },
+      "https://githits.com/software-factories/agent-runners/": {
+        "added": "1790668095000",
+        "added_ms": 1790668095000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "netlify agent runners",
+        "oss": "false",
+        "tags": "bring-your-own-agent sandboxes web-apps"
+      },
+      "https://githits.com/software-factories/agentic-engineering-os/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "agentic engineering os",
+        "oss": "false",
+        "tags": "governance enterprise"
+      },
+      "https://githits.com/software-factories/agentic-software-factory/": {
+        "added": "1791405582000",
+        "added_ms": 1791405582000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "agentic software factory",
+        "oss": "true",
+        "tags": "multi-agent issue-to-pr code-review enterprise"
+      },
+      "https://githits.com/software-factories/ai-ready-nx-workspace/": {
+        "added": "1792676219000",
+        "added_ms": 1792676219000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "ai-ready nx workspace",
+        "oss": "true",
+        "tags": "bring-your-own-agent governance mcp"
+      },
+      "https://githits.com/software-factories/ai-software-factory/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "ai-software-factory",
+        "oss": "true",
+        "tags": "multi-agent bring-your-own-agent cli"
+      },
+      "https://githits.com/software-factories/aifactory/": {
+        "added": "1791405582000",
+        "added_ms": 1791405582000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "aifactory",
+        "oss": "true",
+        "tags": "spec-driven multi-agent git-worktrees kanban testing"
+      },
+      "https://githits.com/software-factories/aiven/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "aiven",
+        "oss": "false",
+        "tags": ""
+      },
+      "https://githits.com/software-factories/alfred/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "alfred",
+        "oss": "true",
+        "tags": "bring-your-own-agent background-agents desktop-app"
+      },
+      "https://githits.com/software-factories/anneal/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "anneal",
+        "oss": "true",
+        "tags": "bring-your-own-agent spec-driven code-review"
+      },
+      "https://githits.com/software-factories/another-orchestrator/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "another-orchestrator",
+        "oss": "true",
+        "tags": "issue-to-pr cli"
+      },
+      "https://githits.com/software-factories/appfactor/": {
+        "added": "1789483834000",
+        "added_ms": 1789483834000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "appfactor",
+        "oss": "false",
+        "tags": "legacy-modernization enterprise mcp"
+      },
+      "https://githits.com/software-factories/appwizzy/": {
+        "added": "1790677838000",
+        "added_ms": 1790677838000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "appwizzy",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/atelier/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "atelier",
+        "oss": "true",
+        "tags": "observability"
+      },
+      "https://githits.com/software-factories/atlantic/": {
+        "added": "1794732158000",
+        "added_ms": 1794732158000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "atlantic",
+        "oss": "unknown",
+        "tags": "issue-to-pr testing"
+      },
+      "https://githits.com/software-factories/atomic/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "atomic",
+        "oss": "true",
+        "tags": "governance testing"
+      },
+      "https://githits.com/software-factories/atomically/": {
+        "added": "1794732257000",
+        "added_ms": 1794732257000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "atomically",
+        "oss": "unknown",
+        "tags": "multi-agent issue-to-pr"
+      },
+      "https://githits.com/software-factories/authentica-software-factory/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "authenti.ca software factory",
+        "oss": "false",
+        "tags": "enterprise governance code-review"
+      },
+      "https://githits.com/software-factories/background-agents/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "background agents",
+        "oss": "true",
+        "tags": "background-agents issue-to-pr"
+      },
+      "https://githits.com/software-factories/base44/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "base44",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps internal-tools mcp"
+      },
+      "https://githits.com/software-factories/baz/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "baz",
+        "oss": "true",
+        "tags": "code-review spec-driven enterprise mcp cli"
+      },
+      "https://githits.com/software-factories/beadhive/": {
+        "added": "1790669275000",
+        "added_ms": 1790669275000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "beadhive",
+        "oss": "true",
+        "tags": "bring-your-own-agent cli mcp multi-agent"
+      },
+      "https://githits.com/software-factories/bilt/": {
+        "added": "1789539257000",
+        "added_ms": 1789539257000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "bilt",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps mcp"
+      },
+      "https://githits.com/software-factories/bitmagic/": {
+        "added": "1788780354000",
+        "added_ms": 1788780354000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "bitmagic",
+        "oss": "false",
+        "tags": "prompt-to-app bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/bitrig/": {
+        "added": "1787021428000",
+        "added_ms": 1787021428000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "bitrig",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps desktop-app bring-your-own-agent mcp"
+      },
+      "https://githits.com/software-factories/blackbox-ai/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "blackbox ai",
+        "oss": "false",
+        "tags": "enterprise bring-your-own-agent sandboxes issue-to-pr cli mcp"
+      },
+      "https://githits.com/software-factories/blink/": {
+        "added": "1794732202000",
+        "added_ms": 1794732202000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "blink",
+        "oss": "unknown",
+        "tags": "prompt-to-app web-apps mobile-apps"
+      },
+      "https://githits.com/software-factories/blitzy/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "blitzy",
+        "oss": "false",
+        "tags": "enterprise multi-agent legacy-modernization spec-driven"
+      },
+      "https://githits.com/software-factories/bloom/": {
+        "added": "1794732158000",
+        "added_ms": 1794732158000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "bloom",
+        "oss": "unknown",
+        "tags": "prompt-to-app mobile-apps"
+      },
+      "https://githits.com/software-factories/bolt-new/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "bolt.new",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps mobile-apps mcp"
+      },
+      "https://githits.com/software-factories/bosun/": {
+        "added": "1794733781000",
+        "added_ms": 1794733781000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "bosun",
+        "oss": "unknown",
+        "tags": "legacy-modernization issue-to-pr sandboxes enterprise"
+      },
+      "https://githits.com/software-factories/brain/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "brain",
+        "oss": "false",
+        "tags": "bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/builder-io-fusion/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "builder.io fusion",
+        "oss": "false",
+        "tags": "web-apps mcp"
+      },
+      "https://githits.com/software-factories/buildful/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "buildful",
+        "oss": "false",
+        "tags": "issue-to-pr testing background-agents"
+      },
+      "https://githits.com/software-factories/buildra/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "buildra",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mobile-apps mcp"
+      },
+      "https://githits.com/software-factories/bytebell/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "bytebell",
+        "oss": "false",
+        "tags": "code-review enterprise"
+      },
+      "https://githits.com/software-factories/caveman/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "caveman",
+        "oss": "true",
+        "tags": "observability cli"
+      },
+      "https://githits.com/software-factories/choicely/": {
+        "added": "1794732305000",
+        "added_ms": 1794732305000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "choicely",
+        "oss": "unknown",
+        "tags": "prompt-to-app mobile-apps"
+      },
+      "https://githits.com/software-factories/claude-lane-stack/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "claude-lane-stack",
+        "oss": "true",
+        "tags": "multi-agent git-worktrees bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/cline/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "cline",
+        "oss": "true",
+        "tags": "ide cli desktop-app mcp enterprise"
+      },
+      "https://githits.com/software-factories/codalio/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "codalio",
+        "oss": "false",
+        "tags": "spec-driven prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/codeaf-and-swe-af/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "codeaf and swe-af",
+        "oss": "true",
+        "tags": "parallel-agents multi-agent"
+      },
+      "https://githits.com/software-factories/codeboarding/": {
+        "added": "1794733781000",
+        "added_ms": 1794733781000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "codeboarding",
+        "oss": "true",
+        "tags": "code-review cli ide"
+      },
+      "https://githits.com/software-factories/codedesign-ai/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "codedesign.ai",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/codelayer/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "codelayer",
+        "oss": "false",
+        "tags": "ide multi-agent"
+      },
+      "https://githits.com/software-factories/codemate-ai/": {
+        "added": "1793001561000",
+        "added_ms": 1793001561000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "codemate ai",
+        "oss": "unknown",
+        "tags": "ide code-review prompt-to-app enterprise"
+      },
+      "https://githits.com/software-factories/codeplain/": {
+        "added": "1794733781000",
+        "added_ms": 1794733781000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "codeplain",
+        "oss": "unknown",
+        "tags": "spec-driven testing"
+      },
+      "https://githits.com/software-factories/coderabbit/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "coderabbit",
+        "oss": "false",
+        "tags": "code-review"
+      },
+      "https://githits.com/software-factories/codewisp/": {
+        "added": "1794732257000",
+        "added_ms": 1794732257000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "codewisp",
+        "oss": "unknown",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/command-code/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "command code",
+        "oss": "false",
+        "tags": "cli background-agents sandboxes mcp coding-models"
+      },
+      "https://githits.com/software-factories/commons-systems/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "commons systems",
+        "oss": "true",
+        "tags": "multi-agent"
+      },
+      "https://githits.com/software-factories/conductor/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "conductor",
+        "oss": "false",
+        "tags": "parallel-agents bring-your-own-agent desktop-app code-review mcp"
+      },
+      "https://githits.com/software-factories/condux/": {
+        "added": "1794732202000",
+        "added_ms": 1794732202000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "condux",
+        "oss": "unknown",
+        "tags": "issue-to-pr multi-agent sandboxes testing"
+      },
+      "https://githits.com/software-factories/contrabass/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "contrabass",
+        "oss": "true",
+        "tags": "git-worktrees issue-to-pr cli"
+      },
+      "https://githits.com/software-factories/corbits/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "corbits",
+        "oss": "true",
+        "tags": "cli"
+      },
+      "https://githits.com/software-factories/cosmos/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "cosmos",
+        "oss": "false",
+        "tags": "issue-to-pr background-agents testing enterprise"
+      },
+      "https://githits.com/software-factories/crafting/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "crafting",
+        "oss": "false",
+        "tags": "sandboxes testing enterprise"
+      },
+      "https://githits.com/software-factories/create-xyz-anything/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "anything",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps web-apps"
+      },
+      "https://githits.com/software-factories/cubic/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "cubic",
+        "oss": "false",
+        "tags": "code-review background-agents mcp"
+      },
+      "https://githits.com/software-factories/cursor/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "cursor",
+        "oss": "false",
+        "tags": "ide cli background-agents mcp coding-models"
+      },
+      "https://githits.com/software-factories/cyrus/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "cyrus",
+        "oss": "true",
+        "tags": "background-agents bring-your-own-agent issue-to-pr"
+      },
+      "https://githits.com/software-factories/danic/": {
+        "added": "1794732257000",
+        "added_ms": 1794732257000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "danic",
+        "oss": "unknown",
+        "tags": "multi-agent ide"
+      },
+      "https://githits.com/software-factories/dark-factory/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "dark factory",
+        "oss": "true",
+        "tags": "testing cli"
+      },
+      "https://githits.com/software-factories/daytona/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "daytona",
+        "oss": "false",
+        "tags": "sandboxes"
+      },
+      "https://githits.com/software-factories/deep-interactions/": {
+        "added": "1794732202000",
+        "added_ms": 1794732202000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "deep interactions",
+        "oss": "unknown",
+        "tags": "prompt-to-app"
+      },
+      "https://githits.com/software-factories/diffusion/": {
+        "added": "1790847914000",
+        "added_ms": 1790847914000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "diffusion",
+        "oss": "false",
+        "tags": "enterprise testing multi-agent"
+      },
+      "https://githits.com/software-factories/donmai/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "donmai",
+        "oss": "true",
+        "tags": "bring-your-own-agent mcp governance"
+      },
+      "https://githits.com/software-factories/draftbit-ai/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "draftbit",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps web-apps bring-your-own-agent mcp"
+      },
+      "https://githits.com/software-factories/dyad/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "dyad",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps desktop-app mcp"
+      },
+      "https://githits.com/software-factories/e2b-fragments/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "e2b",
+        "oss": "true",
+        "tags": "sandboxes mcp enterprise"
+      },
+      "https://githits.com/software-factories/e2e/": {
+        "added": "1794960000000",
+        "added_ms": 1794960000000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "e2e",
+        "oss": "true",
+        "tags": "testing bring-your-own-agent mcp web-apps mobile-apps"
+      },
+      "https://githits.com/software-factories/ellipsis/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "ellipsis",
+        "oss": "false",
+        "tags": "bring-your-own-agent sandboxes code-review governance mcp"
+      },
+      "https://githits.com/software-factories/emergent/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "emergent",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mobile-apps internal-tools multi-agent mcp"
+      },
+      "https://githits.com/software-factories/encore/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "encore",
+        "oss": "true",
+        "tags": "cli"
+      },
+      "https://githits.com/software-factories/engrams/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "engrams",
+        "oss": "true",
+        "tags": "bring-your-own-agent sandboxes background-agents"
+      },
+      "https://githits.com/software-factories/entire-checkpoints/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "development-platforms",
+        "deployment": true,
+        "featured": true,
+        "name": "entire",
+        "oss": "true",
+        "tags": "code-review cli"
+      },
+      "https://githits.com/software-factories/esf/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "esf",
+        "oss": "true",
+        "tags": "sandboxes testing"
+      },
+      "https://githits.com/software-factories/fabrik/": {
+        "added": "1794732257000",
+        "added_ms": 1794732257000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "fabrik",
+        "oss": "unknown",
+        "tags": "issue-to-pr sandboxes"
+      },
+      "https://githits.com/software-factories/fabrika-berkaycubuk/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "fabrika",
+        "oss": "true",
+        "tags": ""
+      },
+      "https://githits.com/software-factories/fabrika-tatiyants/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "fabrika",
+        "oss": "true",
+        "tags": "multi-agent sandboxes testing code-review"
+      },
+      "https://githits.com/software-factories/fabro/": {
+        "added": "1789553938000",
+        "added_ms": 1789553938000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "fabro",
+        "oss": "true",
+        "tags": "sandboxes observability mcp"
+      },
+      "https://githits.com/software-factories/factory-agent-ajsai47/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "factory-agent",
+        "oss": "true",
+        "tags": "issue-to-pr multi-agent"
+      },
+      "https://githits.com/software-factories/factory-agent-annakov/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "factory-agent",
+        "oss": "true",
+        "tags": "issue-to-pr"
+      },
+      "https://githits.com/software-factories/factory-com/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "factory",
+        "oss": "false",
+        "tags": "enterprise desktop-app cli mcp code-review"
+      },
+      "https://githits.com/software-factories/factory-factory/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "factory factory",
+        "oss": "true",
+        "tags": "parallel-agents bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/factory-on-herdr/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "factory on herdr",
+        "oss": "true",
+        "tags": "bring-your-own-agent multi-agent code-review"
+      },
+      "https://githits.com/software-factories/factory-watt-mind/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "factory",
+        "oss": "true",
+        "tags": "testing"
+      },
+      "https://githits.com/software-factories/fastshot/": {
+        "added": "1794732158000",
+        "added_ms": 1794732158000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "fastshot",
+        "oss": "unknown",
+        "tags": "prompt-to-app mobile-apps multi-agent"
+      },
+      "https://githits.com/software-factories/finn-loop/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "finn-loop",
+        "oss": "true",
+        "tags": "bring-your-own-agent spec-driven code-review"
+      },
+      "https://githits.com/software-factories/floot/": {
+        "added": "1787021379000",
+        "added_ms": 1787021379000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "floot",
+        "oss": "false",
+        "tags": "web-apps mcp bring-your-own-agent prompt-to-app"
+      },
+      "https://githits.com/software-factories/fluent/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "fluent",
+        "oss": "true",
+        "tags": "multi-agent"
+      },
+      "https://githits.com/software-factories/foreman/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "foreman",
+        "oss": "true",
+        "tags": "bring-your-own-agent cli"
+      },
+      "https://githits.com/software-factories/forge/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "forge",
+        "oss": "true",
+        "tags": "bring-your-own-agent testing code-review"
+      },
+      "https://githits.com/software-factories/forgecode/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "forgecode",
+        "oss": "false",
+        "tags": "issue-to-pr background-agents cli"
+      },
+      "https://githits.com/software-factories/forgeo/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "forgeo",
+        "oss": "true",
+        "tags": "bring-your-own-agent background-agents"
+      },
+      "https://githits.com/software-factories/fredrin/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "fredrin",
+        "oss": "false",
+        "tags": "kanban parallel-agents git-worktrees bring-your-own-agent desktop-app"
+      },
+      "https://githits.com/software-factories/fusion/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "fusion",
+        "oss": "true",
+        "tags": "kanban git-worktrees code-review background-agents"
+      },
+      "https://githits.com/software-factories/gas-city/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "gas city",
+        "oss": "true",
+        "tags": "multi-agent bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/genie/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "genie",
+        "oss": "true",
+        "tags": "parallel-agents git-worktrees code-review cli"
+      },
+      "https://githits.com/software-factories/gitlab/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "development-platforms",
+        "deployment": true,
+        "featured": true,
+        "name": "gitlab",
+        "oss": "false",
+        "tags": "enterprise governance"
+      },
+      "https://githits.com/software-factories/graphite-agent/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "graphite agent",
+        "oss": "false",
+        "tags": "code-review"
+      },
+      "https://githits.com/software-factories/great-cto/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "great cto",
+        "oss": "true",
+        "tags": "multi-agent bring-your-own-agent observability"
+      },
+      "https://githits.com/software-factories/greptile/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "greptile",
+        "oss": "false",
+        "tags": "code-review testing mcp multi-agent"
+      },
+      "https://githits.com/software-factories/growapps/": {
+        "added": "1794737355000",
+        "added_ms": 1794737355000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "growapps",
+        "oss": "unknown",
+        "tags": "prompt-to-app mobile-apps"
+      },
+      "https://githits.com/software-factories/guild-software-factory/": {
+        "added": "1791408258000",
+        "added_ms": 1791408258000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "guild software factory",
+        "oss": "false",
+        "tags": "issue-to-pr code-review multi-agent"
+      },
+      "https://githits.com/software-factories/happycapy/": {
+        "added": "1789471543000",
+        "added_ms": 1789471543000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "happycapy",
+        "oss": "false",
+        "tags": "sandboxes web-apps mcp"
+      },
+      "https://githits.com/software-factories/har/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "har",
+        "oss": "true",
+        "tags": "cli mcp git-worktrees testing"
+      },
+      "https://githits.com/software-factories/harness-kanban/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "harness-kanban",
+        "oss": "true",
+        "tags": "kanban background-agents sandboxes"
+      },
+      "https://githits.com/software-factories/helmor/": {
+        "added": "1792418102000",
+        "added_ms": 1792418102000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "helmor",
+        "oss": "true",
+        "tags": "git-worktrees parallel-agents"
+      },
+      "https://githits.com/software-factories/henosia/": {
+        "added": "1794732158000",
+        "added_ms": 1794732158000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "henosia",
+        "oss": "unknown",
+        "tags": "prompt-to-app internal-tools governance"
+      },
+      "https://githits.com/software-factories/hoplite/": {
+        "added": "1790669275000",
+        "added_ms": 1790669275000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "hoplite",
+        "oss": "false",
+        "tags": "background-agents sandboxes issue-to-pr mcp testing"
+      },
+      "https://githits.com/software-factories/human/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "human",
+        "oss": "true",
+        "tags": "bring-your-own-agent sandboxes"
+      },
+      "https://githits.com/software-factories/imagine-bo/": {
+        "added": "1794732305000",
+        "added_ms": 1794732305000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "imagine.bo",
+        "oss": "unknown",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/insforge/": {
+        "added": "1794310136000",
+        "added_ms": 1794310136000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "insforge",
+        "oss": "true",
+        "tags": "mcp cli"
+      },
+      "https://githits.com/software-factories/intercode/": {
+        "added": "1794732305000",
+        "added_ms": 1794732305000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "intercode",
+        "oss": "unknown",
+        "tags": "issue-to-pr"
+      },
+      "https://githits.com/software-factories/ipsion-ai/": {
+        "added": "1791758386000",
+        "added_ms": 1791758386000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "ipsion",
+        "oss": "false",
+        "tags": "prompt-to-app multi-agent web-apps testing"
+      },
+      "https://githits.com/software-factories/iqx-studio/": {
+        "added": "1794732305000",
+        "added_ms": 1794732305000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "iqx studio",
+        "oss": "unknown",
+        "tags": "prompt-to-app web-apps mobile-apps"
+      },
+      "https://githits.com/software-factories/issue-to-pr-agent/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "issue-to-pr-agent",
+        "oss": "true",
+        "tags": "issue-to-pr sandboxes testing"
+      },
+      "https://githits.com/software-factories/ivy-tendril/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "tendril",
+        "oss": "true",
+        "tags": "bring-your-own-agent parallel-agents git-worktrees"
+      },
+      "https://githits.com/software-factories/jenz/": {
+        "added": "1794826843000",
+        "added_ms": 1794826843000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "jenz",
+        "oss": "unknown",
+        "tags": "internal-tools sandboxes"
+      },
+      "https://githits.com/software-factories/jules/": {
+        "added": "1790590725000",
+        "added_ms": 1790590725000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "jules",
+        "oss": "false",
+        "tags": "background-agents issue-to-pr cli mcp"
+      },
+      "https://githits.com/software-factories/junie/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "junie",
+        "oss": "false",
+        "tags": "ide cli mcp"
+      },
+      "https://githits.com/software-factories/kavia-ai/": {
+        "added": "1794310136000",
+        "added_ms": 1794310136000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "kavia ai",
+        "oss": "false",
+        "tags": "enterprise legacy-modernization code-review testing cli"
+      },
+      "https://githits.com/software-factories/kilo-code/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "kilo code",
+        "oss": "true",
+        "tags": "ide cli background-agents sandboxes mcp"
+      },
+      "https://githits.com/software-factories/kiro/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "kiro",
+        "oss": "false",
+        "tags": "spec-driven parallel-agents ide cli testing mcp"
+      },
+      "https://githits.com/software-factories/latentforce-ai/": {
+        "added": "1791817901000",
+        "added_ms": 1791817901000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "latentforce",
+        "oss": "false",
+        "tags": "enterprise legacy-modernization code-review"
+      },
+      "https://githits.com/software-factories/lightspeed/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "lightspeed",
+        "oss": "true",
+        "tags": ""
+      },
+      "https://githits.com/software-factories/lightsprint/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "lightsprint",
+        "oss": "false",
+        "tags": "parallel-agents sandboxes mcp"
+      },
+      "https://githits.com/software-factories/linearb/": {
+        "added": "1791819681000",
+        "added_ms": 1791819681000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "linearb",
+        "oss": "false",
+        "tags": "code-review observability mcp enterprise"
+      },
+      "https://githits.com/software-factories/lit-factory/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "lit factory",
+        "oss": "false",
+        "tags": "bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/loki-mode/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "loki mode",
+        "oss": "true",
+        "tags": "multi-agent spec-driven bring-your-own-agent code-review"
+      },
+      "https://githits.com/software-factories/lovable/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "lovable",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps internal-tools mcp"
+      },
+      "https://githits.com/software-factories/luo/": {
+        "added": "1789539257000",
+        "added_ms": 1789539257000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "luo",
+        "oss": "false",
+        "tags": "prompt-to-app internal-tools"
+      },
+      "https://githits.com/software-factories/machinist/": {
+        "added": "1791405582000",
+        "added_ms": 1791405582000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "machinist",
+        "oss": "true",
+        "tags": "bring-your-own-agent observability background-agents"
+      },
+      "https://githits.com/software-factories/magic-patterns/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "magic patterns",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mcp"
+      },
+      "https://githits.com/software-factories/manus/": {
+        "added": "1788435919000",
+        "added_ms": 1788435919000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "manus",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mcp"
+      },
+      "https://githits.com/software-factories/mastra-factory/": {
+        "added": "1790605068000",
+        "added_ms": 1790605068000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "mastra factory",
+        "oss": "true",
+        "tags": "issue-to-pr sandboxes code-review"
+      },
+      "https://githits.com/software-factories/mechanical-orchard/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "mechanical orchard",
+        "oss": "false",
+        "tags": "legacy-modernization enterprise multi-agent testing"
+      },
+      "https://githits.com/software-factories/meku/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "meku",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/membrane/": {
+        "added": "1794310136000",
+        "added_ms": 1794310136000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "membrane",
+        "oss": "false",
+        "tags": "mcp cli"
+      },
+      "https://githits.com/software-factories/metagpt/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "metagpt",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps internal-tools multi-agent"
+      },
+      "https://githits.com/software-factories/mindflock/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "mindflock",
+        "oss": "true",
+        "tags": "git-worktrees parallel-agents issue-to-pr"
+      },
+      "https://githits.com/software-factories/miniforge/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "miniforge",
+        "oss": "true",
+        "tags": "governance"
+      },
+      "https://githits.com/software-factories/minimum-viable-factory/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "minimum viable factory",
+        "oss": "true",
+        "tags": "issue-to-pr web-apps"
+      },
+      "https://githits.com/software-factories/mission-control/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "mission control",
+        "oss": "true",
+        "tags": "observability"
+      },
+      "https://githits.com/software-factories/mistral-code/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "ai-labs",
+        "deployment": true,
+        "featured": true,
+        "name": "mistral code",
+        "oss": "true",
+        "tags": "coding-models cli ide mcp enterprise"
+      },
+      "https://githits.com/software-factories/mo-ai-qa-engineer/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "mo",
+        "oss": "false",
+        "tags": "testing mcp"
+      },
+      "https://githits.com/software-factories/modelence-app-builder/": {
+        "added": "1787021428000",
+        "added_ms": 1787021428000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "modelence",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/moi/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "moi",
+        "oss": "true",
+        "tags": "parallel-agents"
+      },
+      "https://githits.com/software-factories/morph/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "morph",
+        "oss": "false",
+        "tags": "sandboxes bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/mspilot/": {
+        "added": "1787021428000",
+        "added_ms": 1787021428000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "mspilot",
+        "oss": "false",
+        "tags": "governance observability mcp bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/multica/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "multica",
+        "oss": "true",
+        "tags": "kanban bring-your-own-agent multi-agent"
+      },
+      "https://githits.com/software-factories/needle/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "needle",
+        "oss": "true",
+        "tags": "background-agents"
+      },
+      "https://githits.com/software-factories/newly/": {
+        "added": "1794737355000",
+        "added_ms": 1794737355000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "newly",
+        "oss": "unknown",
+        "tags": "prompt-to-app mobile-apps"
+      },
+      "https://githits.com/software-factories/niteshift/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "niteshift",
+        "oss": "false",
+        "tags": "bring-your-own-agent testing mcp"
+      },
+      "https://githits.com/software-factories/no-human/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "no_human",
+        "oss": "true",
+        "tags": "issue-to-pr code-review"
+      },
+      "https://githits.com/software-factories/oh-my-symphony/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "oh-my-symphony",
+        "oss": "true",
+        "tags": "bring-your-own-agent kanban cli"
+      },
+      "https://githits.com/software-factories/ona/": {
+        "added": "1789553938000",
+        "added_ms": 1789553938000,
+        "category": "ai-labs",
+        "deployment": true,
+        "featured": true,
+        "name": "ona",
+        "oss": "false",
+        "tags": "background-agents enterprise governance mcp"
+      },
+      "https://githits.com/software-factories/onlook/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "onlook",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps mcp"
+      },
+      "https://githits.com/software-factories/open-polsia/": {
+        "added": "1791405582000",
+        "added_ms": 1791405582000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "open polsia",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps multi-agent"
+      },
+      "https://githits.com/software-factories/open-swe/": {
+        "added": "1791405582000",
+        "added_ms": 1791405582000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "open swe",
+        "oss": "true",
+        "tags": "issue-to-pr background-agents sandboxes code-review"
+      },
+      "https://githits.com/software-factories/opencastle/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "opencastle",
+        "oss": "true",
+        "tags": "multi-agent bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/opencode/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "opencode",
+        "oss": "true",
+        "tags": "cli desktop-app ide parallel-agents mcp"
+      },
+      "https://githits.com/software-factories/openfactory-core/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "openfactory",
+        "oss": "true",
+        "tags": "issue-to-pr code-review"
+      },
+      "https://githits.com/software-factories/openhands/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "openhands",
+        "oss": "true",
+        "tags": "cli mcp enterprise"
+      },
+      "https://githits.com/software-factories/opensession/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "open session",
+        "oss": "true",
+        "tags": "git-worktrees sandboxes code-review"
+      },
+      "https://githits.com/software-factories/optio/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "optio",
+        "oss": "true",
+        "tags": "issue-to-pr multi-agent bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/orbi/": {
+        "added": "1789900658000",
+        "added_ms": 1789900658000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "orbi",
+        "oss": "true",
+        "tags": "issue-to-pr code-review git-worktrees testing"
+      },
+      "https://githits.com/software-factories/overcut/": {
+        "added": "1789553938000",
+        "added_ms": 1789553938000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "overcut",
+        "oss": "false",
+        "tags": "code-review sandboxes enterprise mcp"
+      },
+      "https://githits.com/software-factories/pi-rukas/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "pi-rukas",
+        "oss": "true",
+        "tags": "coding-models cli"
+      },
+      "https://githits.com/software-factories/planwright/": {
+        "added": "1792418295000",
+        "added_ms": 1792418295000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "planwright",
+        "oss": "true",
+        "tags": "spec-driven bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/playerzero/": {
+        "added": "1794310136000",
+        "added_ms": 1794310136000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "playerzero",
+        "oss": "false",
+        "tags": "code-review observability testing enterprise"
+      },
+      "https://githits.com/software-factories/plover-labs/": {
+        "added": "1794732158000",
+        "added_ms": 1794732158000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "plover labs",
+        "oss": "unknown",
+        "tags": "code-review governance"
+      },
+      "https://githits.com/software-factories/polygraph/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "polygraph",
+        "oss": "false",
+        "tags": "bring-your-own-agent multi-agent enterprise"
+      },
+      "https://githits.com/software-factories/polymet/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "polymet",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mcp"
+      },
+      "https://githits.com/software-factories/poolside/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "ai-labs",
+        "deployment": true,
+        "featured": true,
+        "name": "poolside",
+        "oss": "false",
+        "tags": "coding-models enterprise cli ide mcp"
+      },
+      "https://githits.com/software-factories/port/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "port",
+        "oss": "false",
+        "tags": "governance issue-to-pr mcp enterprise"
+      },
+      "https://githits.com/software-factories/primio/": {
+        "added": "1794732202000",
+        "added_ms": 1794732202000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "primio",
+        "oss": "unknown",
+        "tags": "prompt-to-app mobile-apps web-apps"
+      },
+      "https://githits.com/software-factories/prized/": {
+        "added": "1787021428000",
+        "added_ms": 1787021428000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "prized",
+        "oss": "false",
+        "tags": "bring-your-own-agent sandboxes mcp"
+      },
+      "https://githits.com/software-factories/qoder/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "qoder",
+        "oss": "false",
+        "tags": "ide cli background-agents mcp"
+      },
+      "https://githits.com/software-factories/qodo-gen/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "code-review",
+        "deployment": true,
+        "featured": true,
+        "name": "qodo gen",
+        "oss": "false",
+        "tags": "code-review testing"
+      },
+      "https://githits.com/software-factories/reason-agent/": {
+        "added": "1791833888000",
+        "added_ms": 1791833888000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "reason",
+        "oss": "false",
+        "tags": "issue-to-pr background-agents code-review mcp"
+      },
+      "https://githits.com/software-factories/reflex/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "reflex",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps internal-tools mcp"
+      },
+      "https://githits.com/software-factories/replit-agent/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "replit agent",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mobile-apps mcp"
+      },
+      "https://githits.com/software-factories/retool-appgen-agents/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "retool appgen",
+        "oss": "false",
+        "tags": "prompt-to-app internal-tools web-apps mcp"
+      },
+      "https://githits.com/software-factories/riff/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "riff",
+        "oss": "false",
+        "tags": "prompt-to-app internal-tools enterprise governance"
+      },
+      "https://githits.com/software-factories/rocket-new/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "rocket",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mobile-apps"
+      },
+      "https://githits.com/software-factories/rork/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "rork",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps web-apps"
+      },
+      "https://githits.com/software-factories/rosebud/": {
+        "added": "1789373054000",
+        "added_ms": 1789373054000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "rosebud",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/sfactory/": {
+        "added": "1791309312000",
+        "added_ms": 1791309312000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "sfactory",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/sgai/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "sgai",
+        "oss": "true",
+        "tags": "multi-agent spec-driven"
+      },
+      "https://githits.com/software-factories/shipfox/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "shipfloor",
+        "oss": "true",
+        "tags": "bring-your-own-agent kanban"
+      },
+      "https://githits.com/software-factories/smile-software-factory/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "smile",
+        "oss": "true",
+        "tags": "issue-to-pr code-review"
+      },
+      "https://githits.com/software-factories/softgen/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "softgen",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/softr/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "softr",
+        "oss": "false",
+        "tags": "prompt-to-app internal-tools web-apps mcp"
+      },
+      "https://githits.com/software-factories/software-factory-nicolas-melo/": {
+        "added": "1791405582000",
+        "added_ms": 1791405582000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "software-factory",
+        "oss": "true",
+        "tags": "governance testing code-review cli"
+      },
+      "https://githits.com/software-factories/software-factory-stratonext/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "stratonext software-factory",
+        "oss": "true",
+        "tags": "cli git-worktrees"
+      },
+      "https://githits.com/software-factories/solid/": {
+        "added": "1791254638000",
+        "added_ms": 1791254638000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "solid",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps background-agents"
+      },
+      "https://githits.com/software-factories/sortie/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "sortie",
+        "oss": "true",
+        "tags": "cli"
+      },
+      "https://githits.com/software-factories/spacexai/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "ai-labs",
+        "deployment": true,
+        "featured": true,
+        "name": "spacexai",
+        "oss": "true",
+        "tags": "coding-models cli"
+      },
+      "https://githits.com/software-factories/stagewise/": {
+        "added": "1787021428000",
+        "added_ms": 1787021428000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "stagewise",
+        "oss": "true",
+        "tags": "ide desktop-app parallel-agents"
+      },
+      "https://githits.com/software-factories/summer-engine/": {
+        "added": "1789373054000",
+        "added_ms": 1789373054000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "summer engine",
+        "oss": "false",
+        "tags": "desktop-app mcp prompt-to-app"
+      },
+      "https://githits.com/software-factories/superapp/": {
+        "added": "1794737355000",
+        "added_ms": 1794737355000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "superapp",
+        "oss": "unknown",
+        "tags": "prompt-to-app mobile-apps"
+      },
+      "https://githits.com/software-factories/superblocks/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "superblocks",
+        "oss": "false",
+        "tags": "internal-tools prompt-to-app governance enterprise"
+      },
+      "https://githits.com/software-factories/superset/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "superset",
+        "oss": "false",
+        "tags": "parallel-agents git-worktrees bring-your-own-agent ide"
+      },
+      "https://githits.com/software-factories/taiga/": {
+        "added": "1790605068000",
+        "added_ms": 1790605068000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "taiga",
+        "oss": "false",
+        "tags": "spec-driven issue-to-pr enterprise governance"
+      },
+      "https://githits.com/software-factories/taskplane/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "taskplane",
+        "oss": "true",
+        "tags": "multi-agent"
+      },
+      "https://githits.com/software-factories/tasktrooper/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "tasktrooper",
+        "oss": "true",
+        "tags": "kanban multi-agent bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/taskuary/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "taskuary",
+        "oss": "true",
+        "tags": "governance"
+      },
+      "https://githits.com/software-factories/temper/": {
+        "added": "1791309312000",
+        "added_ms": 1791309312000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "temper",
+        "oss": "false",
+        "tags": "testing"
+      },
+      "https://githits.com/software-factories/tempo/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "tempo",
+        "oss": "false",
+        "tags": "bring-your-own-agent git-worktrees background-agents desktop-app"
+      },
+      "https://githits.com/software-factories/tessl/": {
+        "added": "1787021596000",
+        "added_ms": 1787021596000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "tessl",
+        "oss": "false",
+        "tags": "spec-driven bring-your-own-agent governance mcp"
+      },
+      "https://githits.com/software-factories/thunkable/": {
+        "added": "1794310136000",
+        "added_ms": 1794310136000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "thunkable",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps"
+      },
+      "https://githits.com/software-factories/tiden/": {
+        "added": "1792017299000",
+        "added_ms": 1792017299000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "tiden",
+        "oss": "false",
+        "tags": "bring-your-own-agent spec-driven testing governance"
+      },
+      "https://githits.com/software-factories/totalum/": {
+        "added": "1791405582000",
+        "added_ms": 1791405582000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "totalum",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps mcp"
+      },
+      "https://githits.com/software-factories/trae/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "trae",
+        "oss": "false",
+        "tags": "ide cli mcp parallel-agents"
+      },
+      "https://githits.com/software-factories/treegates/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "treegates",
+        "oss": "false",
+        "tags": "bring-your-own-agent governance"
+      },
+      "https://githits.com/software-factories/truefoundry-ai-gateway/": {
+        "added": "1791824970000",
+        "added_ms": 1791824970000,
+        "category": "agent-infrastructure",
+        "deployment": true,
+        "featured": true,
+        "name": "truefoundry ai gateway",
+        "oss": "false",
+        "tags": "governance observability mcp enterprise"
+      },
+      "https://githits.com/software-factories/ui-bakery/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "ui bakery",
+        "oss": "false",
+        "tags": "prompt-to-app internal-tools web-apps mcp"
+      },
+      "https://githits.com/software-factories/v0/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "v0",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps mcp"
+      },
+      "https://githits.com/software-factories/velra/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "velra",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/vibecode/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "vibecode",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps web-apps"
+      },
+      "https://githits.com/software-factories/vibely/": {
+        "added": "1794732257000",
+        "added_ms": 1794732257000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "vibely",
+        "oss": "unknown",
+        "tags": "prompt-to-app web-apps mobile-apps mcp"
+      },
+      "https://githits.com/software-factories/vorflux/": {
+        "added": "1789553938000",
+        "added_ms": 1789553938000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "vorflux",
+        "oss": "false",
+        "tags": "background-agents issue-to-pr testing code-review"
+      },
+      "https://githits.com/software-factories/vybe/": {
+        "added": "1786075817000",
+        "added_ms": 1786075817000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "vybe",
+        "oss": "false",
+        "tags": "internal-tools prompt-to-app web-apps"
+      },
+      "https://githits.com/software-factories/warp-oz/": {
+        "added": "1787182284000",
+        "added_ms": 1787182284000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "warp",
+        "oss": "true",
+        "tags": "background-agents bring-your-own-agent issue-to-pr mcp enterprise"
+      },
+      "https://githits.com/software-factories/windsurf-ide/": {
+        "added": "1786075730000",
+        "added_ms": 1786075730000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "devin desktop",
+        "oss": "false",
+        "tags": "ide background-agents parallel-agents issue-to-pr mcp bring-your-own-agent"
+      },
+      "https://githits.com/software-factories/workshop/": {
+        "added": "1794310136000",
+        "added_ms": 1794310136000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "workshop",
+        "oss": "true",
+        "tags": "prompt-to-app web-apps mobile-apps internal-tools desktop-app mcp"
+      },
+      "https://githits.com/software-factories/x1/": {
+        "added": "1787021428000",
+        "added_ms": 1787021428000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "x1",
+        "oss": "false",
+        "tags": "prompt-to-app mobile-apps testing"
+      },
+      "https://githits.com/software-factories/xfactory/": {
+        "added": "1792417885000",
+        "added_ms": 1792417885000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "xfactory",
+        "oss": "false",
+        "tags": "enterprise governance internal-tools"
+      },
+      "https://githits.com/software-factories/xirp/": {
+        "added": "1792418477000",
+        "added_ms": 1792418477000,
+        "category": "agent-workspaces",
+        "deployment": true,
+        "featured": true,
+        "name": "xirp",
+        "oss": "false",
+        "tags": "parallel-agents bring-your-own-agent git-worktrees desktop-app mcp"
+      },
+      "https://githits.com/software-factories/xsquad/": {
+        "added": "1789553938000",
+        "added_ms": 1789553938000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "xsquad",
+        "oss": "false",
+        "tags": "multi-agent issue-to-pr"
+      },
+      "https://githits.com/software-factories/yagni/": {
+        "added": "1794732202000",
+        "added_ms": 1794732202000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "yagni",
+        "oss": "unknown",
+        "tags": "multi-agent issue-to-pr code-review testing"
+      },
+      "https://githits.com/software-factories/youware/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "app-builders",
+        "deployment": true,
+        "featured": true,
+        "name": "youware",
+        "oss": "false",
+        "tags": "prompt-to-app web-apps internal-tools mcp"
+      },
+      "https://githits.com/software-factories/zed/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "zed",
+        "oss": "true",
+        "tags": "ide bring-your-own-agent mcp"
+      },
+      "https://githits.com/software-factories/zencoder-zenflow/": {
+        "added": "1788344824000",
+        "added_ms": 1788344824000,
+        "category": "engineering-factories",
+        "deployment": true,
+        "featured": true,
+        "name": "zencoder",
+        "oss": "false",
+        "tags": "parallel-agents bring-your-own-agent desktop-app ide mcp enterprise"
+      },
+      "https://githits.com/software-factories/zeroshot-and-opcore/": {
+        "added": "1790849865000",
+        "added_ms": 1790849865000,
+        "category": "agent-orchestration",
+        "deployment": true,
+        "featured": true,
+        "name": "zeroshot and opcore",
+        "oss": "true",
+        "tags": "bring-your-own-agent code-review issue-to-pr cli"
+      }
+    },
+    "item_urls": [
+      "https://githits.com/software-factories/8090/",
+      "https://githits.com/software-factories/actual-ai/",
+      "https://githits.com/software-factories/aeon/",
+      "https://githits.com/software-factories/agentic-engineering-os/",
+      "https://githits.com/software-factories/agentic-software-factory/",
+      "https://githits.com/software-factories/ai-ready-nx-workspace/",
+      "https://githits.com/software-factories/ai-software-factory/",
+      "https://githits.com/software-factories/aifactory/",
+      "https://githits.com/software-factories/aiven/",
+      "https://githits.com/software-factories/alfred/",
+      "https://githits.com/software-factories/anneal/",
+      "https://githits.com/software-factories/another-orchestrator/",
+      "https://githits.com/software-factories/create-xyz-anything/",
+      "https://githits.com/software-factories/appfactor/",
+      "https://githits.com/software-factories/appwizzy/",
+      "https://githits.com/software-factories/atelier/",
+      "https://githits.com/software-factories/atlantic/",
+      "https://githits.com/software-factories/atomic/",
+      "https://githits.com/software-factories/atomically/",
+      "https://githits.com/software-factories/authentica-software-factory/",
+      "https://githits.com/software-factories/background-agents/",
+      "https://githits.com/software-factories/base44/",
+      "https://githits.com/software-factories/baz/",
+      "https://githits.com/software-factories/beadhive/",
+      "https://githits.com/software-factories/bilt/",
+      "https://githits.com/software-factories/bitmagic/",
+      "https://githits.com/software-factories/bitrig/",
+      "https://githits.com/software-factories/blackbox-ai/",
+      "https://githits.com/software-factories/blink/",
+      "https://githits.com/software-factories/blitzy/",
+      "https://githits.com/software-factories/bloom/",
+      "https://githits.com/software-factories/bolt-new/",
+      "https://githits.com/software-factories/bosun/",
+      "https://githits.com/software-factories/brain/",
+      "https://githits.com/software-factories/builder-io-fusion/",
+      "https://githits.com/software-factories/buildful/",
+      "https://githits.com/software-factories/buildra/",
+      "https://githits.com/software-factories/bytebell/",
+      "https://githits.com/software-factories/caveman/",
+      "https://githits.com/software-factories/choicely/",
+      "https://githits.com/software-factories/claude-lane-stack/",
+      "https://githits.com/software-factories/cline/",
+      "https://githits.com/software-factories/codalio/",
+      "https://githits.com/software-factories/codeaf-and-swe-af/",
+      "https://githits.com/software-factories/codeboarding/",
+      "https://githits.com/software-factories/codedesign-ai/",
+      "https://githits.com/software-factories/codelayer/",
+      "https://githits.com/software-factories/codemate-ai/",
+      "https://githits.com/software-factories/codeplain/",
+      "https://githits.com/software-factories/coderabbit/",
+      "https://githits.com/software-factories/codewisp/",
+      "https://githits.com/software-factories/command-code/",
+      "https://githits.com/software-factories/commons-systems/",
+      "https://githits.com/software-factories/conductor/",
+      "https://githits.com/software-factories/condux/",
+      "https://githits.com/software-factories/contrabass/",
+      "https://githits.com/software-factories/corbits/",
+      "https://githits.com/software-factories/cosmos/",
+      "https://githits.com/software-factories/crafting/",
+      "https://githits.com/software-factories/cubic/",
+      "https://githits.com/software-factories/cursor/",
+      "https://githits.com/software-factories/cyrus/",
+      "https://githits.com/software-factories/danic/",
+      "https://githits.com/software-factories/dark-factory/",
+      "https://githits.com/software-factories/daytona/",
+      "https://githits.com/software-factories/deep-interactions/",
+      "https://githits.com/software-factories/windsurf-ide/",
+      "https://githits.com/software-factories/diffusion/",
+      "https://githits.com/software-factories/donmai/",
+      "https://githits.com/software-factories/draftbit-ai/",
+      "https://githits.com/software-factories/dyad/",
+      "https://githits.com/software-factories/e2b-fragments/",
+      "https://githits.com/software-factories/e2e/",
+      "https://githits.com/software-factories/ellipsis/",
+      "https://githits.com/software-factories/emergent/",
+      "https://githits.com/software-factories/encore/",
+      "https://githits.com/software-factories/engrams/",
+      "https://githits.com/software-factories/entire-checkpoints/",
+      "https://githits.com/software-factories/esf/",
+      "https://githits.com/software-factories/fabrik/",
+      "https://githits.com/software-factories/fabrika-berkaycubuk/",
+      "https://githits.com/software-factories/fabrika-tatiyants/",
+      "https://githits.com/software-factories/fabro/",
+      "https://githits.com/software-factories/factory-com/",
+      "https://githits.com/software-factories/factory-watt-mind/",
+      "https://githits.com/software-factories/factory-factory/",
+      "https://githits.com/software-factories/factory-on-herdr/",
+      "https://githits.com/software-factories/factory-agent-ajsai47/",
+      "https://githits.com/software-factories/factory-agent-annakov/",
+      "https://githits.com/software-factories/fastshot/",
+      "https://githits.com/software-factories/finn-loop/",
+      "https://githits.com/software-factories/floot/",
+      "https://githits.com/software-factories/fluent/",
+      "https://githits.com/software-factories/foreman/",
+      "https://githits.com/software-factories/forge/",
+      "https://githits.com/software-factories/forgecode/",
+      "https://githits.com/software-factories/forgeo/",
+      "https://githits.com/software-factories/fredrin/",
+      "https://githits.com/software-factories/fusion/",
+      "https://githits.com/software-factories/gas-city/",
+      "https://githits.com/software-factories/genie/",
+      "https://githits.com/software-factories/gitlab/",
+      "https://githits.com/software-factories/graphite-agent/",
+      "https://githits.com/software-factories/great-cto/",
+      "https://githits.com/software-factories/greptile/",
+      "https://githits.com/software-factories/growapps/",
+      "https://githits.com/software-factories/guild-software-factory/",
+      "https://githits.com/software-factories/happycapy/",
+      "https://githits.com/software-factories/har/",
+      "https://githits.com/software-factories/harness-kanban/",
+      "https://githits.com/software-factories/helmor/",
+      "https://githits.com/software-factories/henosia/",
+      "https://githits.com/software-factories/hoplite/",
+      "https://githits.com/software-factories/human/",
+      "https://githits.com/software-factories/imagine-bo/",
+      "https://githits.com/software-factories/insforge/",
+      "https://githits.com/software-factories/intercode/",
+      "https://githits.com/software-factories/ipsion-ai/",
+      "https://githits.com/software-factories/iqx-studio/",
+      "https://githits.com/software-factories/issue-to-pr-agent/",
+      "https://githits.com/software-factories/jenz/",
+      "https://githits.com/software-factories/jules/",
+      "https://githits.com/software-factories/junie/",
+      "https://githits.com/software-factories/kavia-ai/",
+      "https://githits.com/software-factories/kilo-code/",
+      "https://githits.com/software-factories/kiro/",
+      "https://githits.com/software-factories/latentforce-ai/",
+      "https://githits.com/software-factories/lightspeed/",
+      "https://githits.com/software-factories/lightsprint/",
+      "https://githits.com/software-factories/linearb/",
+      "https://githits.com/software-factories/lit-factory/",
+      "https://githits.com/software-factories/loki-mode/",
+      "https://githits.com/software-factories/lovable/",
+      "https://githits.com/software-factories/luo/",
+      "https://githits.com/software-factories/machinist/",
+      "https://githits.com/software-factories/magic-patterns/",
+      "https://githits.com/software-factories/manus/",
+      "https://githits.com/software-factories/mastra-factory/",
+      "https://githits.com/software-factories/mechanical-orchard/",
+      "https://githits.com/software-factories/meku/",
+      "https://githits.com/software-factories/membrane/",
+      "https://githits.com/software-factories/metagpt/",
+      "https://githits.com/software-factories/mindflock/",
+      "https://githits.com/software-factories/miniforge/",
+      "https://githits.com/software-factories/minimum-viable-factory/",
+      "https://githits.com/software-factories/mission-control/",
+      "https://githits.com/software-factories/mistral-code/",
+      "https://githits.com/software-factories/mo-ai-qa-engineer/",
+      "https://githits.com/software-factories/modelence-app-builder/",
+      "https://githits.com/software-factories/moi/",
+      "https://githits.com/software-factories/morph/",
+      "https://githits.com/software-factories/mspilot/",
+      "https://githits.com/software-factories/multica/",
+      "https://githits.com/software-factories/needle/",
+      "https://githits.com/software-factories/agent-runners/",
+      "https://githits.com/software-factories/newly/",
+      "https://githits.com/software-factories/niteshift/",
+      "https://githits.com/software-factories/no-human/",
+      "https://githits.com/software-factories/oh-my-symphony/",
+      "https://githits.com/software-factories/ona/",
+      "https://githits.com/software-factories/onlook/",
+      "https://githits.com/software-factories/open-polsia/",
+      "https://githits.com/software-factories/opensession/",
+      "https://githits.com/software-factories/open-swe/",
+      "https://githits.com/software-factories/opencastle/",
+      "https://githits.com/software-factories/opencode/",
+      "https://githits.com/software-factories/openfactory-core/",
+      "https://githits.com/software-factories/openhands/",
+      "https://githits.com/software-factories/optio/",
+      "https://githits.com/software-factories/orbi/",
+      "https://githits.com/software-factories/overcut/",
+      "https://githits.com/software-factories/pi-rukas/",
+      "https://githits.com/software-factories/planwright/",
+      "https://githits.com/software-factories/playerzero/",
+      "https://githits.com/software-factories/plover-labs/",
+      "https://githits.com/software-factories/polygraph/",
+      "https://githits.com/software-factories/polymet/",
+      "https://githits.com/software-factories/poolside/",
+      "https://githits.com/software-factories/port/",
+      "https://githits.com/software-factories/primio/",
+      "https://githits.com/software-factories/prized/",
+      "https://githits.com/software-factories/qoder/",
+      "https://githits.com/software-factories/qodo-gen/",
+      "https://githits.com/software-factories/reason-agent/",
+      "https://githits.com/software-factories/reflex/",
+      "https://githits.com/software-factories/replit-agent/",
+      "https://githits.com/software-factories/retool-appgen-agents/",
+      "https://githits.com/software-factories/riff/",
+      "https://githits.com/software-factories/rocket-new/",
+      "https://githits.com/software-factories/rork/",
+      "https://githits.com/software-factories/rosebud/",
+      "https://githits.com/software-factories/sfactory/",
+      "https://githits.com/software-factories/sgai/",
+      "https://githits.com/software-factories/shipfox/",
+      "https://githits.com/software-factories/smile-software-factory/",
+      "https://githits.com/software-factories/softgen/",
+      "https://githits.com/software-factories/softr/",
+      "https://githits.com/software-factories/software-factory-nicolas-melo/",
+      "https://githits.com/software-factories/solid/",
+      "https://githits.com/software-factories/sortie/",
+      "https://githits.com/software-factories/spacexai/",
+      "https://githits.com/software-factories/stagewise/",
+      "https://githits.com/software-factories/software-factory-stratonext/",
+      "https://githits.com/software-factories/summer-engine/",
+      "https://githits.com/software-factories/superapp/",
+      "https://githits.com/software-factories/superblocks/",
+      "https://githits.com/software-factories/superset/",
+      "https://githits.com/software-factories/taiga/",
+      "https://githits.com/software-factories/taskplane/",
+      "https://githits.com/software-factories/tasktrooper/",
+      "https://githits.com/software-factories/taskuary/",
+      "https://githits.com/software-factories/temper/",
+      "https://githits.com/software-factories/tempo/",
+      "https://githits.com/software-factories/ivy-tendril/",
+      "https://githits.com/software-factories/tessl/",
+      "https://githits.com/software-factories/thunkable/",
+      "https://githits.com/software-factories/tiden/",
+      "https://githits.com/software-factories/totalum/",
+      "https://githits.com/software-factories/trae/",
+      "https://githits.com/software-factories/treegates/",
+      "https://githits.com/software-factories/truefoundry-ai-gateway/",
+      "https://githits.com/software-factories/ui-bakery/",
+      "https://githits.com/software-factories/v0/",
+      "https://githits.com/software-factories/velra/",
+      "https://githits.com/software-factories/vibecode/",
+      "https://githits.com/software-factories/vibely/",
+      "https://githits.com/software-factories/vorflux/",
+      "https://githits.com/software-factories/vybe/",
+      "https://githits.com/software-factories/warp-oz/",
+      "https://githits.com/software-factories/workshop/",
+      "https://githits.com/software-factories/x1/",
+      "https://githits.com/software-factories/xfactory/",
+      "https://githits.com/software-factories/xirp/",
+      "https://githits.com/software-factories/xsquad/",
+      "https://githits.com/software-factories/yagni/",
+      "https://githits.com/software-factories/youware/",
+      "https://githits.com/software-factories/zed/",
+      "https://githits.com/software-factories/zencoder-zenflow/",
+      "https://githits.com/software-factories/zeroshot-and-opcore/"
+    ],
+    "url_count": 239
+  },
+  "discovered_at": "2026-11-26T12:04:17.588181+00:00",
+  "errors": [],
+  "items": {
+    "https://githits.com/software-factories/8090/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/actual-ai/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/aeon/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/agent-runners/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/agentic-engineering-os/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/agentic-software-factory/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/ai-ready-nx-workspace/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/ai-software-factory/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/aifactory/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/aiven/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/alfred/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/anneal/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/another-orchestrator/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/appfactor/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/appwizzy/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/atelier/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/atlantic/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/atomic/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/atomically/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/authentica-software-factory/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/background-agents/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/base44/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/baz/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/beadhive/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/bilt/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/bitmagic/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/bitrig/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/blackbox-ai/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/blink/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/blitzy/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/bloom/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/bolt-new/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/bosun/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/brain/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/builder-io-fusion/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/buildful/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/buildra/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/bytebell/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/caveman/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/choicely/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/claude-lane-stack/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/cline/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codalio/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codeaf-and-swe-af/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codeboarding/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codedesign-ai/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codelayer/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codemate-ai/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codeplain/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/coderabbit/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/codewisp/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/command-code/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/commons-systems/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/conductor/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/condux/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/contrabass/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/corbits/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/cosmos/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/crafting/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/create-xyz-anything/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/cubic/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/cursor/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/cyrus/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/danic/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/dark-factory/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/daytona/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/deep-interactions/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/diffusion/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/donmai/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/draftbit-ai/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/dyad/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/e2b-fragments/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/e2e/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/ellipsis/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/emergent/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/encore/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/engrams/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/entire-checkpoints/": {
+      "categories": [
+        "development-platforms"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/esf/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fabrik/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fabrika-berkaycubuk/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fabrika-tatiyants/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fabro/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/factory-agent-ajsai47/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/factory-agent-annakov/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/factory-com/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/factory-factory/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/factory-on-herdr/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/factory-watt-mind/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fastshot/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/finn-loop/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/floot/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fluent/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/foreman/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/forge/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/forgecode/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/forgeo/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fredrin/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/fusion/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/gas-city/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/genie/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/gitlab/": {
+      "categories": [
+        "development-platforms"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/graphite-agent/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/great-cto/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/greptile/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/growapps/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/guild-software-factory/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/happycapy/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/har/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/harness-kanban/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/helmor/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/henosia/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/hoplite/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/human/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/imagine-bo/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/insforge/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/intercode/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/ipsion-ai/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/iqx-studio/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/issue-to-pr-agent/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/ivy-tendril/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/jenz/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/jules/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/junie/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/kavia-ai/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/kilo-code/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/kiro/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/latentforce-ai/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/lightspeed/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/lightsprint/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/linearb/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/lit-factory/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/loki-mode/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/lovable/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/luo/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/machinist/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/magic-patterns/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/manus/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/mastra-factory/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/mechanical-orchard/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/meku/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/membrane/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/metagpt/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/mindflock/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/miniforge/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/minimum-viable-factory/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/mission-control/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/mistral-code/": {
+      "categories": [
+        "ai-labs"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/mo-ai-qa-engineer/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/modelence-app-builder/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/moi/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/morph/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/mspilot/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/multica/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/needle/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/newly/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/niteshift/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/no-human/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/oh-my-symphony/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/ona/": {
+      "categories": [
+        "ai-labs"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/onlook/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/open-polsia/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/open-swe/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/opencastle/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/opencode/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/openfactory-core/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/openhands/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/opensession/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/optio/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/orbi/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/overcut/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/pi-rukas/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/planwright/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/playerzero/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/plover-labs/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/polygraph/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/polymet/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/poolside/": {
+      "categories": [
+        "ai-labs"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/port/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/primio/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/prized/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/qoder/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/qodo-gen/": {
+      "categories": [
+        "code-review"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/reason-agent/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/reflex/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/replit-agent/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/retool-appgen-agents/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/riff/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/rocket-new/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/rork/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/rosebud/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/sfactory/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/sgai/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/shipfox/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/smile-software-factory/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/softgen/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/softr/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/software-factory-nicolas-melo/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/software-factory-stratonext/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/solid/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/sortie/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/spacexai/": {
+      "categories": [
+        "ai-labs"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/stagewise/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/summer-engine/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/superapp/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/superblocks/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/superset/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/taiga/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/taskplane/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/tasktrooper/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/taskuary/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/temper/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/tempo/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/tessl/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/thunkable/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/tiden/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/totalum/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/trae/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/treegates/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/truefoundry-ai-gateway/": {
+      "categories": [
+        "agent-infrastructure"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/ui-bakery/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/v0/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/velra/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/vibecode/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/vibely/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/vorflux/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/vybe/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/warp-oz/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/windsurf-ide/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/workshop/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/x1/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/xfactory/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/xirp/": {
+      "categories": [
+        "agent-workspaces"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/xsquad/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/yagni/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/youware/": {
+      "categories": [
+        "app-builders"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/zed/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/zencoder-zenflow/": {
+      "categories": [
+        "engineering-factories"
+      ],
+      "in_directory_inventory": true
+    },
+    "https://githits.com/software-factories/zeroshot-and-opcore/": {
+      "categories": [
+        "agent-orchestration"
+      ],
+      "in_directory_inventory": true
+    }
+  },
+  "observations": {
+    "advertised_total": 239,
+    "collected_total_with_duplicates": 239,
+    "in_categories_not_in_inventory": [],
+    "in_inventory_not_in_categories": []
+  },
+  "source": "https://githits.com/software-factories/",
+  "topics": [
+    {
+      "advertised_count": 102,
+      "filter": "oss=open",
+      "name": "Open source",
+      "url": "https://githits.com/software-factories/?oss=open"
+    },
+    {
+      "advertised_count": 77,
+      "filter": "tag=mcp",
+      "name": "MCP",
+      "url": "https://githits.com/software-factories/?tag=mcp"
+    },
+    {
+      "advertised_count": 63,
+      "filter": "tag=prompt-to-app",
+      "name": "Prompt to app",
+      "url": "https://githits.com/software-factories/?tag=prompt-to-app"
+    },
+    {
+      "advertised_count": 57,
+      "filter": "tag=bring-your-own-agent",
+      "name": "Works with your agents",
+      "url": "https://githits.com/software-factories/?tag=bring-your-own-agent"
+    },
+    {
+      "advertised_count": 50,
+      "filter": "tag=web-apps",
+      "name": "Web apps",
+      "url": "https://githits.com/software-factories/?tag=web-apps"
+    },
+    {
+      "advertised_count": 43,
+      "filter": "tag=code-review",
+      "name": "Code review",
+      "url": "https://githits.com/software-factories/?tag=code-review"
+    },
+    {
+      "advertised_count": 40,
+      "filter": "tag=cli",
+      "name": "CLI",
+      "url": "https://githits.com/software-factories/?tag=cli"
+    },
+    {
+      "advertised_count": 39,
+      "filter": "tag=issue-to-pr",
+      "name": "Issue to pull request",
+      "url": "https://githits.com/software-factories/?tag=issue-to-pr"
+    },
+    {
+      "advertised_count": 37,
+      "filter": "tag=enterprise",
+      "name": "Enterprise",
+      "url": "https://githits.com/software-factories/?tag=enterprise"
+    },
+    {
+      "advertised_count": 37,
+      "filter": "tag=multi-agent",
+      "name": "Multi-agent systems",
+      "url": "https://githits.com/software-factories/?tag=multi-agent"
+    },
+    {
+      "advertised_count": 34,
+      "filter": "tag=testing",
+      "name": "Testing & QA",
+      "url": "https://githits.com/software-factories/?tag=testing"
+    },
+    {
+      "advertised_count": 28,
+      "filter": "tag=background-agents",
+      "name": "Background agents",
+      "url": "https://githits.com/software-factories/?tag=background-agents"
+    },
+    {
+      "advertised_count": 28,
+      "filter": "tag=sandboxes",
+      "name": "Sandboxes",
+      "url": "https://githits.com/software-factories/?tag=sandboxes"
+    },
+    {
+      "advertised_count": 25,
+      "filter": "tag=governance",
+      "name": "Governance & audit",
+      "url": "https://githits.com/software-factories/?tag=governance"
+    },
+    {
+      "advertised_count": 25,
+      "filter": "tag=mobile-apps",
+      "name": "Mobile apps",
+      "url": "https://githits.com/software-factories/?tag=mobile-apps"
+    },
+    {
+      "advertised_count": 19,
+      "filter": "tag=ide",
+      "name": "IDE",
+      "url": "https://githits.com/software-factories/?tag=ide"
+    },
+    {
+      "advertised_count": 18,
+      "filter": "tag=parallel-agents",
+      "name": "Parallel agents",
+      "url": "https://githits.com/software-factories/?tag=parallel-agents"
+    },
+    {
+      "advertised_count": 17,
+      "filter": "tag=internal-tools",
+      "name": "Internal tools",
+      "url": "https://githits.com/software-factories/?tag=internal-tools"
+    },
+    {
+      "advertised_count": 16,
+      "filter": "tag=git-worktrees",
+      "name": "Git worktrees",
+      "url": "https://githits.com/software-factories/?tag=git-worktrees"
+    },
+    {
+      "advertised_count": 14,
+      "filter": "tag=desktop-app",
+      "name": "Desktop app",
+      "url": "https://githits.com/software-factories/?tag=desktop-app"
+    },
+    {
+      "advertised_count": 14,
+      "filter": "tag=spec-driven",
+      "name": "Spec-driven development",
+      "url": "https://githits.com/software-factories/?tag=spec-driven"
+    },
+    {
+      "advertised_count": 10,
+      "filter": "tag=observability",
+      "name": "Observability & cost tracking",
+      "url": "https://githits.com/software-factories/?tag=observability"
+    },
+    {
+      "advertised_count": 8,
+      "filter": "tag=kanban",
+      "name": "Kanban workflow",
+      "url": "https://githits.com/software-factories/?tag=kanban"
+    },
+    {
+      "advertised_count": 6,
+      "filter": "tag=coding-models",
+      "name": "Coding models",
+      "url": "https://githits.com/software-factories/?tag=coding-models"
+    },
+    {
+      "advertised_count": 6,
+      "filter": "tag=legacy-modernization",
+      "name": "Legacy modernization",
+      "url": "https://githits.com/software-factories/?tag=legacy-modernization"
+    }
+  ],
+  "unique_item_count": 239,
+  "unique_item_urls": [
+    "https://githits.com/software-factories/8090/",
+    "https://githits.com/software-factories/aeon/",
+    "https://githits.com/software-factories/agentic-engineering-os/",
+    "https://githits.com/software-factories/ai-ready-nx-workspace/",
+    "https://githits.com/software-factories/ai-software-factory/",
+    "https://githits.com/software-factories/aifactory/",
+    "https://githits.com/software-factories/alfred/",
+    "https://githits.com/software-factories/anneal/",
+    "https://githits.com/software-factories/another-orchestrator/",
+    "https://githits.com/software-factories/atelier/",
+    "https://githits.com/software-factories/atomic/",
+    "https://githits.com/software-factories/beadhive/",
+    "https://githits.com/software-factories/brain/",
+    "https://githits.com/software-factories/claude-lane-stack/",
+    "https://githits.com/software-factories/codelayer/",
+    "https://githits.com/software-factories/commons-systems/",
+    "https://githits.com/software-factories/contrabass/",
+    "https://githits.com/software-factories/corbits/",
+    "https://githits.com/software-factories/cyrus/",
+    "https://githits.com/software-factories/dark-factory/",
+    "https://githits.com/software-factories/donmai/",
+    "https://githits.com/software-factories/engrams/",
+    "https://githits.com/software-factories/esf/",
+    "https://githits.com/software-factories/fabrika-berkaycubuk/",
+    "https://githits.com/software-factories/factory-watt-mind/",
+    "https://githits.com/software-factories/factory-on-herdr/",
+    "https://githits.com/software-factories/factory-agent-ajsai47/",
+    "https://githits.com/software-factories/factory-agent-annakov/",
+    "https://githits.com/software-factories/finn-loop/",
+    "https://githits.com/software-factories/fluent/",
+    "https://githits.com/software-factories/foreman/",
+    "https://githits.com/software-factories/forge/",
+    "https://githits.com/software-factories/forgeo/",
+    "https://githits.com/software-factories/fusion/",
+    "https://githits.com/software-factories/gas-city/",
+    "https://githits.com/software-factories/genie/",
+    "https://githits.com/software-factories/great-cto/",
+    "https://githits.com/software-factories/har/",
+    "https://githits.com/software-factories/harness-kanban/",
+    "https://githits.com/software-factories/human/",
+    "https://githits.com/software-factories/issue-to-pr-agent/",
+    "https://githits.com/software-factories/lightspeed/",
+    "https://githits.com/software-factories/lit-factory/",
+    "https://githits.com/software-factories/loki-mode/",
+    "https://githits.com/software-factories/machinist/",
+    "https://githits.com/software-factories/mindflock/",
+    "https://githits.com/software-factories/miniforge/",
+    "https://githits.com/software-factories/minimum-viable-factory/",
+    "https://githits.com/software-factories/mission-control/",
+    "https://githits.com/software-factories/mspilot/",
+    "https://githits.com/software-factories/multica/",
+    "https://githits.com/software-factories/needle/",
+    "https://githits.com/software-factories/no-human/",
+    "https://githits.com/software-factories/oh-my-symphony/",
+    "https://githits.com/software-factories/opencastle/",
+    "https://githits.com/software-factories/openfactory-core/",
+    "https://githits.com/software-factories/optio/",
+    "https://githits.com/software-factories/pi-rukas/",
+    "https://githits.com/software-factories/planwright/",
+    "https://githits.com/software-factories/polygraph/",
+    "https://githits.com/software-factories/port/",
+    "https://githits.com/software-factories/sgai/",
+    "https://githits.com/software-factories/smile-software-factory/",
+    "https://githits.com/software-factories/software-factory-nicolas-melo/",
+    "https://githits.com/software-factories/sortie/",
+    "https://githits.com/software-factories/software-factory-stratonext/",
+    "https://githits.com/software-factories/taskplane/",
+    "https://githits.com/software-factories/tasktrooper/",
+    "https://githits.com/software-factories/taskuary/",
+    "https://githits.com/software-factories/ivy-tendril/",
+    "https://githits.com/software-factories/tessl/",
+    "https://githits.com/software-factories/tiden/",
+    "https://githits.com/software-factories/treegates/",
+    "https://githits.com/software-factories/zeroshot-and-opcore/",
+    "https://githits.com/software-factories/agentic-software-factory/",
+    "https://githits.com/software-factories/appfactor/",
+    "https://githits.com/software-factories/atlantic/",
+    "https://githits.com/software-factories/atomically/",
+    "https://githits.com/software-factories/authentica-software-factory/",
+    "https://githits.com/software-factories/background-agents/",
+    "https://githits.com/software-factories/blackbox-ai/",
+    "https://githits.com/software-factories/blitzy/",
+    "https://githits.com/software-factories/bosun/",
+    "https://githits.com/software-factories/builder-io-fusion/",
+    "https://githits.com/software-factories/buildful/",
+    "https://githits.com/software-factories/codeaf-and-swe-af/",
+    "https://githits.com/software-factories/codemate-ai/",
+    "https://githits.com/software-factories/codeplain/",
+    "https://githits.com/software-factories/command-code/",
+    "https://githits.com/software-factories/condux/",
+    "https://githits.com/software-factories/cosmos/",
+    "https://githits.com/software-factories/cursor/",
+    "https://githits.com/software-factories/danic/",
+    "https://githits.com/software-factories/windsurf-ide/",
+    "https://githits.com/software-factories/diffusion/",
+    "https://githits.com/software-factories/fabrik/",
+    "https://githits.com/software-factories/fabrika-tatiyants/",
+    "https://githits.com/software-factories/fabro/",
+    "https://githits.com/software-factories/factory-com/",
+    "https://githits.com/software-factories/forgecode/",
+    "https://githits.com/software-factories/guild-software-factory/",
+    "https://githits.com/software-factories/hoplite/",
+    "https://githits.com/software-factories/intercode/",
+    "https://githits.com/software-factories/jules/",
+    "https://githits.com/software-factories/junie/",
+    "https://githits.com/software-factories/kavia-ai/",
+    "https://githits.com/software-factories/kilo-code/",
+    "https://githits.com/software-factories/kiro/",
+    "https://githits.com/software-factories/latentforce-ai/",
+    "https://githits.com/software-factories/lightsprint/",
+    "https://githits.com/software-factories/mastra-factory/",
+    "https://githits.com/software-factories/mechanical-orchard/",
+    "https://githits.com/software-factories/open-swe/",
+    "https://githits.com/software-factories/opencode/",
+    "https://githits.com/software-factories/openhands/",
+    "https://githits.com/software-factories/orbi/",
+    "https://githits.com/software-factories/overcut/",
+    "https://githits.com/software-factories/playerzero/",
+    "https://githits.com/software-factories/plover-labs/",
+    "https://githits.com/software-factories/qoder/",
+    "https://githits.com/software-factories/reason-agent/",
+    "https://githits.com/software-factories/stagewise/",
+    "https://githits.com/software-factories/taiga/",
+    "https://githits.com/software-factories/trae/",
+    "https://githits.com/software-factories/vorflux/",
+    "https://githits.com/software-factories/warp-oz/",
+    "https://githits.com/software-factories/xsquad/",
+    "https://githits.com/software-factories/yagni/",
+    "https://githits.com/software-factories/zed/",
+    "https://githits.com/software-factories/zencoder-zenflow/",
+    "https://githits.com/software-factories/create-xyz-anything/",
+    "https://githits.com/software-factories/appwizzy/",
+    "https://githits.com/software-factories/base44/",
+    "https://githits.com/software-factories/bilt/",
+    "https://githits.com/software-factories/bitmagic/",
+    "https://githits.com/software-factories/bitrig/",
+    "https://githits.com/software-factories/blink/",
+    "https://githits.com/software-factories/bloom/",
+    "https://githits.com/software-factories/bolt-new/",
+    "https://githits.com/software-factories/buildra/",
+    "https://githits.com/software-factories/choicely/",
+    "https://githits.com/software-factories/codalio/",
+    "https://githits.com/software-factories/codedesign-ai/",
+    "https://githits.com/software-factories/codewisp/",
+    "https://githits.com/software-factories/deep-interactions/",
+    "https://githits.com/software-factories/draftbit-ai/",
+    "https://githits.com/software-factories/dyad/",
+    "https://githits.com/software-factories/emergent/",
+    "https://githits.com/software-factories/fastshot/",
+    "https://githits.com/software-factories/growapps/",
+    "https://githits.com/software-factories/happycapy/",
+    "https://githits.com/software-factories/henosia/",
+    "https://githits.com/software-factories/imagine-bo/",
+    "https://githits.com/software-factories/ipsion-ai/",
+    "https://githits.com/software-factories/iqx-studio/",
+    "https://githits.com/software-factories/jenz/",
+    "https://githits.com/software-factories/lovable/",
+    "https://githits.com/software-factories/luo/",
+    "https://githits.com/software-factories/magic-patterns/",
+    "https://githits.com/software-factories/manus/",
+    "https://githits.com/software-factories/meku/",
+    "https://githits.com/software-factories/metagpt/",
+    "https://githits.com/software-factories/modelence-app-builder/",
+    "https://githits.com/software-factories/newly/",
+    "https://githits.com/software-factories/onlook/",
+    "https://githits.com/software-factories/open-polsia/",
+    "https://githits.com/software-factories/polymet/",
+    "https://githits.com/software-factories/primio/",
+    "https://githits.com/software-factories/reflex/",
+    "https://githits.com/software-factories/replit-agent/",
+    "https://githits.com/software-factories/retool-appgen-agents/",
+    "https://githits.com/software-factories/riff/",
+    "https://githits.com/software-factories/rocket-new/",
+    "https://githits.com/software-factories/rork/",
+    "https://githits.com/software-factories/rosebud/",
+    "https://githits.com/software-factories/sfactory/",
+    "https://githits.com/software-factories/softgen/",
+    "https://githits.com/software-factories/softr/",
+    "https://githits.com/software-factories/solid/",
+    "https://githits.com/software-factories/summer-engine/",
+    "https://githits.com/software-factories/superapp/",
+    "https://githits.com/software-factories/superblocks/",
+    "https://githits.com/software-factories/temper/",
+    "https://githits.com/software-factories/thunkable/",
+    "https://githits.com/software-factories/totalum/",
+    "https://githits.com/software-factories/ui-bakery/",
+    "https://githits.com/software-factories/v0/",
+    "https://githits.com/software-factories/velra/",
+    "https://githits.com/software-factories/vibecode/",
+    "https://githits.com/software-factories/vibely/",
+    "https://githits.com/software-factories/vybe/",
+    "https://githits.com/software-factories/workshop/",
+    "https://githits.com/software-factories/x1/",
+    "https://githits.com/software-factories/xfactory/",
+    "https://githits.com/software-factories/youware/",
+    "https://githits.com/software-factories/cline/",
+    "https://githits.com/software-factories/conductor/",
+    "https://githits.com/software-factories/factory-factory/",
+    "https://githits.com/software-factories/fredrin/",
+    "https://githits.com/software-factories/helmor/",
+    "https://githits.com/software-factories/moi/",
+    "https://githits.com/software-factories/superset/",
+    "https://githits.com/software-factories/tempo/",
+    "https://githits.com/software-factories/xirp/",
+    "https://githits.com/software-factories/actual-ai/",
+    "https://githits.com/software-factories/baz/",
+    "https://githits.com/software-factories/bytebell/",
+    "https://githits.com/software-factories/codeboarding/",
+    "https://githits.com/software-factories/coderabbit/",
+    "https://githits.com/software-factories/cubic/",
+    "https://githits.com/software-factories/graphite-agent/",
+    "https://githits.com/software-factories/greptile/",
+    "https://githits.com/software-factories/linearb/",
+    "https://githits.com/software-factories/qodo-gen/",
+    "https://githits.com/software-factories/aiven/",
+    "https://githits.com/software-factories/caveman/",
+    "https://githits.com/software-factories/crafting/",
+    "https://githits.com/software-factories/daytona/",
+    "https://githits.com/software-factories/e2b-fragments/",
+    "https://githits.com/software-factories/e2e/",
+    "https://githits.com/software-factories/ellipsis/",
+    "https://githits.com/software-factories/encore/",
+    "https://githits.com/software-factories/floot/",
+    "https://githits.com/software-factories/insforge/",
+    "https://githits.com/software-factories/membrane/",
+    "https://githits.com/software-factories/mo-ai-qa-engineer/",
+    "https://githits.com/software-factories/morph/",
+    "https://githits.com/software-factories/agent-runners/",
+    "https://githits.com/software-factories/niteshift/",
+    "https://githits.com/software-factories/opensession/",
+    "https://githits.com/software-factories/prized/",
+    "https://githits.com/software-factories/shipfox/",
+    "https://githits.com/software-factories/truefoundry-ai-gateway/",
+    "https://githits.com/software-factories/entire-checkpoints/",
+    "https://githits.com/software-factories/gitlab/",
+    "https://githits.com/software-factories/mistral-code/",
+    "https://githits.com/software-factories/ona/",
+    "https://githits.com/software-factories/poolside/",
+    "https://githits.com/software-factories/spacexai/"
+  ]
+}

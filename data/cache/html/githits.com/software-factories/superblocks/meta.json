@@ -1,0 +1,38 @@
+{
+  "attempts": 1,
+  "body_bytes": 83362,
+  "body_sha256": "453ae92894ff65b360005d2085f946e2999fd9762e3cde70d07c0190f37fdab9",
+  "elapsed_ms": 583.3,
+  "error": null,
+  "fetched_at": "2026-11-26T11:58:49.557999+00:00",
+  "final_url": "https://githits.com/software-factories/superblocks/",
+  "headers": {
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Encoding": "gzip",
+    "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+    "Content-Type": "text/html",
+    "Date": "Thu, 26 Nov 2026 11:58:50 GMT",
+    "ETag": "\"20937405\"",
+    "Last-Modified": "Thu, 26 Nov 2026 08:33:18 GMT",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Transfer-Encoding": "chunked",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "CONFIG_NOCACHE",
+    "X-Content-Type-Options": "nosniff",
+    "X-DNS-Prefetch-Control": "off",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "x-azure-ref": "20261126T115850Z-17cdd8df565pd4wjhC1CPHhk8w00000016hg0000000063a8"
+  },
+  "requested_url": "https://githits.com/software-factories/superblocks/",
+  "retry_events": [
+    {
+      "event": "polite_delay",
+      "seconds": 0.412
+    }
+  ],
+  "status": 200
+}
