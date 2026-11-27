@@ -1,0 +1,37 @@
+.gitignore
+  s_8bdc183adb10b3::t_c5decf253fb38c 6-31
+.oxlintrc.json
+  s_8bdc183adb10b3::t_ec5c4b361a57cc 1-8
+README.frontend.md
+  s_8bdc183adb10b3::t_fcdbec81b3142a 1-32
+index.html
+  s_8bdc183adb10b3::t_5f9ccb80ec0e91 1-13
+package.json
+  s_8bdc183adb10b3::t_95002996ad98f3 1-28
+pnpm-lock.yaml
+  s_8bdc183adb10b3::t_00b02cbe15316c 1-1667
+tsconfig.app.json
+  s_8bdc183adb10b3::t_6f809f3272d688 1-26
+tsconfig.json
+  s_8bdc183adb10b3::t_be88229d1e6077 1-7
+tsconfig.node.json
+  s_8bdc183adb10b3::t_d8e0a8ff026b9e 1-23
+vite.config.ts
+  s_8bdc183adb10b3::t_3b213dc4f1c9fd 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1951807a04266825dd89536f54e3845632f1f351",
+  "prompts": {},
+  "sessions": {
+    "s_8bdc183adb10b3": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a21ce9-05bb-730b-8ede-539678b5015e",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
