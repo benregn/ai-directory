@@ -1,0 +1,27 @@
+src/matrix-model.test.ts
+  s_33fbb12936c04c::t_50ce31fe1d8ecd 41
+src/drawer-model.test.ts
+  s_33fbb12936c04c::t_a39f88266a63bd 27
+  s_33fbb12936c04c::t_6d12cb3f44d2ee 1-21,23-26,28-186
+  s_33fbb12936c04c::t_4d0900df951e0b 22
+src/matrix-model.ts
+  s_33fbb12936c04c::t_4aa9b001da063d 44-45,83
+src/drawer-model.ts
+  s_33fbb12936c04c::t_4a56fc6c109e52 1-137
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "73c6a4f4e863f5abf507614c32ea5addf9177a6f",
+  "prompts": {},
+  "sessions": {
+    "s_33fbb12936c04c": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-5-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
