@@ -1,0 +1,58 @@
+src/drawer-model.test.ts
+  s_33fbb12936c04c::t_6d12cb3f44d2ee 1-21,23-26,28-186
+  s_33fbb12936c04c::t_a39f88266a63bd 27
+  s_33fbb12936c04c::t_4d0900df951e0b 22
+src/test/setup.ts
+  s_33fbb12936c04c::t_4b2fb0981c6089 25-28
+src/App.tsx
+  s_33fbb12936c04c::t_6d1c01c88378c5 1,7,11-13,17,24,29-33,43,51-57,81,83-84,86,88-94
+src/matrix-model.test.ts
+  s_33fbb12936c04c::t_50ce31fe1d8ecd 41
+src/components/DetailDrawer.tsx
+  s_33fbb12936c04c::t_f61d35fb93288b 1-2,44-45,54-69,81-83,121
+  s_33fbb12936c04c::t_13836a93804528 3-11,16-28,30-43,46-53,74,84,87-89,91-98,104,107,111-120,122-128,131-132
+  s_33fbb12936c04c::t_b0a4c773f1a565 75-77,99-101
+src/components/SpecMatrix.tsx
+  s_33fbb12936c04c::t_705cd37bcec422 1,25-33,115,117-118,120,122-123,125,165-177,184-187,189,220,233-235
+  s_33fbb12936c04c::t_6acecc76ccb036 81,94,128,135,141-146,178-181,196,207-208,219
+  s_1a675ef38966e2::t_6a60369e266d7a 129
+src/drawer-model.ts
+  s_33fbb12936c04c::t_4a56fc6c109e52 1-137
+src/components/DetailDrawer.css
+  s_33fbb12936c04c::t_44669dc0def3b5 60-61,69-77,136-156,161,165-166,169,173-177,183-187
+src/matrix-model.ts
+  s_33fbb12936c04c::t_4aa9b001da063d 45,86
+src/components/SpecMatrix.test.tsx
+  s_33fbb12936c04c::t_fde7738926d45c 2,17-21,28-30,32-33,35-38,41-42,74,79-84,86,104-105,113-114,118,122,137-138,140-143,146,148-149,151-153,155,158-159,169-174,178-179,193-194,197,199
+  s_33fbb12936c04c::t_0862223d7aa12b 200-201,203-204,207-221,223-229,232-235,237-250,252-257
+  s_33fbb12936c04c::t_b21b5bea3aebda 291,325
+src/App.test.tsx
+  s_33fbb12936c04c::t_08d1cc04b9d638 252-253
+  s_33fbb12936c04c::t_0cc828d6a37ada 227,319,342
+  s_33fbb12936c04c::t_a02ae6dca11461 279-314
+  s_33fbb12936c04c::t_bba4766ec59669 1,3-5,17-45,215-226,228-251,254-263,264-278,315-318,320-341,343-346
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1707b3d6a2d4b27ef91f815f83ce67a369ef3659",
+  "prompts": {},
+  "sessions": {
+    "s_1a675ef38966e2": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a21d95-9c10-7664-951b-521c5f288e18",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    },
+    "s_33fbb12936c04c": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-5-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
