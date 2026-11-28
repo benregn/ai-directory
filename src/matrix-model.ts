@@ -41,6 +41,7 @@ export interface MatrixRowView {
   initial: string;
   summary: string;
   category: string;
+  /** Machine category key — filtering and compare match on this. */
   categorySlug: string;
   licenseLabel: string | null;
   deployment: Array<Deployment> | null;

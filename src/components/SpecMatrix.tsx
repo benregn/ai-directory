@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type {
   KeyboardEvent as ReactKeyboardEvent,
   MouseEvent as ReactMouseEvent,
@@ -22,6 +22,18 @@ import './SpecMatrix.css';
  * summary, category, license, deployment, oss, stars — compressed to a
  * single truncated line per row. The tile shrinks 24px → 16px and the
  * two-line name/summary stack becomes one line; nothing else is dropped.
+ *
+ * Issue #5 changes the selection contract: selection is the viewer's single
+ * cursor, lifted to the composition root (the drawer inspects it). Clicking
+ * selects — never deselects, because the always-present drawer has no
+ * nothing-selected state in the mock — and arrow/page keys move focus and
+ * selection together, the master-detail register the mock implies (it has
+ * no focused-but-unselected visual state). The first row of the current
+ * view auto-selects when nothing is selected, so the drawer is never empty.
+ *
+ * Rows arrive filtered from the composition root's pipeline (issue #4):
+ * the matrix never filters internally — it sorts what it receives, renders
+ * it, and owns the roving focus keyed by row id.
  */
 const ROW_H = 27;
 const HEAD_H = 30;
@@ -66,7 +78,7 @@ function Row({
   tabStop: boolean;
   onPress: (index: number) => void;
   onKey: (event: ReactKeyboardEvent, index: number) => void;
-  onFocus: (index: number) => void;
+  onFocus: (id: string) => void;
   rowRef: (id: string, el: HTMLElement | null) => void;
 }) {
   return (
@@ -79,7 +91,7 @@ function Row({
       ref={(el) => rowRef(row.id, el)}
       onClick={() => onPress(index)}
       onKeyDown={(event) => onKey(event, index)}
-      onFocus={() => onFocus(index)}
+      onFocus={() => onFocus(row.id)}
     >
       <div className="idx" role="gridcell">
         {row.entryLabel}
@@ -102,21 +114,35 @@ function Row({
 
 export function SpecMatrix({
   rows,
+  selectedId,
+  onSelect,
   onClearFilters,
 }: {
   rows: Array<MatrixRowView>;
+  selectedId: string | null;
+  onSelect: (id: string) => void;
   onClearFilters: () => void;
 }) {
   const [sortColumn, setSortColumn] = useState<SortColumn>('star');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
-  const [selectedId, setSelectedId] = useState<string | null>(null);
   const [focusId, setFocusId] = useState<string | null>(null);
 
   const sorted = useMemo(
     () => sortRows(rows, sortColumn, sortDirection),
     [rows, sortColumn, sortDirection],
   );
-  const focusVisible = focusId !== null && sorted.some((row) => row.id === focusId);
+
+  // The roving tab stop is keyed by row id, never index: row-set changes —
+  // every facet click, compare toggle and search keystroke — can never
+  // strand it on the wrong logical row or past the end of the filtered
+  // set. When the keyed row leaves the set the first row takes the stop;
+  // when the row returns, the stop returns with it. Exactly one stop
+  // whenever rows exist.
+  const firstRow = sorted[0];
+  const stopId =
+    focusId !== null && sorted.some((row) => row.id === focusId)
+      ? focusId
+      : (firstRow?.id ?? null);
 
   const scrollerRef = useRef<HTMLDivElement>(null);
   const rowEls = useRef(new Map<string, HTMLElement>());
@@ -136,6 +162,31 @@ export function SpecMatrix({
     }
   }, [sorted]);
 
+  // The drawer is always populated: when nothing is selected, the first row
+  // of the current view is. Layout effect so the drawer never paints empty.
+  useLayoutEffect(() => {
+    if (selectedId === null && sorted.length > 0) {
+      const first = sorted[0];
+      if (first) {
+        onSelect(first.id);
+      }
+    }
+  }, [selectedId, sorted, onSelect]);
+
+  // Selection the matrix didn't originate (the drawer's same-class list)
+  // must still be visible in the scan. Clicked/focused rows already are, so
+  // a nearest-block scroll is a no-op for every other origin. Filtering
+  // reveals the selected row the same way when it survives the filter — the
+  // scroll reset above runs first, this runs after and wins; when the row
+  // is filtered out there is nothing to reveal and the top-scan stands.
+  // keyed on the rows prop, never the sorted array: a re-sort is a new
+  // scan and must not yank the view back to the selected row.
+  useEffect(() => {
+    if (selectedId !== null) {
+      rowEls.current.get(selectedId)?.scrollIntoView({ block: 'nearest' });
+    }
+  }, [selectedId, rows]);
+
   function pressHeader(event: ReactMouseEvent<HTMLButtonElement>, column: SortColumn) {
     // Rows never carry focus across a re-sort: focus moves onto the control
     // deliberately, because Safari and Firefox on macOS never focus clicked
@@ -153,11 +204,8 @@ export function SpecMatrix({
 
   // DOM focus — exactly what Tab produces — syncs the roving stop. No
   // scrolling, no selecting: focus alone.
-  function focusRow(index: number) {
-    const row = sorted[index];
-    if (row) {
-      setFocusId(row.id);
-    }
+  function focusRow(id: string) {
+    setFocusId(id);
   }
 
   function pressRow(index: number) {
@@ -169,7 +217,7 @@ export function SpecMatrix({
     // keyboard focus on it in every browser, not almost every browser.
     rowEls.current.get(row.id)?.focus({ preventScroll: true });
     setFocusId(row.id);
-    setSelectedId((current) => (current === row.id ? null : row.id));
+    onSelect(row.id);
   }
 
   function moveFocus(index: number) {
@@ -182,6 +230,9 @@ export function SpecMatrix({
     // browser scrolls it into view — scroll-margin-top keeps it clear of
     // the sticky header. No effects, no retries, nothing to lose.
     rowEls.current.get(row.id)?.focus();
+    // Keyboard navigation is the scan interface of a master-detail viewer:
+    // moving the cursor moves the selection, and the drawer follows.
+    onSelect(row.id);
   }
 
   function keyRow(event: ReactKeyboardEvent, index: number) {
@@ -272,7 +323,7 @@ export function SpecMatrix({
             row={row}
             index={index}
             selected={row.id === selectedId}
-            tabStop={focusVisible ? row.id === focusId : index === 0}
+            tabStop={row.id === stopId}
             onPress={pressRow}
             onKey={keyRow}
             onFocus={focusRow}
