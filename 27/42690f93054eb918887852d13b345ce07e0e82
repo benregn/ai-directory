@@ -1,0 +1,30 @@
+src/App.test.tsx
+  s_037adef4da3160::t_3b54c27716f7cc 501-502,508-511,519-520,523-536,538-540,542-553
+  s_037adef4da3160::t_df76ab73f4ab60 512-518,521-522,537,541
+  s_037adef4da3160::t_86a3fc6c105b1c 554
+src/share-state.ts
+  s_037adef4da3160::t_3108141a7016f2 15-24,54-58
+  s_037adef4da3160::t_f04a4c89e6b798 62,266-268
+src/App.tsx
+  s_037adef4da3160::t_c4707fa434f14f 175
+src/components/SpecMatrix.tsx
+  s_037adef4da3160::t_500c9b7d1b2970 140,150-154,391-393
+src/components/SpecMatrix.test.tsx
+  s_037adef4da3160::t_ab4a37c477b94e 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2742690f93054eb918887852d13b345ce07e0e82",
+  "prompts": {},
+  "sessions": {
+    "s_037adef4da3160": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-6-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
