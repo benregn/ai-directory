@@ -5,12 +5,40 @@
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  gap: 8px;
+  padding: 0 16px 0 20px;
+  gap: 6px;
   font-family: 'Red Hat Mono', monospace;
   font-size: 11px;
   color: var(--gray);
   white-space: nowrap;
+  overflow: hidden;
+}
+
+.strip-params {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dim) transparent;
+}
+
+.strip-params::-webkit-scrollbar {
+  height: 4px;
+}
+
+.strip-params::-webkit-scrollbar-thumb {
+  background: var(--dim);
+}
+
+.strip-params::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.strip-params > span {
+  flex: none;
 }
 
 .strip b {
@@ -19,23 +47,44 @@
 }
 
 .strip .x {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
   color: var(--blue);
+  font: inherit;
   font-weight: 500;
   margin-right: 6px;
+  cursor: pointer;
 }
 
 .strip .sep {
-  margin: 0 4px;
+  margin: 0 3px;
   color: var(--dim);
 }
 
 .strip .res {
-  margin-left: auto;
+  flex: none;
+  margin-left: 14px;
   color: var(--ink);
   font-weight: 500;
 }
 
 .strip .clear {
+  flex: none;
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
   margin-left: 14px;
+  color: var(--blue);
+  font: inherit;
   font-size: 10.5px;
+  cursor: pointer;
+}
+
+.strip .x:focus-visible,
+.strip .clear:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }

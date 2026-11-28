@@ -3,9 +3,8 @@ import type {
   KeyboardEvent as ReactKeyboardEvent,
   MouseEvent as ReactMouseEvent,
 } from 'react';
-import { listings } from '../data/listings.ts';
 import type { MatrixRowView, SortColumn, SortDirection } from '../matrix-model.ts';
-import { deriveRows, initialDirection, sortRows } from '../matrix-model.ts';
+import { initialDirection, sortRows } from '../matrix-model.ts';
 import './SpecMatrix.css';
 
 /**
@@ -101,17 +100,23 @@ function Row({
   );
 }
 
-export function SpecMatrix() {
-  const rows = useMemo(() => deriveRows(listings), []);
+export function SpecMatrix({
+  rows,
+  onClearFilters,
+}: {
+  rows: Array<MatrixRowView>;
+  onClearFilters: () => void;
+}) {
   const [sortColumn, setSortColumn] = useState<SortColumn>('star');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [focusIndex, setFocusIndex] = useState<number | null>(null);
+  const [focusId, setFocusId] = useState<string | null>(null);
 
   const sorted = useMemo(
     () => sortRows(rows, sortColumn, sortDirection),
     [rows, sortColumn, sortDirection],
   );
+  const focusVisible = focusId !== null && sorted.some((row) => row.id === focusId);
 
   const scrollerRef = useRef<HTMLDivElement>(null);
   const rowEls = useRef(new Map<string, HTMLElement>());
@@ -123,7 +128,7 @@ export function SpecMatrix() {
     }
   }, []);
 
-  // A re-sort is a new scan: start at the top of the new ordering.
+  // A re-sort or a new filtered scan starts at the top of the new ordering.
   useEffect(() => {
     const el = scrollerRef.current;
     if (el) {
@@ -137,7 +142,7 @@ export function SpecMatrix() {
     // buttons and programmatic activation never does. Standard, correct
     // focus placement in every browser.
     event.currentTarget.focus();
-    setFocusIndex(null);
+    setFocusId(null);
     if (column === sortColumn) {
       setSortDirection((dir) => (dir === 'asc' ? 'desc' : 'asc'));
     } else {
@@ -149,7 +154,10 @@ export function SpecMatrix() {
   // DOM focus — exactly what Tab produces — syncs the roving stop. No
   // scrolling, no selecting: focus alone.
   function focusRow(index: number) {
-    setFocusIndex(index);
+    const row = sorted[index];
+    if (row) {
+      setFocusId(row.id);
+    }
   }
 
   function pressRow(index: number) {
@@ -160,7 +168,7 @@ export function SpecMatrix() {
     // Deliberate focus, as with the sort buttons: clicking a row must put
     // keyboard focus on it in every browser, not almost every browser.
     rowEls.current.get(row.id)?.focus({ preventScroll: true });
-    setFocusIndex(index);
+    setFocusId(row.id);
     setSelectedId((current) => (current === row.id ? null : row.id));
   }
 
@@ -219,7 +227,7 @@ export function SpecMatrix() {
       className="matrix-scroll"
       role="grid"
       aria-label="Product specification matrix"
-      aria-rowcount={sorted.length + 1}
+      aria-rowcount={sorted.length === 0 ? 2 : sorted.length + 1}
       ref={scrollerRef}
     >
       <div className="mhead" role="row" aria-rowindex={1}>
@@ -248,19 +256,30 @@ export function SpecMatrix() {
           );
         })}
       </div>
-      {sorted.map((row, index) => (
-        <Row
-          key={row.id}
-          row={row}
-          index={index}
-          selected={row.id === selectedId}
-          tabStop={focusIndex === null ? index === 0 : focusIndex === index}
-          onPress={pressRow}
-          onKey={keyRow}
-          onFocus={focusRow}
-          rowRef={rowRef}
-        />
-      ))}
+      {sorted.length === 0 ? (
+        <div className="matrix-empty" role="row" aria-rowindex={2}>
+          <div role="gridcell" aria-colspan={7}>
+            <span>No rows match the current parameters.</span>
+            <button type="button" className="empty-clear" onClick={onClearFilters}>
+              Clear all
+            </button>
+          </div>
+        </div>
+      ) : (
+        sorted.map((row, index) => (
+          <Row
+            key={row.id}
+            row={row}
+            index={index}
+            selected={row.id === selectedId}
+            tabStop={focusVisible ? row.id === focusId : index === 0}
+            onPress={pressRow}
+            onKey={keyRow}
+            onFocus={focusRow}
+            rowRef={rowRef}
+          />
+        ))
+      )}
     </div>
   );
 }

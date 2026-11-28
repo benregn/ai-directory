@@ -187,3 +187,36 @@
   outline: 2px solid var(--blue);
   outline-offset: -2px;
 }
+
+.matrix-empty {
+  min-height: 108px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  color: var(--gray);
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 11px;
+}
+
+.matrix-empty > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px;
+}
+
+.empty-clear {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--blue);
+  font: inherit;
+  font-size: 10.5px;
+  cursor: pointer;
+}
+
+.empty-clear:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}

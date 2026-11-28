@@ -1,10 +1,22 @@
+import { flushSync } from 'react-dom';
+import { Input } from '@ui-sdk/react/input';
 import './Masthead.css';
 
 /**
  * Dark masthead: product tile + FACTORY INDEX wordmark, CAT. NO. furniture,
- * primary nav, and the typeahead search field with the register count.
+ * primary nav, and the catalog search field with the register count.
  */
-export function Masthead() {
+export function Masthead({
+  query,
+  productCount,
+  categoryCount,
+  onQueryChange,
+}: {
+  query: string;
+  productCount: number;
+  categoryCount: number;
+  onQueryChange: (query: string) => void;
+}) {
   return (
     <header className="masthead">
       <div className="mark">
@@ -21,12 +33,22 @@ export function Masthead() {
         <a href="#">About</a>
       </nav>
       <div className="mastsearch">
-        <input
+        <Input
           type="search"
-          placeholder="Search 239 products — name, topic, license…"
+          placeholder={`Search ${productCount} products — name, topic, license…`}
           aria-label="Search products"
+          value={query}
+          onValueChange={(value, details) => {
+            if (details.source === 'agent') {
+              flushSync(() => onQueryChange(value));
+            } else {
+              onQueryChange(value);
+            }
+          }}
         />
-        <span className="count mono">239 PRODUCTS / 8 CATEGORIES</span>
+        <span className="count mono">
+          {productCount} PRODUCTS / {categoryCount} CATEGORIES
+        </span>
       </div>
     </header>
   );

@@ -1,3 +1,5 @@
+@layer ui-sdk;
+
 /*
  * Factory Index — design tokens + base.
  * Palette and density follow .impeccable/mocks/decision/model-pick-v3.html
