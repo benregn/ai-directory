@@ -1,10 +1,16 @@
 import { flushSync } from 'react-dom';
 import { Input } from '@ui-sdk/react/input';
+import { CopyAction } from './CopyAction.tsx';
 import './Masthead.css';
 
 /**
  * Dark masthead: product tile + FACTORY INDEX wordmark, CAT. NO. furniture,
  * primary nav, and the catalog search field with the register count.
+ * Issue #6's Copy link lives here rather than the parameter strip: the
+ * strip's full default parameter readout leaves no honest room for it,
+ * and a whole-viewer share action is global chrome — which is what the
+ * masthead is. It sits outside the inert nav furniture, in the search
+ * cluster, visibly separate from the links that do nothing.
  */
 export function Masthead({
   query,
@@ -45,6 +51,12 @@ export function Masthead({
               onQueryChange(value);
             }
           }}
+        />
+        <CopyAction
+          label="Copy link"
+          className="copylink"
+          text={() => window.location.href}
+          title="Copy the shareable URL — filters, selection and shortlist"
         />
         <span className="count mono">
           {productCount} PRODUCTS / {categoryCount} CATEGORIES

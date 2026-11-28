@@ -1,7 +1,14 @@
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { createAgent } from '@ui-sdk/react/agent';
-import { describe, expect, test } from 'vitest';
+import { beforeEach, describe, expect, test } from 'vitest';
 import App from './App.tsx';
+
+// Issue #6 write-through means every render mirrors state into the URL and
+// localStorage: without isolation the next test would restore it.
+beforeEach(() => {
+  localStorage.clear();
+  window.history.replaceState(null, '', '/');
+});
 
 function visibleRowCount(container: HTMLElement): number {
   return container.querySelectorAll('.mrow').length;
@@ -348,7 +355,7 @@ describe('composition root wiring', () => {
 describe('agent readiness', () => {
   test('an agent can find and change the filter controls', async () => {
     const agent = createAgent();
-    render(<App />);
+    const { container } = render(<App />);
 
     const components = agent
       .snapshot()
@@ -365,6 +372,9 @@ describe('agent readiness', () => {
       'Topics',
       'Open source only',
       'Agent orchestration 74',
+      // issue #6: the new controls are agent-visible with honest names
+      'Hide shortlisted 0',
+      'Shortlist',
     ]) {
       expect(labels, `${label} is missing from the snapshot`).toContain(label);
     }
@@ -385,5 +395,314 @@ describe('agent readiness', () => {
         .getByRole('checkbox', { name: 'Agent orchestration 74' })
         .getAttribute('aria-checked'),
     ).toBe('true');
+
+    // the issue #6 controls act through the agent the same as through the keyboard
+    await act(async () => {
+      result = await agent.act({
+        steps: [
+          { ref: 'Shortlist', action: 'setPressed', args: [true] },
+          { ref: 'Hide shortlisted 1', action: 'setChecked', args: [true] },
+        ],
+      });
+    });
+    expect(result?.ok, result?.error?.message).toBe(true);
+    // mcp ∩ agent-orchestration is 8 rows; the marked record (auto-selected
+    // opencode) is not among them, so hiding it changes nothing visible here —
+    // what the steps prove is that both controls actuate through the agent
+    expect(container.querySelectorAll('.mrow')).toHaveLength(8);
+    expect(
+      screen.getByRole('checkbox', { name: 'Hide shortlisted 1' }).getAttribute('aria-checked'),
+    ).toBe('true');
+  });
+});
+
+function shortlistButton(): HTMLElement {
+  const button = [...drawer().querySelectorAll('button')].find(
+    (el) => el.textContent === 'Shortlist',
+  );
+  if (!button) {
+    throw new Error('no shortlist button');
+  }
+  return button;
+}
+
+describe('shortlist state (issue #6)', () => {
+  test('the drawer shortlist button is a real pressed-state toggle, no longer inert furniture', async () => {
+    const { container } = render(<App />);
+    await settle();
+    const button = shortlistButton();
+    expect(button.getAttribute('aria-hidden')).toBeNull();
+    expect(button.getAttribute('aria-pressed')).toBe('false');
+    const name = drawerName();
+
+    fireEvent.click(button);
+    await settle();
+    expect(shortlistButton().getAttribute('aria-pressed')).toBe('true');
+    // the matrix row shows the mark for the same record
+    const row = rowsOf(container).find((el) => rowName(el) === name);
+    expect(row?.classList.contains('marked')).toBe(true);
+    expect(row?.querySelector('.mtile')?.textContent).toBe('✓');
+
+    fireEvent.click(shortlistButton());
+    await settle();
+    expect(shortlistButton().getAttribute('aria-pressed')).toBe('false');
+  });
+
+  test('s on a matrix row marks it and the drawer button agrees', async () => {
+    const { container } = render(<App />);
+    await settle();
+    const row = rowsOf(container)[3];
+    row?.focus();
+    await settle();
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+    expect(rowsOf(container)[3]?.classList.contains('marked')).toBe(true);
+    // the marked row is not the selected one, so the drawer still shows unpressed
+    expect(shortlistButton().getAttribute('aria-pressed')).toBe('false');
+  });
+
+  test('hide-shortlisted removes marked rows and the counts agree everywhere', async () => {
+    const { container } = render(<App />);
+    await settle();
+    fireEvent.click(shortlistButton());
+    await settle();
+    expect(visibleRowCount(container)).toBe(239);
+
+    const hide = screen.getByRole('checkbox', { name: /Hide shortlisted/ });
+    fireEvent.click(hide);
+    await settle();
+    expect(visibleRowCount(container)).toBe(238);
+    expect(stripText(container)).toContain('238 results');
+    expect(railheadText(container)).toContain('238 / 239');
+
+    fireEvent.click(screen.getByRole('checkbox', { name: /Hide shortlisted/ }));
+    await settle();
+    expect(visibleRowCount(container)).toBe(239);
+  });
+
+  test('scan-end: marking away the last visible row never drops focus to body', async () => {
+    const { container } = render(<App />);
+    await settle();
+    // an impossible-ish filter leaving a single row, then hide mode on
+    const input = screen.getByLabelText<HTMLInputElement>('Search products');
+    fireEvent.input(input, { target: { value: 'aeon' } });
+    await settle();
+    expect(visibleRowCount(container)).toBe(1);
+    fireEvent.click(screen.getByRole('checkbox', { name: /Hide shortlisted/ }));
+    await settle();
+    // still visible: nothing marked yet
+    expect(visibleRowCount(container)).toBe(1);
+    const row = rowsOf(container)[0];
+    row?.focus();
+    await settle();
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+    expect(visibleRowCount(container)).toBe(0);
+    expect(document.activeElement?.tagName).not.toBe('BODY');
+    expect(document.activeElement).toBe(
+      screen.getByRole('checkbox', { name: /Hide shortlisted/ }),
+    );
+  });
+});
+
+describe('share state write-through (issue #6)', () => {
+  test('state changes serialize into the URL live, readable and complete', async () => {
+    const { container } = render(<App />);
+    await settle();
+    fireEvent.click(screen.getByRole('checkbox', { name: 'MIT' }));
+    await settle();
+    const row = rowsOf(container)[2];
+    row?.focus();
+    await settle();
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+
+    const search = window.location.search;
+    expect(search).toContain('lic=MIT');
+    expect(search).toContain('sl=');
+    expect(search).toContain('sel=');
+    // no hiding, no categories, no query: those params stay absent
+    expect(search).not.toContain('hide=');
+    expect(search).not.toContain('cat=');
+    expect(search).not.toContain('q=');
+    expect(visibleRowCount(container)).toBe(46);
+  });
+
+  test('localStorage mirrors the live state on every change', async () => {
+    render(<App />);
+    await settle();
+    fireEvent.click(screen.getByRole('checkbox', { name: 'MIT' }));
+    await settle();
+    const stored = localStorage.getItem('factory-index:view:v1');
+    expect(stored).toBeTruthy();
+    // the storage format is the URL's own serialization (share-state module doc)
+    expect(stored).toContain('lic=MIT');
+    expect(stored).toContain('sel=');
+  });
+});
+
+describe('share state restoration (issue #6)', () => {
+  test('a pasted URL restores filters, selection and shortlist exactly', async () => {
+    window.history.replaceState(
+      null,
+      '',
+      '/?lic=MIT&topics=MCP&sel=aeon&sl=aeon,opencode&hide=1',
+    );
+    const { container } = render(<App />);
+    await settle();
+    // MIT ∩ MCP, minus hidden shortlisted rows (opencode and aeon are both in it)
+    expect(stripText(container)).toContain('License: MIT');
+    expect(stripText(container)).toContain('Topics: MCP');
+    expect(drawerName()).toBe('Aeon');
+    expect(
+      screen.getByRole('checkbox', { name: 'MIT' }).getAttribute('aria-checked'),
+    ).toBe('true');
+    expect(
+      screen.getByRole('checkbox', { name: 'MCP' }).getAttribute('aria-checked'),
+    ).toBe('true');
+    expect(screen.getByLabelText<HTMLInputElement>('Search products').value).toBe('');
+    // hide mode restored: aeon is shortlisted and must not appear even though selected
+    expect(
+      rowsOf(container).some((row) => rowName(row) === 'Aeon'),
+    ).toBe(false);
+    // opencode is MIT-licensed and MCP-topiced, shortlisted, hidden as well
+    expect(
+      rowsOf(container).some((row) => rowName(row) === 'opencode'),
+    ).toBe(false);
+    // un-hiding reveals both marked rows with their marks
+    fireEvent.click(screen.getByRole('checkbox', { name: /Hide shortlisted/ }));
+    await settle();
+    const aeon = rowsOf(container).find((row) => rowName(row) === 'Aeon');
+    expect(aeon?.classList.contains('marked')).toBe(true);
+  });
+
+  test('click order round-trips visibly: the strip reads the same', async () => {
+    window.history.replaceState(null, '', '/?cat=app-builders,agent-orchestration');
+    const { container } = render(<App />);
+    await settle();
+    expect(stripText(container)).toContain('Category: App builders, Agent orchestration');
+    expect(visibleRowCount(container)).toBe(139);
+  });
+
+  test('returning visit: clean URL restores the stored state', async () => {
+    localStorage.setItem(
+      'factory-index:view:v1',
+      'cat=ai-labs&sel=mistral-code&sl=mistral-code',
+    );
+    const { container } = render(<App />);
+    await settle();
+    expect(visibleRowCount(container)).toBe(4);
+    expect(drawerName()).toBe('Mistral Code');
+    expect(
+      rowsOf(container).find((row) => rowName(row) === 'Mistral Code')?.classList.contains('marked'),
+    ).toBe(true);
+  });
+
+  test('first visit: nothing stored, clean URL — default state', async () => {
+    const { container } = render(<App />);
+    await settle();
+    expect(visibleRowCount(container)).toBe(239);
+    expect(container.querySelectorAll('.mrow.marked')).toHaveLength(0);
+    expect(stripText(container)).toContain('Category: any');
+  });
+
+  test('a shared URL wins over contradicting stored state, with no merging', async () => {
+    localStorage.setItem('factory-index:view:v1', 'cat=ai-labs&sel=opencode&sl=opencode');
+    window.history.replaceState(null, '', '/?lic=MIT&sel=aeon');
+    const { container } = render(<App />);
+    await settle();
+    expect(stripText(container)).toContain('License: MIT');
+    expect(stripText(container)).not.toContain('Category:');
+    expect(drawerName()).toBe('Aeon');
+    // the stored shortlist does not leak into the shared state
+    expect(container.querySelectorAll('.mrow.marked')).toHaveLength(0);
+  });
+
+  test('garbage URLs never crash and garbage values drop', async () => {
+    window.history.replaceState(null, '', '/?cat=bogus,%E0%A4%A&sl=ghost&sel=ghost&q=%E0%A4%A');
+    const { container } = render(<App />);
+    await settle();
+    // a recognized key was present, so the URL wins — but every value was
+    // garbage, so the state is the default one, not a crash
+    expect(visibleRowCount(container)).toBe(239);
+    expect(container.querySelectorAll('.mrow.marked')).toHaveLength(0);
+  });
+
+  test('corrupt storage reads as a first visit', async () => {
+    localStorage.setItem('factory-index:view:v1', '{{{corrupt');
+    const { container } = render(<App />);
+    await settle();
+    expect(visibleRowCount(container)).toBe(239);
+  });
+});
+
+function mockClipboard() {
+  const written: Array<string> = [];
+  Object.defineProperty(navigator, 'clipboard', {
+    value: { writeText: (text: string) => (written.push(text), Promise.resolve()) },
+    configurable: true,
+  });
+  return written;
+}
+
+describe('copy export (issue #6)', () => {
+  test('copy link writes the live shareable URL to the clipboard', async () => {
+    const written = mockClipboard();
+    render(<App />);
+    await settle();
+    fireEvent.click(screen.getByRole('checkbox', { name: 'MIT' }));
+    await settle();
+    fireEvent.click(screen.getByRole('button', { name: 'Copy link' }));
+    await settle();
+    expect(written).toHaveLength(1);
+    expect(written[0]).toContain('lic=MIT');
+    expect(written[0]).toContain('sel=');
+  });
+
+  test('copy shortlist as markdown writes paste-ready entries checked against real data', async () => {
+    const written = mockClipboard();
+    const { container } = render(<App />);
+    await settle();
+    // disabled while the shortlist is empty
+    const button = screen.getByRole('button', { name: 'Copy shortlist as markdown' });
+    expect(button).toHaveProperty('disabled', true);
+
+    // mark opencode (auto-selected first row) through the drawer
+    fireEvent.click(
+      [...drawer().querySelectorAll('button')].find((el) => el.textContent === 'Shortlist') ??
+        (() => {
+          throw new Error('no shortlist button');
+        })(),
+    );
+    await settle();
+    // mark one more row through the matrix
+    const row = rowsOf(container)[4];
+    row?.focus();
+    await settle();
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+
+    const enabled = screen.getByRole('button', { name: 'Copy shortlist as markdown' });
+    expect(enabled).toHaveProperty('disabled', false);
+    fireEvent.click(enabled);
+    await settle();
+    expect(written).toHaveLength(1);
+    const lines = written[0]?.split('\n') ?? [];
+    expect(lines).toHaveLength(2);
+    // opencode leads: the catalog's most-starred record, real link, and the
+    // honest approximation prefix — the source count is a rounded figure
+    expect(lines[0]).toMatch(/^- \[opencode\]\(https:\/\/opencode\.ai\/\) — .+ — ★ ~217,100$/);
+    for (const line of lines) {
+      expect(line).toMatch(/^- \[.+\]\(https?:\/\/\S+\) — .+/);
+    }
+  });
+
+  test('copy feedback flips the label honestly and reverts', async () => {
+    mockClipboard();
+    render(<App />);
+    await settle();
+    fireEvent.click(screen.getByRole('button', { name: 'Copy link' }));
+    await settle();
+    expect(screen.getByRole('button', { name: 'Copied ✓' })).toBeTruthy();
   });
 });

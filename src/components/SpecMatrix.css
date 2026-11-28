@@ -173,6 +173,14 @@
   color: var(--dim);
 }
 
+/* Shortlist mark (issue #6): the tile is the row's strongest scan element,
+   so it carries the state — blue fill (palette) plus a ✓ glyph in place of
+   the initial (a non-color cue), at zero width cost. The initial is
+   decorative duplicate information; the name text sits immediately right. */
+.mrow.marked .mtile {
+  background: var(--blue);
+}
+
 .mrow:hover {
   background: var(--row-hover);
 }
