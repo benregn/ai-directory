@@ -22,4 +22,8 @@ globalThis.ResizeObserver ??= class {
   disconnect() {}
 };
 
+// jsdom doesn't implement scrollIntoView; the matrix calls it to reveal
+// externally-changed selections. No-op is fine: jsdom has no layout.
+Element.prototype.scrollIntoView = () => undefined;
+
 afterEach(cleanup);
