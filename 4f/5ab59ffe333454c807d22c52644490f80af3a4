@@ -1,0 +1,107 @@
+.agents/skills/impeccable/SKILL.md
+  s_037adef4da3160::t_80771b36909e02 4-5,13,17,80,82,84,86
+.agents/skills/impeccable/agents/impeccable_asset_producer.toml
+  s_037adef4da3160::t_bf747a04be1654 1-47
+.agents/skills/impeccable/agents/impeccable_documenter.toml
+  s_037adef4da3160::t_51274efe9ced8d 1-27
+.agents/skills/impeccable/agents/impeccable_finish_reviewer.toml
+  s_037adef4da3160::t_96bfc652beb082 1-41
+.agents/skills/impeccable/agents/impeccable_manual_edit_applier.toml
+  s_037adef4da3160::t_d77d2646b50394 1-96
+.agents/skills/impeccable/agents/impeccable_motion_reviewer.toml
+  s_037adef4da3160::t_a755de102afdca 1-32
+.agents/skills/impeccable/agents/openai.yaml
+  s_037adef4da3160::t_8563319158a4ec 1-4
+.agents/skills/impeccable/reference/adapt.md
+  s_037adef4da3160::t_c46ee14f192067 197
+.agents/skills/impeccable/reference/adapt.native.md
+  s_037adef4da3160::t_ac2c4a009560c6 51
+.agents/skills/impeccable/reference/animate.md
+  s_037adef4da3160::t_0b88b2c77f35fb 88-89,106
+.agents/skills/impeccable/reference/audit.md
+  s_037adef4da3160::t_c70d54297bcee4 69,112,128-129,131,137,154
+.agents/skills/impeccable/reference/audit.native.md
+  s_037adef4da3160::t_592329a1636601 105,121-122,124,130,147
+.agents/skills/impeccable/reference/bolder.md
+  s_037adef4da3160::t_5ae512dbfdd7d1 9,33
+.agents/skills/impeccable/reference/clarify.md
+  s_037adef4da3160::t_4dd84f420b225a 94
+.agents/skills/impeccable/reference/colorize.md
+  s_037adef4da3160::t_f624d4b3b74f7b 76
+.agents/skills/impeccable/reference/component-review.md
+  s_037adef4da3160::t_bef4e96b6c99c6 7,11,21-24
+.agents/skills/impeccable/reference/craft-floor.md
+  s_037adef4da3160::t_cdd433db04e1d2 7,39,44-49
+.agents/skills/impeccable/reference/critique.md
+  s_037adef4da3160::t_5ba2010592f9b6 26,44-53,81,95,102,107-108,113-114,121-122,180,204-208,227,235-236,240,248,261,267,297-298,302,309,315
+.agents/skills/impeccable/reference/degraded/asset-producer.md
+  s_037adef4da3160::t_123dd4da416033 32-34,38-39
+.agents/skills/impeccable/reference/delight.md
+  s_037adef4da3160::t_49d2d28443e0ce 70
+.agents/skills/impeccable/reference/distill.md
+  s_037adef4da3160::t_5b489e34f5a7aa 24,111
+.agents/skills/impeccable/reference/doctor.md
+  s_037adef4da3160::t_1329b120626dee 16,29,47
+.agents/skills/impeccable/reference/document.md
+  s_037adef4da3160::t_e169a7b40ba6b9 71,80,371,390
+.agents/skills/impeccable/reference/extract.md
+  s_037adef4da3160::t_7710fa70875975 9
+.agents/skills/impeccable/reference/foundations.md
+  s_037adef4da3160::t_e55267c1d43c70 1,10,19,28-29
+.agents/skills/impeccable/reference/generate.md
+  s_037adef4da3160::t_68bd01816adc42 34,49,66,77,88,93,99
+.agents/skills/impeccable/reference/harden.md
+  s_037adef4da3160::t_86f7eff7626aee 362
+.agents/skills/impeccable/reference/hooks.md
+  s_037adef4da3160::t_f96423853af1ae 1,15,51,54,73,81,87,93,100,106,113,120
+.agents/skills/impeccable/reference/init.md
+  s_037adef4da3160::t_49cb7d1b2fd5ef 27,128-129,131
+.agents/skills/impeccable/reference/layout.md
+  s_037adef4da3160::t_39039260163d64 28,74
+.agents/skills/impeccable/reference/live-setup.md
+  s_037adef4da3160::t_7114958fae3212 50
+.agents/skills/impeccable/reference/live.md
+  s_037adef4da3160::t_9b0f9f8ead2838 7-9,38,61,72,74,81-83,102,123,131,263,270,311,329,338
+.agents/skills/impeccable/reference/new-work-comp.md
+  s_037adef4da3160::t_4e997d85eb7b17 9,11
+.agents/skills/impeccable/reference/new-work-world.md
+  s_037adef4da3160::t_744c81a0842e15 10,13
+.agents/skills/impeccable/reference/new-work.md
+  s_037adef4da3160::t_f5c349a6335c2b 40,70,72,105,109,113,115,119,121
+.agents/skills/impeccable/reference/onboard.md
+  s_037adef4da3160::t_ce835f94253d3e 235
+.agents/skills/impeccable/reference/optimize.md
+  s_037adef4da3160::t_638f0acbd7d77f 257
+.agents/skills/impeccable/reference/overdrive.md
+  s_037adef4da3160::t_0f76256bf0e74e 17
+.agents/skills/impeccable/reference/polish.md
+  s_037adef4da3160::t_b1b6fbe55cc2b0 22,32,102
+.agents/skills/impeccable/reference/quieter.md
+  s_037adef4da3160::t_809b643a88aa24 31,99
+.agents/skills/impeccable/reference/region-map.md
+  s_037adef4da3160::t_15f8c4ba98cad4 5-7
+.agents/skills/impeccable/reference/routing.md
+  s_037adef4da3160::t_450b13763663c3 9,11,16,22
+.agents/skills/impeccable/reference/typeset.md
+  s_037adef4da3160::t_2c592711154487 27,86
+.agents/skills/impeccable/reference/visualize.md
+  s_037adef4da3160::t_cd62b5663213d4 43
+.codex/hooks.json
+  s_037adef4da3160::t_0f043d44f1dff0 1-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4f5ab59ffe333454c807d22c52644490f80af3a4",
+  "prompts": {},
+  "sessions": {
+    "s_037adef4da3160": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-6-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
