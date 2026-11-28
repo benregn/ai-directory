@@ -27,7 +27,7 @@
  *   total and stable.
  */
 
-import type { MatrixRow } from './data/types.ts';
+import type { Deployment, MatrixRow } from './data/types.ts';
 
 export type SortColumn = 'idx' | 'name' | 'cat' | 'lic' | 'dep' | 'oss' | 'star';
 export type SortDirection = 'asc' | 'desc';
@@ -41,11 +41,15 @@ export interface MatrixRowView {
   initial: string;
   summary: string;
   category: string;
+  categorySlug: string;
   licenseLabel: string | null;
+  deployment: Array<Deployment> | null;
   deploymentLabel: string | null;
+  oss: boolean | null;
   ossYes: boolean;
   stars: number | null;
   starsLabel: string | null;
+  topics: Array<string>;
 }
 
 const starFormat = new Intl.NumberFormat('en-US');
@@ -78,14 +82,18 @@ export function deriveRows(rows: Array<MatrixRow>): Array<MatrixRowView> {
     initial: listing.name.charAt(0).toUpperCase(),
     summary: listing.summary,
     category: listing.category,
+    categorySlug: listing.categorySlug,
     licenseLabel: licenseLabelOf(listing),
+    deployment: listing.deployment,
     deploymentLabel: deploymentLabelOf(listing),
+    oss: listing.oss,
     ossYes: listing.oss === true,
     stars: listing.stars,
     starsLabel:
       listing.stars === null
         ? null
         : formatStars(listing.stars, listing.starsApproximate),
+    topics: listing.topics,
   }));
 }
 

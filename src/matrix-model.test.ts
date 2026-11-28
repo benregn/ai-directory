@@ -38,11 +38,15 @@ function row(overrides: Partial<MatrixRowView>): MatrixRowView {
     initial: 'X',
     summary: 's',
     category: 'Agent orchestration',
+    categorySlug: 'agent-orchestration',
     licenseLabel: null,
+    deployment: null,
     deploymentLabel: null,
+    oss: null,
     ossYes: false,
     stars: null,
     starsLabel: null,
+    topics: [],
     ...overrides,
   };
 }
