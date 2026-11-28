@@ -1,0 +1,35 @@
+src/components/SpecMatrix.tsx
+  s_33fbb12936c04c::t_705cd37bcec422 1,26-39,118-127,133-140,142-143,164-183,214,227-229
+src/App.test.tsx
+  s_33fbb12936c04c::t_08d1cc04b9d638 77-78
+  s_33fbb12936c04c::t_0cc828d6a37ada 52,129,152
+  s_33fbb12936c04c::t_bba4766ec59669 1-51,53-76,79-128,130-151,153-156
+src/components/DetailDrawer.tsx
+  s_33fbb12936c04c::t_13836a93804528 1-9,14-26,28-49,54,61-62,65-67,69-76,82,85,89-106,109-110
+  s_33fbb12936c04c::t_b0a4c773f1a565 55-57,77-79
+src/App.tsx
+  s_33fbb12936c04c::t_6d1c01c88378c5 1,7-10,15-18,21-43,51-55,57-63
+src/components/SpecMatrix.test.tsx
+  s_33fbb12936c04c::t_b21b5bea3aebda 187,221
+  s_33fbb12936c04c::t_fde7738926d45c 2,12-16,19-33,62,67-72,74,92-93,101-102,106,110,125-126,128-131,134,136-137,139-141,143,146-147,157-177
+src/components/DetailDrawer.css
+  s_33fbb12936c04c::t_44669dc0def3b5 60-61,69-77,136-156,161,165-166,169,173-177,183-187
+src/test/setup.ts
+  s_33fbb12936c04c::t_4b2fb0981c6089 10-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "72f9aec3b17296fb4465bf10f92cd52dc9d34ae1",
+  "prompts": {},
+  "sessions": {
+    "s_33fbb12936c04c": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-5-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
