@@ -498,10 +498,59 @@ describe('shortlist state (issue #6)', () => {
     fireEvent.keyDown(row, { key: 's' });
     await settle();
     expect(visibleRowCount(container)).toBe(0);
+    // hiding is the sole cause here — the pre-hide set was non-empty
+    expect(screen.getByText('No visible rows — shortlisted rows are hidden.')).toBeTruthy();
     expect(document.activeElement?.tagName).not.toBe('BODY');
     expect(document.activeElement).toBe(
       screen.getByRole('checkbox', { name: /Hide shortlisted/ }),
     );
+  });
+
+  test('empty-state copy is exact about the cause: parameters vs hiding', async () => {
+    const { container } = render(<App />);
+    await settle();
+    const input = screen.getByLabelText<HTMLInputElement>('Search products');
+    // mark Aeon: the query aeon matches exactly one row in the catalog
+    fireEvent.input(input, { target: { value: 'aeon' } });
+    await settle();
+    expect(visibleRowCount(container)).toBe(1);
+    fireEvent.click(rowsOf(container)[0]);
+    await settle();
+    fireEvent.click(shortlistButton());
+    await settle();
+    fireEvent.input(input, { target: { value: '' } });
+    await settle();
+    fireEvent.click(screen.getByRole('checkbox', { name: /Hide shortlisted/ }));
+    await settle();
+
+    // a query matching nothing: the parameters are the sole cause, even
+    // though hide is active and the shortlist non-empty — unchecking hide
+    // would still reveal zero rows
+    fireEvent.input(input, { target: { value: 'zzz-nothing' } });
+    await settle();
+    expect(visibleRowCount(container)).toBe(0);
+    expect(screen.getByText('No rows match the current parameters.')).toBeTruthy();
+    expect(screen.queryByText('No visible rows — shortlisted rows are hidden.')).toBeNull();
+
+    // a query matching exactly the hidden row: hiding becomes the sole
+    // cause, and the message must flip to say so
+    fireEvent.input(input, { target: { value: 'aeon' } });
+    await settle();
+    expect(visibleRowCount(container)).toBe(0);
+    expect(screen.getByText('No visible rows — shortlisted rows are hidden.')).toBeTruthy();
+    expect(screen.queryByText('No rows match the current parameters.')).toBeNull();
+
+    // toggling hide off in that state reveals the row and no message at all
+    fireEvent.click(screen.getByRole('checkbox', { name: /Hide shortlisted/ }));
+    await settle();
+    expect(visibleRowCount(container)).toBe(1);
+
+    // and back on with the nonsense query: parameters again, never the wrong lever
+    fireEvent.click(screen.getByRole('checkbox', { name: /Hide shortlisted/ }));
+    await settle();
+    fireEvent.input(input, { target: { value: 'zzz-nothing' } });
+    await settle();
+    expect(screen.getByText('No rows match the current parameters.')).toBeTruthy();
   });
 });
 

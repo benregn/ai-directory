@@ -12,11 +12,16 @@
  * — commas never appear in any catalog value (verified), and splitting
  * before decoding keeps even an encoded comma correct. Params with empty
  * values are omitted entirely, so the unconstrained catalog is a clean URL.
- * Array values keep their click order both ways: the strip renders them in
- * that order, so canonicalizing would restore a visibly different strip —
- * exactness beats canonical form. `q` is free text and round-trips exactly —
- * no trimming, no length cap: exactness outranks pathological-input
- * economy, and browsers cap URL length long before it matters here.
+ * Array values keep their order both ways — never canonicalized. What the
+ * order is worth: ui-sdk's CheckboxGroup emits rail/DOM order regardless
+ * of click order, so filter arrays are rail-ordered in every user-built
+ * state anyway; but the shortlist genuinely carries click order (Set
+ * insertion), and a hand-ordered shared URL restores its exact value
+ * order — visibly, in the strip — so dropping it would break the
+ * round-trip exactness the issue contracts for. `q` is free text and
+ * round-trips exactly — no trimming, no length cap: exactness outranks
+ * pathological-input economy, and browsers cap URL length long before it
+ * matters here.
  *
  * GARBAGE TOLERANCE — parsing never throws. Unknown keys are ignored;
  * malformed percent-encoding, empty tokens and duplicates drop individually;
@@ -46,12 +51,15 @@
  * honest fallback — every current record carries a website entry, verified
  * against the dataset), then the record's real summary, then stars exactly
  * as the matrix renders them (`~` for approximations, omitted entirely when
- * absent). Ordering is the matrix's own default scan ordering: stars
- * descending, absent last, catalog order breaking ties — what the user
- * scans is what they paste.
+ * absent). Ordering is the matrix's DEFAULT scan ordering: stars
+ * descending, absent last, catalog order breaking ties. Sort order is
+ * matrix-internal state the URL never carries, so a re-sorted matrix does
+ * not change the export — the ordering is deterministic, not
+ * scan-following.
  */
 
 import type { Deployment, Listing } from './data/types.ts';
+import { websiteHrefOf } from './drawer-model.ts';
 import type { FilterState } from './filter-model.ts';
 import { emptyFilters } from './filter-model.ts';
 import { formatStars } from './matrix-model.ts';
@@ -255,9 +263,9 @@ function markdownEscape(text: string): string {
 }
 
 function entryLinkOf(listing: Listing): string {
-  const website = listing.detail.entries.find((entry) => entry.label === 'Website')?.links[0]
-    ?.href;
-  return website ?? listing.detail.sourceUrl;
+  // one lookup for the whole app — drawer-model owns it; the githits
+  // source is this export's documented fallback, dead on current data
+  return websiteHrefOf(listing) ?? listing.detail.sourceUrl;
 }
 
 /** Paste-ready markdown for the shortlist — see the module doc for the format. */

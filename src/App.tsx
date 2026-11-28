@@ -172,6 +172,7 @@ export default function App() {
             selectedId={selectedId}
             shortlist={shortlist}
             hiddenShortlisted={hiddenShortlisted}
+            preHideEmpty={filteredRows.length === 0}
             onSelect={handleSelect}
             onToggleShortlist={toggleShortlist}
             onScanEnd={focusHideControl}
