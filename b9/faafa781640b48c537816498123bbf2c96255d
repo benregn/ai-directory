@@ -1,0 +1,24 @@
+vitest.config.ts
+  s_212f756d6cde6a::t_6f2e9d749365ef 4-8,10
+vite.config.ts
+  s_212f756d6cde6a::t_fbb10f15e4493f 5-8,14
+.github/workflows/pages.yml
+  s_212f756d6cde6a::t_3066e95b4f94ee 22
+  s_212f756d6cde6a::t_9e4db09a9d1b81 1-21,23-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b9faafa781640b48c537816498123bbf2c96255d",
+  "prompts": {},
+  "sessions": {
+    "s_212f756d6cde6a": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "issue-7-impl",
+        "model": "swe-2-1-max"
+      },
+      "human_author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
