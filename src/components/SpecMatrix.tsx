@@ -33,7 +33,24 @@ import './SpecMatrix.css';
  *
  * Rows arrive filtered from the composition root's pipeline (issue #4):
  * the matrix never filters internally — it sorts what it receives, renders
- * it, and owns the roving focus keyed by row id.
+ * it, and owns the roving focus keyed by row id. Issue #6 hide-shortlisted
+ * reaches the matrix the same way: already-hidden rows simply never arrive.
+ *
+ * Issue #6 row marking: `s` on a focused row toggles its shortlist
+ * membership — the register-true affordance for a keyboard-first scan,
+ * documented in the implementation report (the mock shows no row-level
+ * marking control; a per-row button would be 239 pieces of permanent
+ * chrome for an action the drawer already offers the mouse). A marked row
+ * shows it in the tile: blue with a ✓ in place of the initial — palette
+ * color plus a non-color glyph, no width cost. When hide-shortlisted is
+ * active the row vanishes under the cursor, and the scan must not break:
+ * focus and selection move deliberately to the next visible row (the last
+ * row's fallback is the previous), exactly as an arrow press would — and
+ * because rows are fixed-height, the row below slides into the vanished
+ * row's exact screen position at a constant scrollTop, so the scroll
+ * reset a new scan would get is suppressed for this mutation. When nothing
+ * visible remains, focus lands on the rail's hide control — the one
+ * control that reverses the situation — never on <body>.
  */
 const ROW_H = 27;
 const HEAD_H = 30;
@@ -66,6 +83,7 @@ function Row({
   row,
   index,
   selected,
+  marked,
   tabStop,
   onPress,
   onKey,
@@ -75,6 +93,7 @@ function Row({
   row: MatrixRowView;
   index: number;
   selected: boolean;
+  marked: boolean;
   tabStop: boolean;
   onPress: (index: number) => void;
   onKey: (event: ReactKeyboardEvent, index: number) => void;
@@ -83,10 +102,11 @@ function Row({
 }) {
   return (
     <div
-      className={selected ? 'mrow sel' : 'mrow'}
+      className={`mrow${selected ? ' sel' : ''}${marked ? ' marked' : ''}`}
       role="row"
       aria-rowindex={index + 2}
       aria-selected={selected}
+      aria-description={marked ? 'shortlisted' : undefined}
       tabIndex={tabStop ? 0 : -1}
       ref={(el) => rowRef(row.id, el)}
       onClick={() => onPress(index)}
@@ -97,7 +117,7 @@ function Row({
         {row.entryLabel}
       </div>
       <div className="ncell" role="gridcell">
-        <span className="mtile">{row.initial}</span>
+        <span className="mtile">{marked ? '✓' : row.initial}</span>
         <span className="nname">{row.name}</span>
         <span className="nsum">{row.summary}</span>
       </div>
@@ -115,12 +135,21 @@ function Row({
 export function SpecMatrix({
   rows,
   selectedId,
+  shortlist,
+  hiddenShortlisted,
   onSelect,
+  onToggleShortlist,
+  onScanEnd,
   onClearFilters,
 }: {
   rows: Array<MatrixRowView>;
   selectedId: string | null;
+  shortlist: ReadonlySet<string>;
+  hiddenShortlisted: boolean;
   onSelect: (id: string) => void;
+  onToggleShortlist: (id: string) => void;
+  /** Focus destination when a mark hides the last visible row. */
+  onScanEnd: () => void;
   onClearFilters: () => void;
 }) {
   const [sortColumn, setSortColumn] = useState<SortColumn>('star');
@@ -154,8 +183,16 @@ export function SpecMatrix({
     }
   }, []);
 
-  // A re-sort or a new filtered scan starts at the top of the new ordering.
+  // A re-sort or a new filtered scan starts at the top of the new ordering —
+  // but a mark-vanish is not a new scan: rows are fixed-height, so at a
+  // constant scrollTop the row below slides into the vanished row's exact
+  // screen position and the scan continues without moving the eyes.
+  const markVanishRef = useRef(false);
   useEffect(() => {
+    if (markVanishRef.current) {
+      markVanishRef.current = false;
+      return;
+    }
     const el = scrollerRef.current;
     if (el) {
       el.scrollTop = 0;
@@ -235,6 +272,32 @@ export function SpecMatrix({
     onSelect(row.id);
   }
 
+  // `s` toggles shortlist membership on the focused row. When the row
+  // vanishes (hide active, row newly marked), focus and selection move
+  // deliberately before the DOM mutates: the target exists on both sides
+  // of the mutation, so no flushSync is needed — moving focus first means
+  // the unmount can never drop it. Modifier chords (Ctrl/Cmd/Alt+S) pass
+  // through to the browser untouched.
+  function markRow(index: number) {
+    const row = sorted[index];
+    if (!row) {
+      return;
+    }
+    const willVanish = hiddenShortlisted && !shortlist.has(row.id);
+    onToggleShortlist(row.id);
+    if (!willVanish) {
+      return;
+    }
+    markVanishRef.current = true;
+    const target = sorted[index + 1] ?? sorted[index - 1];
+    if (target) {
+      rowEls.current.get(target.id)?.focus();
+      onSelect(target.id);
+    } else {
+      onScanEnd();
+    }
+  }
+
   function keyRow(event: ReactKeyboardEvent, index: number) {
     const page = Math.max(
       1,
@@ -269,6 +332,14 @@ export function SpecMatrix({
       case ' ':
         event.preventDefault();
         pressRow(index);
+        break;
+      case 's':
+      case 'S':
+        if (event.ctrlKey || event.metaKey || event.altKey) {
+          break;
+        }
+        event.preventDefault();
+        markRow(index);
         break;
     }
   }
@@ -310,7 +381,13 @@ export function SpecMatrix({
       {sorted.length === 0 ? (
         <div className="matrix-empty" role="row" aria-rowindex={2}>
           <div role="gridcell" aria-colspan={7}>
-            <span>No rows match the current parameters.</span>
+            {/* hiding can empty the matrix while rows do match: the copy
+                must never claim the parameters are the cause */}
+            <span>
+              {hiddenShortlisted && shortlist.size > 0
+                ? 'No visible rows — shortlisted rows are hidden.'
+                : 'No rows match the current parameters.'}
+            </span>
             <button type="button" className="empty-clear" onClick={onClearFilters}>
               Clear all
             </button>
@@ -323,6 +400,7 @@ export function SpecMatrix({
             row={row}
             index={index}
             selected={row.id === selectedId}
+            marked={shortlist.has(row.id)}
             tabStop={row.id === stopId}
             onPress={pressRow}
             onKey={keyRow}

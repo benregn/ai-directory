@@ -120,3 +120,24 @@
   outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
+
+/* The one instructional line in the rail — print-catalog legend furniture,
+   smaller and quieter than the facet text it explains. */
+.facet .slhint {
+  margin-top: 7px;
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 9.5px;
+  color: var(--gray);
+}
+
+/* The shortlist export is the rail's own text-action register (the
+   Show-all-topics treatment); disabled it dims honestly, never hidden —
+   a stable control the user can find before the first mark. */
+.facet .copymd {
+  display: block;
+}
+
+.facet .copymd:disabled {
+  color: var(--dim);
+  cursor: default;
+}

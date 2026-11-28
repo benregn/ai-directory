@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { flushSync } from 'react-dom';
 import { Checkbox, CheckboxGroup, CheckboxIndicator } from '@ui-sdk/react/checkbox';
 import type { FacetOptions, FilterState } from '../filter-model.ts';
+import { CopyAction } from './CopyAction.tsx';
 import './FacetRail.css';
 
 function FacetCheckbox({
@@ -35,12 +36,20 @@ export function FacetRail({
   filters,
   resultCount,
   totalCount,
+  shortlistCount,
+  shortlistMarkdown,
+  hiddenShortlisted,
+  onHiddenShortlistedChange,
   onFiltersChange,
 }: {
   facets: FacetOptions;
   filters: FilterState;
   resultCount: number;
   totalCount: number;
+  shortlistCount: number;
+  shortlistMarkdown: string;
+  hiddenShortlisted: boolean;
+  onHiddenShortlistedChange: (hidden: boolean) => void;
   onFiltersChange: (filters: FilterState) => void;
 }) {
   const [showAllTopics, setShowAllTopics] = useState(false);
@@ -138,6 +147,47 @@ export function FacetRail({
           </Checkbox>
           <span className="facet-text">Open source only</span>
         </label>
+      </div>
+
+      {/* Issue #6: the shortlist is personal scan state, not a catalog
+          facet — it sits apart from the mock's facet grammar, after the
+          last binary refinement and before the expandable topics. The
+          trailing count is the rail's own count grammar; the hint line is
+          the one piece of instructional print furniture in the rail, there
+          because the row-level marking key is otherwise undiscoverable. */}
+      <div className="facet">
+        <h3>Shortlist</h3>
+        <label className={hiddenShortlisted ? 'ck' : undefined}>
+          <Checkbox
+            id="hide-shortlisted-control"
+            aria-label={`Hide shortlisted ${shortlistCount}`}
+            checked={hiddenShortlisted}
+            onCheckedChange={(checked, details) => {
+              const next = checked === true;
+              if (details.source === 'agent') {
+                flushSync(() => onHiddenShortlistedChange(next));
+              } else {
+                onHiddenShortlistedChange(next);
+              }
+            }}
+          >
+            <CheckboxIndicator aria-hidden="true">✓</CheckboxIndicator>
+          </Checkbox>
+          <span className="facet-text">Hide shortlisted</span>
+          <em>{shortlistCount}</em>
+        </label>
+        <CopyAction
+          label="Copy shortlist as markdown"
+          className="more copymd"
+          text={shortlistMarkdown}
+          disabled={shortlistCount === 0}
+          title={
+            shortlistCount === 0
+              ? 'Nothing shortlisted yet — press S on a row'
+              : `Copy ${shortlistCount} ${shortlistCount === 1 ? 'entry' : 'entries'} as paste-ready markdown`
+          }
+        />
+        <p className="slhint">Press S on a row to mark it</p>
       </div>
 
       <div className="facet">

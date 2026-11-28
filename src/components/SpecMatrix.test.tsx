@@ -24,14 +24,35 @@ const matrixRows = deriveRows(listings);
  * every facet click, compare toggle and search keystroke does in the app.
  */
 
-function Harness({ rows }: { rows: Array<MatrixRowView> }) {
+function Harness({ rows, hiddenShortlisted = false }: { rows: Array<MatrixRowView>; hiddenShortlisted?: boolean }) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [shortlist, setShortlist] = useState<ReadonlySet<string>>(new Set());
+  // The hide-filtering itself lives in the composition root; the harness
+  // mirrors that wiring exactly so the matrix sees the same row-set
+  // mutations it would see in the app.
+  const visible = hiddenShortlisted
+    ? rows.filter((row) => !shortlist.has(row.id))
+    : rows;
   return (
     <SpecMatrix
-      rows={rows}
+      rows={visible}
       selectedId={selectedId}
+      shortlist={shortlist}
+      hiddenShortlisted={hiddenShortlisted}
       onSelect={setSelectedId}
+      onScanEnd={() => undefined}
       onClearFilters={() => undefined}
+      onToggleShortlist={(id) =>
+        setShortlist((current) => {
+          const next = new Set(current);
+          if (next.has(id)) {
+            next.delete(id);
+          } else {
+            next.add(id);
+          }
+          return next;
+        })
+      }
     />
   );
 }
@@ -339,5 +360,133 @@ describe('re-sort while a row holds focus', () => {
       (row) => row.querySelector('.nname')?.textContent === name,
     );
     expect(moved?.getAttribute('aria-selected')).toBe('true');
+  });
+});
+
+describe('row-level shortlist marking (issue #6)', () => {
+  test('s on a focused row marks it: tile glyph, aria-description, and back', async () => {
+    const { container } = renderMatrix();
+    await settle();
+    const row = rowsOf(container)[2];
+    if (!row) {
+      throw new Error('no rows rendered');
+    }
+    row.focus();
+    await settle();
+    expect(row.classList.contains('marked')).toBe(false);
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+    expect(rowsOf(container)[2]?.classList.contains('marked')).toBe(true);
+    expect(rowsOf(container)[2]?.querySelector('.mtile')?.textContent).toBe('✓');
+    expect(rowsOf(container)[2]?.getAttribute('aria-description')).toBe('shortlisted');
+
+    fireEvent.keyDown(rowsOf(container)[2], { key: 's' });
+    await settle();
+    expect(rowsOf(container)[2]?.classList.contains('marked')).toBe(false);
+    expect(rowsOf(container)[2]?.getAttribute('aria-description')).toBeNull();
+  });
+
+  test('marking changes neither focus nor selection while nothing vanishes', async () => {
+    const { container } = renderMatrix();
+    await settle();
+    const row = rowsOf(container)[4];
+    if (!row) {
+      throw new Error('no rows rendered');
+    }
+    row.focus();
+    await settle();
+    // focus-without-selection: tabbing into the grid lands here
+    expect(row.getAttribute('aria-selected')).toBe('false');
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+    expect(document.activeElement).toBe(row);
+    expect(rowsOf(container)[4]?.getAttribute('aria-selected')).toBe('false');
+    expect(rowsOf(container)[4]?.classList.contains('marked')).toBe(true);
+  });
+
+  test('modifier chords pass through: ctrl+s never marks', async () => {
+    const { container } = renderMatrix();
+    await settle();
+    const row = rowsOf(container)[0];
+    row?.focus();
+    await settle();
+    fireEvent.keyDown(row, { key: 's', ctrlKey: true });
+    fireEvent.keyDown(row, { key: 's', metaKey: true });
+    await settle();
+    expect(rowsOf(container)[0]?.classList.contains('marked')).toBe(false);
+    fireEvent.keyDown(row, { key: 'S' });
+    await settle();
+    expect(rowsOf(container)[0]?.classList.contains('marked')).toBe(true);
+  });
+
+  test('exactly one tab stop survives mark mutations', async () => {
+    const { container } = renderMatrix();
+    await settle();
+    const row = rowsOf(container)[1];
+    row?.focus();
+    await settle();
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+    expect(stopsOf(container)).toHaveLength(1);
+  });
+});
+
+function renderHidden(rows = matrixRows) {
+  return render(<Harness rows={rows} hiddenShortlisted />);
+}
+
+describe('marking with hide-shortlisted active', () => {
+
+  test('a marked row vanishes and focus+selection move to the next visible row', async () => {
+    const { container } = renderHidden();
+    await settle();
+    const rows = rowsOf(container);
+    const second = rows[1];
+    const third = rows[2];
+    if (!second || !third) {
+      throw new Error('no rows rendered');
+    }
+    const thirdName = third.querySelector('.nname')?.textContent;
+    second.focus();
+    await settle();
+    fireEvent.keyDown(second, { key: 's' });
+    await settle();
+    // the row left the visible set entirely
+    const visible = rowsOf(container);
+    expect(visible).toHaveLength(238);
+    expect(
+      visible.some((row) => row.querySelector('.nname')?.textContent === thirdName),
+    ).toBe(true);
+    expect(document.activeElement).toBe(rowsOf(container)[1]);
+    expect(rowsOf(container)[1]?.querySelector('.nname')?.textContent).toBe(thirdName);
+    expect(rowsOf(container)[1]?.getAttribute('aria-selected')).toBe('true');
+  });
+
+  test('marking the last visible row moves focus upward', async () => {
+    const { container } = renderHidden(platformRows);
+    await settle();
+    expect(rowsOf(container)).toHaveLength(2);
+    const last = rowsOf(container)[1];
+    last?.focus();
+    await settle();
+    fireEvent.keyDown(last, { key: 's' });
+    await settle();
+    expect(rowsOf(container)).toHaveLength(1);
+    expect(document.activeElement).toBe(rowsOf(container)[0]);
+  });
+
+  test('the tab stop is never stranded on a hidden row', async () => {
+    const { container } = renderHidden();
+    await settle();
+    const row = rowsOf(container)[5];
+    row?.focus();
+    await settle();
+    expect(stopsOf(container)[0]).toBe(row);
+    fireEvent.keyDown(row, { key: 's' });
+    await settle();
+    const stops = stopsOf(container);
+    expect(stops).toHaveLength(1);
+    // focus moved deliberately, so the stop is exactly the focused row
+    expect(stops[0]).toBe(document.activeElement);
   });
 });

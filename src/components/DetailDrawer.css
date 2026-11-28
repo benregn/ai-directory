@@ -82,6 +82,19 @@
   color: var(--white);
 }
 
+/* Pressed shortlist toggle: the palette's filled treatment, same as .pri —
+   the active state reads at scan speed, no new color. */
+.dactions [data-pressed] {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.dactions button:focus-visible,
+.dactions a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
 .facts {
   border-bottom: 1px solid var(--line);
 }

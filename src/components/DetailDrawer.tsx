@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { flushSync } from 'react-dom';
+import { Toggle } from '@ui-sdk/react/toggle';
 import type { Listing } from '../data/types.ts';
 import {
   compareItemsOf,
@@ -18,9 +19,11 @@ import './DetailDrawer.css';
  * drawer-model — absence renders as `—`, never filler.
  *
  * Furniture decisions:
- * - Shortlist renders exactly as the mock has it but does nothing: the
- *   shortlist is issue #6's territory, furniture until then.
- * - The ✕ is likewise inert. Closing the drawer has no honest meaning yet:
+ * - Shortlist is a real control since issue #6: a ui-sdk Toggle with
+ *   aria-pressed, filled like `.pri` while pressed. The label stays
+ *   "Shortlist" in both states — screen readers announce the pressed
+ *   state, and a changing label would confuse exactly them.
+ * - The ✕ remains inert. Closing the drawer has no honest meaning yet:
  *   the mock shows no collapsed state and no reopen affordance, and the
  *   shell geometry is issue #2's.
  * - Same-class rows are buttons, not links: they select that record in
@@ -31,6 +34,8 @@ export function DetailDrawer({
   listing,
   entry,
   total,
+  shortlisted,
+  onToggleShortlist,
   onCompare,
   onSelect,
 }: {
@@ -38,6 +43,8 @@ export function DetailDrawer({
   /** Stable 1-based catalog position of the listing, null when unknown. */
   entry: number | null;
   total: number;
+  shortlisted: boolean;
+  onToggleShortlist: (id: string, marked?: boolean) => void;
   onCompare: (categorySlug: string) => void;
   onSelect: (id: string) => void;
 }) {
@@ -96,9 +103,21 @@ export function DetailDrawer({
         <button type="button" onClick={() => onCompare(listing.categorySlug)}>
           Compare
         </button>
-        <button type="button" aria-hidden="true" tabIndex={-1}>
+        <Toggle
+          pressed={shortlisted}
+          onPressedChange={(pressed, details) => {
+            // same agent-source contract as the rail and masthead: the
+            // change must commit synchronously for the agent to observe it
+            if (details.source === 'agent') {
+              flushSync(() => onToggleShortlist(listing.id, pressed));
+            } else {
+              onToggleShortlist(listing.id, pressed);
+            }
+          }}
+          title="Shortlist — press S on a focused matrix row for the same action"
+        >
           Shortlist
-        </button>
+        </Toggle>
       </div>
       <div className="facts">
         {factsOf(listing).map(({ label, value, absent }) => (

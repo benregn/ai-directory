@@ -92,3 +92,28 @@
   font-size: 10px;
   letter-spacing: 0.08em;
 }
+
+/* Copy link: the masthead's one real action — text furniture in the
+   masthead's own muted register, blue only in the feedback/hover state,
+   no new chrome. */
+.mastsearch .copylink {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--masthead-text);
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mastsearch .copylink:hover {
+  color: var(--white);
+}
+
+.mastsearch .copylink:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
