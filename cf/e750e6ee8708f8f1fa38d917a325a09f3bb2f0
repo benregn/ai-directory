@@ -1,0 +1,14 @@
+.gitignore
+  h_9889e896d9694b 32-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cfe750e6ee8708f8f1fa38d917a325a09f3bb2f0",
+  "prompts": {},
+  "humans": {
+    "h_9889e896d9694b": {
+      "author": "Tomas Thor Jonsson <benregn@gmail.com>"
+    }
+  }
+}
