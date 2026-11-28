@@ -137,6 +137,7 @@ export function SpecMatrix({
   selectedId,
   shortlist,
   hiddenShortlisted,
+  preHideEmpty,
   onSelect,
   onToggleShortlist,
   onScanEnd,
@@ -146,6 +147,11 @@ export function SpecMatrix({
   selectedId: string | null;
   shortlist: ReadonlySet<string>;
   hiddenShortlisted: boolean;
+  /** True when the pre-hide filtered set is empty — the empty-state copy
+      hinges on it: visible = matching − hidden, so an empty visible set
+      with a non-empty matching set is hiding's work, and an empty
+      matching set is the parameters' — regardless of hide state. */
+  preHideEmpty: boolean;
   onSelect: (id: string) => void;
   onToggleShortlist: (id: string) => void;
   /** Focus destination when a mark hides the last visible row. */
@@ -381,12 +387,10 @@ export function SpecMatrix({
       {sorted.length === 0 ? (
         <div className="matrix-empty" role="row" aria-rowindex={2}>
           <div role="gridcell" aria-colspan={7}>
-            {/* hiding can empty the matrix while rows do match: the copy
-                must never claim the parameters are the cause */}
             <span>
-              {hiddenShortlisted && shortlist.size > 0
-                ? 'No visible rows — shortlisted rows are hidden.'
-                : 'No rows match the current parameters.'}
+              {preHideEmpty
+                ? 'No rows match the current parameters.'
+                : 'No visible rows — shortlisted rows are hidden.'}
             </span>
             <button type="button" className="empty-clear" onClick={onClearFilters}>
               Clear all

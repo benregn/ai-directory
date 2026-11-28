@@ -39,6 +39,7 @@ function Harness({ rows, hiddenShortlisted = false }: { rows: Array<MatrixRowVie
       selectedId={selectedId}
       shortlist={shortlist}
       hiddenShortlisted={hiddenShortlisted}
+      preHideEmpty={rows.length === 0}
       onSelect={setSelectedId}
       onScanEnd={() => undefined}
       onClearFilters={() => undefined}
