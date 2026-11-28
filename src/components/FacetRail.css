@@ -2,8 +2,10 @@
 .rail {
   width: 230px;
   flex: none;
+  min-height: 0;
+  overflow-y: auto;
   border-right: 1px solid var(--line);
-  padding: 16px 16px 0 20px;
+  padding: 16px 16px 16px 20px;
 }
 
 .railhead {
@@ -41,6 +43,7 @@
 }
 
 .facet label {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -59,12 +62,40 @@
   color: var(--gray);
 }
 
-.facet input {
+.facet [data-slot='checkbox'] {
+  appearance: none;
   width: 12px;
   height: 12px;
-  accent-color: var(--blue);
-  margin: 0;
   flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray);
+  border-radius: 2px;
+  background: var(--white);
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.facet [data-slot='checkbox'][data-checked] {
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.facet [data-slot='checkbox']:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.facet-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .facet label.ck {
@@ -73,7 +104,19 @@
 }
 
 .facet .more {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--blue);
+  font-family: inherit;
   font-size: 10.5px;
   margin-top: 7px;
   display: inline-block;
+  cursor: pointer;
+}
+
+.facet .more:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }
